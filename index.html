@@ -58,6 +58,37 @@
     </head>
 	
 	<body>
+
+
+		<?php
+    // Pfad zur XML-Datei
+    $xmlFile = "automobiles.xml"; // Stelle sicher, dass der Dateiname zur deiner XML-Datei passt
+
+    // Überprüfen, ob die XML-Datei existiert
+    if (file_exists($xmlFile)) {
+        // Die XML-Datei laden
+        $xml = simplexml_load_file($xmlFile);
+
+        // Hier kannst du die Daten aus der XML-Datei verarbeiten und auf der Website ausgeben
+        foreach ($xml->automobile as $automobile) {
+            $model = (string)$automobile->model;
+            $b2_1 = (string)$automobile->b2_1;
+            $b2_2 = (string)$automobile->b2_2;
+            $j = (string)$automobile->j;
+            // usw. für die anderen Elemente
+
+            // Hier werden die Daten in HTML ausgegeben
+            echo "<p>Modell: $model</p>";
+            echo "<p>b2_1: $b2_1</p>";
+            echo "<p>b2_2: $b2_2</p>";
+            echo "<p>j: $j</p>";
+            // usw. für die anderen Elemente
+        }
+    } else {
+        echo "Die XML-Datei wurde nicht gefunden.";
+    }
+    ?>
+
 		<!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -212,118 +243,113 @@
 
 
 			<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="model-search-content">
 				<div class="row">
-					<div class="col-md-12">
-						<div class="model-search-content">
-							<div class="row">
-								<div class="col-md-offset-1 col-md-2 col-sm-12">
-									<div class="single-model-search">
-										<h2>select year</h2>
-										<div class="model-select-icon">
-											<select class="form-control">
-
-											  	<option value="default">year</option><!-- /.option-->
-
-											  	<option value="2018">2018</option><!-- /.option-->
-
-											  	<option value="2017">2017</option><!-- /.option-->
-											  	<option value="2016">2016</option><!-- /.option-->
-
-											</select><!-- /.select-->
-										</div><!-- /.model-select-icon -->
-									</div>
-									<div class="single-model-search">
-										<h2>body style</h2>
-										<div class="model-select-icon">
-											<select class="form-control">
-
-											  	<option value="default">style</option><!-- /.option-->
-
-											  	<option value="sedan">sedan</option><!-- /.option-->
-
-											  	<option value="van">van</option><!-- /.option-->
-											  	<option value="roadster">roadster</option><!-- /.option-->
-
-											</select><!-- /.select-->
-										</div><!-- /.model-select-icon -->
-									</div>
-								</div>
-								<div class="col-md-offset-1 col-md-2 col-sm-12">
-									<div class="single-model-search">
-										<h2>Marke auswählen</h2>
-										<div class="model-select-icon">
-											<select class="form-control">
-
-											  	<option value="default">make</option><!-- /.option-->
-
-											  	<option value="toyota">toyota</option><!-- /.option-->
-
-											  	<option value="holden">holden</option><!-- /.option-->
-											  	<option value="maecedes-benz">maecedes-benz.</option><!-- /.option-->
-
-											</select><!-- /.select-->
-										</div><!-- /.model-select-icon -->
-									</div>
-									<div class="single-model-search">
-										<h2>Emissionswerte</h2>
-										<div class="model-select-icon">
-											<select class="form-control">
-
-											  	<option value="default">condition</option><!-- /.option-->
-
-											  	<option value="something">something</option><!-- /.option-->
-
-											  	<option value="something">something</option><!-- /.option-->
-											  	<option value="something">something</option><!-- /.option-->
-
-											</select><!-- /.select-->
-										</div><!-- /.model-select-icon -->
-									</div>
-								</div>
-								<div class="col-md-offset-1 col-md-2 col-sm-12">
-									<div class="single-model-search">
-										<h2>Modell auswählen</h2>
-										<div class="model-select-icon">
-											<select class="form-control">
-
-											  	<option value="default">model</option><!-- /.option-->
-
-											  	<option value="kia-rio">kia-rio</option><!-- /.option-->
-
-											  	<option value="mitsubishi">mitsubishi</option><!-- /.option-->
-											  	<option value="ford">ford</option><!-- /.option-->
-
-											</select><!-- /.select-->
-										</div><!-- /.model-select-icon -->
-									</div>
-									<div class="single-model-search">
-										<h2>Preis auswählen</h2>
-										<div class="model-select-icon">
-											<select class="form-control">
-
-											  	<option value="default">price</option><!-- /.option-->
-
-											  	<option value="$0.00">$0.00</option><!-- /.option-->
-
-											  	<option value="$0.00">$0.00</option><!-- /.option-->
-											  	<option value="$0.00">$0.00</option><!-- /.option-->
-
-											</select><!-- /.select-->
-										</div><!-- /.model-select-icon -->
-									</div>
-								</div>
-								<div class="col-md-2 col-sm-12">
-									<div class="single-model-search text-center">
-										<button class="welcome-btn model-search-btn" onclick="window.location.href='#'">
-											search
-										</button>
-									</div>
-								</div>
+					<div class="col-md-offset-1 col-md-2 col-sm-12">
+						<div class="single-model-search">
+							<h2>Modell auswählen</h2>
+							<div class="model-select-icon">
+								<select class="form-control">
+									<option value="default">Modell</option>
+									<option value="Audi A3">Audi A3</option>
+									<option value="BMW 3er">BMW 3er</option>
+									<option value="Mercedes C-Class">Mercedes C-Class</option>
+									<option value="Volkswagen Golf">Volkswagen Golf</option>
+									<option value="Ford Focus">Ford Focus</option>
+									<option value="Toyota Camry">Toyota Camry</option>
+									<option value="Honda Civic">Honda Civic</option>
+									<option value="Nissan Leaf">Nissan Leaf</option>
+									<option value="Hyundai i30">Hyundai i30</option>
+									<option value="Opel Corsa">Opel Corsa</option>
+								</select>
 							</div>
+						</div>
+						<div class="single-model-search">
+							<h2>Preis auswählen</h2>
+							<div class "model-select-icon">
+								<select class="form-control">
+									<option value="default">Preis</option>
+									<option value="$0.00">$0.00</option>
+									<option value="$0.00">$0.00</option>
+									<option value="$0.00">$0.00</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-offset-1 col-md-2 col-sm-12">
+						<div class="single-model-search">
+							<h2>Marke auswählen</h2>
+							<div class="model-select-icon">
+								<select class="form-control">
+									<option value="default">Marke</option>
+									<option value="Audi">Audi</option>
+									<option value="BMW">BMW</option>
+									<option value="Mercedes-Benz">Mercedes-Benz</option>
+									<option value="Volkswagen-VW">Volkswagen-VW</option>
+									<option value="Ford">Ford</option>
+									<option value="Toyota">Toyota</option>
+									<option value="Honda">Honda</option>
+									<option value="Nissan">Nissan</option>
+									<option value="Hyuandai">Hyuandai</option>
+									<option value="Opel">Opel</option>
+								</select>
+							</div>
+						</div>
+						<div class="single-model-search">
+							<h2>Emissionswerte</h2>
+							<div class="model-select-icon">
+								<select class="form-control">
+									<option value="default">Emissionswerte</option>
+									<option value="123">123</option>
+									<option value="125">125</option>
+									<option value="128">128</option>
+									<option value="120">120</option>
+									<option value="115">115</option>
+									<option value="100">100</option>
+									<option value="105">105</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-offset-1 col-md-2 col-sm-12">
+						<div class="single-model-search">
+							<h2>Jahr auswählen</h2>
+							<div class="model-select-icon">
+								<select class="form-control">
+									<option value="default">Jahr</option>
+									<option value="2018">2018</option>
+									<option value="2017">2017</option>
+									<option value="2016">2016</option>
+								</select>
+							</div>
+						</div>
+						<div class="single-model-search">
+							<h2>Body Style auswählen</h2>
+							<div class="model-select-icon">
+								<select class="form-control">
+									<option value="default">Body Style</option>
+									<option value="Kompaktklasse">Kompaktklasse</option>
+									<option value="Mittelklasse">Mittelklasse</option>
+									<option value="Kleinwagen">Kleinwagen</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-2 col-sm-12">
+						<div class="single-model-search text-center">
+							<button class="welcome-btn model-search-btn" onclick="window.location.href='#'">
+								Suchen
+							</button>
 						</div>
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+</div>
+
 
 		</section><!--/.welcome-hero-->
 		<!--welcome-hero end -->
