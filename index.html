@@ -58,37 +58,6 @@
     </head>
 	
 	<body>
-
-
-		<?php
-    // Pfad zur XML-Datei
-    $xmlFile = "automobiles.xml"; // Stelle sicher, dass der Dateiname zur deiner XML-Datei passt
-
-    // Überprüfen, ob die XML-Datei existiert
-    if (file_exists($xmlFile)) {
-        // Die XML-Datei laden
-        $xml = simplexml_load_file($xmlFile);
-
-        // Hier kannst du die Daten aus der XML-Datei verarbeiten und auf der Website ausgeben
-        foreach ($xml->automobile as $automobile) {
-            $model = (string)$automobile->model;
-            $b2_1 = (string)$automobile->b2_1;
-            $b2_2 = (string)$automobile->b2_2;
-            $j = (string)$automobile->j;
-            // usw. für die anderen Elemente
-
-            // Hier werden die Daten in HTML ausgegeben
-            echo "<p>Modell: $model</p>";
-            echo "<p>b2_1: $b2_1</p>";
-            echo "<p>b2_2: $b2_2</p>";
-            echo "<p>j: $j</p>";
-            // usw. für die anderen Elemente
-        }
-    } else {
-        echo "Die XML-Datei wurde nicht gefunden.";
-    }
-    ?>
-
 		<!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
@@ -119,7 +88,6 @@
 				                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
 				                    <li class=" scroll active"><a href="#home">home</a></li>
 				                    <li class="scroll"><a href="#service">service</a></li>
-				                    <li class="scroll"><a href="#featured-cars">featured cars</a></li>
 				                    <li class="scroll"><a href="#new-cars">new cars</a></li>
 				                    <li class="scroll"><a href="#brand">brands</a></li>
 				                    <li class="scroll"><a href="#contact">contact</a></li>
@@ -242,121 +210,125 @@
 
 
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="model-search-content">
-                <div class="row">
-                    <div class="col-md-offset-1 col-md-2 col-sm-12">
-                        <div class="single-model-search">
-                            <h2>Modell auswählen</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control">
-                                    <option value="default">Modell</option>
-                                    <option value="Audi A3">Audi A3</option>
-                                    <option value="BMW 3er">BMW 3er</option>
-                                    <option value="Mercedes C-Class">Mercedes C-Class</option>
-                                    <option value="Volkswagen Golf">Volkswagen Golf</option>
-                                    <option value="Ford Focus">Ford Focus</option>
-                                    <option value="Toyota Camry">Toyota Camry</option>
-                                    <option value="Honda Civic">Honda Civic</option>
-                                    <option value="Nissan Leaf">Nissan Leaf</option>
-                                    <option value="Hyundai i30">Hyundai i30</option>
-                                    <option value="Opel Corsa">Opel Corsa</option>
-                                    <!-- Weitere Modell-Optionen hier einfügen -->
-                                </select>
-                            </div>
-                        </div>
-                        <div class="single-model-search">
-                            <h2>Preis auswählen</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control">
-                                    <option value="default">Preis</option>
-                                    <option value="$0.00">$0.00</option>
-                                    <option value="$10,000">$10,000</option>
-                                    <option value="$20,000">$20,000</option>
-                                    <option value="$30,000">$30,000</option>
-                                    <!-- Weitere Preis-Optionen hier einfügen -->
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-offset-1 col-md-2 col-sm-12">
-                        <div class="single-model-search">
-                            <h2>Marke auswählen</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control">
-                                    <option value="default">Marke</option>
-                                    <option value="Audi">Audi</option>
-                                    <option value="BMW">BMW</option>
-                                    <option value="Mercedes-Benz">Mercedes-Benz</option>
-                                    <option value="Volkswagen-VW">Volkswagen-VW</option>
-                                    <option value="Ford">Ford</option>
-                                    <option value="Toyota">Toyota</option>
-                                    <option value="Honda">Honda</option>
-                                    <option value="Nissan">Nissan</option>
-                                    <option value="Hyuandai">Hyuandai</option>
-                                    <option value="Opel">Opel</option>
-                                    <!-- Weitere Marke-Optionen hier einfügen -->
-                                </select>
-                            </div>
-                        </div>
-                        <div class="single-model-search">
-                            <h2>Emissionswerte auswählen</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control">
-                                    <option value="default">Emissionswerte</option>
-                                    <option value="100">100</option>
-                                    <option value="105">105</option>
-                                    <option value="115">115</option>
-                                    <option value="120">120</option>
-                                    <option value="125">125</option>
-                                    <option value="128">128</option>
-                                    <!-- Weitere Emissionswerte-Optionen hier einfügen -->
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-offset-1 col-md-2 col-sm-12">
-                        <div class="single-model-search">
-                            <h2>Jahr auswählen</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control">
-                                    <option value="default">Jahr</option>
-                                    <option value="2018">2018</option>
-                                    <option value="2017">2017</option>
-                                    <option value="2016">2016</option>
-                                    <!-- Weitere Jahr-Optionen hier einfügen -->
-                                </select>
-                            </div>
-                        </div>
-                        <div class="single-model-search">
-                            <h2>Body Style auswählen</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control">
-                                    <option value="default">Body Style</option>
-                                    <option value="Kompaktklasse">Kompaktklasse</option>
-                                    <option value="Mittelklasse">Mittelklasse</option>
-                                    <option value="Kleinwagen">Kleinwagen</option>
-                                    <!-- Weitere Body Style-Optionen hier einfügen -->
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-12">
-                        <div class="single-model-search text-center">
-                            <button class="welcome-btn model-search-btn" onclick="window.location.href='#'">
-                                Suchen
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="model-search-content">
+							<div class="row">
+								<div class="col-md-offset-1 col-md-2 col-sm-12">
+									<div class="single-model-search">
+										<h2>Baujahr</h2>
+										<div class="model-select-icon">
+											<select class="form-control">
 
+											  	<option value="default">baujahr</option><!-- /.option-->
 
+											  	<option value="2018">2018</option><!-- /.option-->
+
+											  	<option value="2017">2017</option><!-- /.option-->
+											  	<option value="2016">2016</option><!-- /.option-->
+
+											</select><!-- /.select-->
+										</div><!-- /.model-select-icon -->
+									</div>
+									<div class="single-model-search">
+										<h2>body style</h2>
+										<div class="model-select-icon">
+											<select class="form-control">
+
+											  	<option value="default">style</option><!-- /.option-->
+
+											  	<option value="sedan">sedan</option><!-- /.option-->
+
+											  	<option value="van">van</option><!-- /.option-->
+											  	<option value="roadster">roadster</option><!-- /.option-->
+
+											</select><!-- /.select-->
+										</div><!-- /.model-select-icon -->
+									</div>
+								</div>
+								<div class="col-md-offset-1 col-md-2 col-sm-12">
+									<div class="single-model-search">
+										<h2>Marke auswählen</h2>
+										<div class="model-select-icon">
+											<select class="form-control">
+
+											  	<option value="default">make</option><!-- /.option-->
+
+											  	<option value="audi">Audi</option><!-- /.option-->
+											  	<option value="bmw">BMW</option><!-- /.option-->
+											  	<option value="mercedes-benz">Mercedes-Benz</option><!-- /.option-->
+												<option value="volkswagen">Volkswagen</option><!-- /.option-->
+												<option value="ford">Ford</option><!-- /.option-->
+												<option value="toyota">Toyota</option><!-- /.option-->
+												<option value="honda">Honda</option><!-- /.option-->
+												<option value="nissan">Nissan</option><!-- /.option-->
+												<option value="hyundai">Hyundai</option><!-- /.option-->
+												<option value="opel">Opel</option><!-- /.option-->
+
+											</select><!-- /.select-->
+										</div><!-- /.model-select-icon -->
+									</div>
+									<div class="single-model-search">
+										<h2>Emissionswerte</h2>
+										<div class="model-select-icon">
+											<select class="form-control">
+
+											  	<option value="default">condition</option><!-- /.option-->
+
+											  	<option value="something">something</option><!-- /.option-->
+
+											  	<option value="something">something</option><!-- /.option-->
+											  	<option value="something">something</option><!-- /.option-->
+
+											</select><!-- /.select-->
+										</div><!-- /.model-select-icon -->
+									</div>
+								</div>
+								<div class="col-md-offset-1 col-md-2 col-sm-12">
+									<div class="single-model-search">
+										<h2>Modell auswählen</h2>
+										<div class="model-select-icon">
+											<select class="form-control">
+
+											  	<option value="default">model</option><!-- /.option-->
+
+											  	<option value="kia-rio">kia-rio</option><!-- /.option-->
+
+											  	<option value="mitsubishi">mitsubishi</option><!-- /.option-->
+											  	<option value="ford">ford</option><!-- /.option-->
+
+											</select><!-- /.select-->
+										</div><!-- /.model-select-icon -->
+									</div>
+									<div class="single-model-search">
+										<h2>Preis auswählen</h2>
+										<div class="model-select-icon">
+											<select class="form-control">
+
+											  	<option value="default">price</option><!-- /.option-->
+
+											  	<option value="$0.00">$0.00</option><!-- /.option-->
+
+											  	<option value="$0.00">$0.00</option><!-- /.option-->
+											  	<option value="$0.00">$0.00</option><!-- /.option-->
+
+											</select><!-- /.select-->
+										</div><!-- /.model-select-icon -->
+									</div>
+								</div>
+								<div class="col-md-2 col-sm-12">
+									<div class="single-model-search text-center">
+										<button class="welcome-btn model-search-btn" onclick="window.location.href='#'">
+											search
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
 		</section><!--/.welcome-hero-->
 		<!--welcome-hero end -->
@@ -497,290 +469,6 @@
 		</section><!--/.new-cars-->
 		<!--new-cars end -->
 
-		<!--featured-cars start -->
-		<section id="featured-cars" class="featured-cars">
-			<div class="container">
-				<div class="section-header">
-					<p>checkout <span>the</span> featured cars</p>
-					<h2>featured cars</h2>
-				</div><!--/.section-header-->
-				<div class="featured-cars-content">
-					<div class="row">
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc1.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">BMW 6-series gran coupe</a></h2>
-									<h3>$89,395</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc2.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">chevrolet camaro <span>wmv20</span></a></h2>
-									<h3>$66,575</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc3.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">lamborghini <span>v520</span></a></h2>
-									<h3>$125,250</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc4.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">audi <span> a3</span> sedan</a></h2>
-									<h3>$95,500</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc4.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">infiniti <span>z5</span></a></h2>
-									<h3>$36,850</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc5.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">porsche <span>718</span> cayman</a></h2>
-									<h3>$48,500</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc7.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#"><span>bmw 8-</span>series coupe</a></h2>
-									<h3>$56,000</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-4 col-sm-6">
-							<div class="single-featured-cars">
-								<div class="featured-img-box">
-									<div class="featured-cars-img">
-										<img src="assets/images/featured-cars/fc8.png" alt="cars">
-									</div>
-									<div class="featured-model-info">
-										<p>
-											model: 2017
-											<span class="featured-mi-span"> 3100 mi</span> 
-											<span class="featured-hp-span"> 240HP</span>
-											 automatic
-										</p>
-									</div>
-								</div>
-								<div class="featured-cars-txt">
-									<h2><a href="#">BMW <span> x</span>series-6</a></h2>
-									<h3>$75,800</h3>
-									<p>
-										Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non. 
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div><!--/.container-->
-
-		</section><!--/.featured-cars-->
-		<!--featured-cars end -->
-
-		<!-- clients-say strat -->
-		<section id="clients-say"  class="clients-say">
-			<div class="container">
-				<div class="section-header">
-					<h2>what our clients say</h2>
-				</div><!--/.section-header-->
-				<div class="row">
-					<div class="owl-carousel testimonial-carousel">
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="assets/images/clients/c1.png" alt="image of clients person" />
-										</div><!--/.testimonial-img-->
-									</div><!--/.testimonial-info-->
-									<div class="testimonial-comment">
-										<p>
-											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
-										</p>
-									</div><!--/.testimonial-comment-->
-									<div class="testimonial-person">
-										<h2><a href="#">tomas lili</a></h2>
-										<h4>new york</h4>
-									</div><!--/.testimonial-person-->
-								</div><!--/.testimonial-description-->
-							</div><!--/.single-testimonial-box-->
-						</div><!--/.col-->
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="assets/images/clients/c2.png" alt="image of clients person" />
-										</div><!--/.testimonial-img-->
-									</div><!--/.testimonial-info-->
-									<div class="testimonial-comment">
-										<p>
-											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
-										</p>
-									</div><!--/.testimonial-comment-->
-									<div class="testimonial-person">
-										<h2><a href="#">romi rain</a></h2>
-										<h4>london</h4>
-									</div><!--/.testimonial-person-->
-								</div><!--/.testimonial-description-->
-							</div><!--/.single-testimonial-box-->
-						</div><!--/.col-->
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="assets/images/clients/c3.png" alt="image of clients person" />
-										</div><!--/.testimonial-img-->
-									</div><!--/.testimonial-info-->
-									<div class="testimonial-comment">
-										<p>
-											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
-										</p>
-									</div><!--/.testimonial-comment-->
-									<div class="testimonial-person">
-										<h2><a href="#">john doe</a></h2>
-										<h4>washington</h4>
-									</div><!--/.testimonial-person-->
-								</div><!--/.testimonial-description-->
-							</div><!--/.single-testimonial-box-->
-						</div><!--/.col-->
-					</div><!--/.testimonial-carousel-->
-				</div><!--/.row-->
-			</div><!--/.container-->
-
-		</section><!--/.clients-say-->	
-		<!-- clients-say end -->
 
 		<!--brand strat -->
 		<section id="brand"  class="brand">
