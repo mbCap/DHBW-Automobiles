@@ -10,25 +10,26 @@
           <xs:complexType>
             <xs:sequence>
               <!-- Definition der einzelnen Datenfelder für das "automobile" Element -->
-              <xs:element name="model" type="xs:string"/>
-              <xs:element name="b2_1" type="xs:integer"/>
-              <xs:element name="b2_2" type="xs:integer"/>
-              <xs:element name="j" type="xs:string"/>
-              <xs:element name="_4" type="xs:integer"/>
-              <xs:element name="d1" type="xs:string"/>
-              <xs:element name="d2" type="xs:string"/>
-              <xs:element name="_2" type="xs:string"/>
-              <xs:element name="_5" type="xs:string"/>
-              <xs:element name="v9" type="xs:string"/>
-              <xs:element name="_14" type="xs:string"/>
-              <xs:element name="p3" type="xs:string"/>
+              <xs:element name="varChar" type="xs:string"/>
+              <xs:element name="HSN" type="xs:integer"/>
+              <xs:element name="TSN" type="xs:integer"/>
+              <xs:element name="Fahrzeugklasse" type="xs:string"/>
+              <xs:element name="ArtAufbau" type="xs:integer"/>
+              <xs:element name="Marke" type="xs:string"/>
+              <xs:element name="Fahrzeugvariante" type="xs:string"/>
+              <xs:element name="HKB" type="xs:string"/>
+              <xs:element name="Fahrzeugaufbau" type="xs:string"/>
+              <xs:element name="EGT" type="xs:string"/>
+              <xs:element name="Schadstoffklasse" type="xs:string"/>
+              <xs:element name="Kraftstoff" type="xs:string"/>
               <xs:element name="innerorts" type="xs:decimal"/>
-              <xs:element name="außerorts" type="xs:decimal"/>
+              <xs:element name="ausserorts" type="xs:decimal"/>
               <xs:element name="kombiniert" type="xs:decimal"/>
-              <xs:element name="co2EmissionKombiniert" type="xs:integer"/>
-              <xs:element name="sehrSchnell" type="xs:decimal"/>
+              <xs:element name="co2EmissionKombiniertNEFZ" type="xs:integer"/>
+              <xs:element name="sehr_schnell" type="xs:decimal"/>
               <xs:element name="schnell" type="xs:decimal"/>
-              <xs:element name="langsam" type="xs:decimal"/>
+              <xs:element name="langsam" type="xs:integer"/>
+              <xs:element name="co2EmissionKombiniertWLTP" type="xs:integer"/>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
