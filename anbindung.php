@@ -11,28 +11,45 @@ $mysqli = new mysqli($servername, $username, $password, $database);
 if ($mysqli->connect_error) {
     die("Verbindung zur Datenbank fehlgeschlagen: " . $mysqli->connect_error);
 }
-
-/*   
+  /* 
 $sql = "
     CREATE TABLE `fahrzeugdaten` (
-        ... (die Tabellenspalten, wie zuvor definiert)
+        `model` VARCHAR(50),
+        `HSN` INT NOT NULL,
+        `TSN` INT NOT NULL,
+        `Fahrzeugklasse` VARCHAR(40) NOT NULL,
+        `ArtAufbau` INT NOT NULL,
+        `Marke` VARCHAR(40) NOT NULL,
+        `Fahrzeugvariante` VARCHAR(40),
+        `HKB` VARCHAR(40) NOT NULL,
+        `Fahrzeugaufbau` VARCHAR(40) NOT NULL,
+        `EGT` VARCHAR(40) NOT NULL,
+        `Schadstoffklasse` VARCHAR(40) NOT NULL,
+        `Kraftstoff` VARCHAR(40) NOT NULL,
+        `innerorts` DOUBLE NOT NULL,
+        `ausserorts` DOUBLE NOT NULL,
+        `kombiniert` DOUBLE NOT NULL,
+        `co2EmissionKombiniertNEFZ` INT NOT NULL,
+        `sehrschnell` DOUBLE NOT NULL,
+        `schnell` DOUBLE NOT NULL,
+        `langsam` DOUBLE NOT NULL,
+        `co2EmissionKombiniertWLTP` INT NOT NULL
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ";
  
-// Tabelle erstellen (Du kannst diese Code-Block-Kommentierung entfernen, wenn die Tabelle noch nicht erstellt wurde)
+// Tabelle erstellen
 if ($mysqli->query($sql) === TRUE) {
     echo "Tabelle 'Fahrzeugdaten' erfolgreich erstellt";
 } else {
     echo "Fehler beim Erstellen der Tabelle: " . $mysqli->error;
 }
-*/
-
-$xml = simplexml_load_file('C:\Users\roman\Desktop\Web_Programmierung\automobiles.xml') or die("Error: Cannot create object");
+  */
+$xml = simplexml_load_file('C:\Users\roman\Desktop\Testwebsite\automobiles.xml') or die("Error: Cannot create object");
 
 $mysqli->begin_transaction(); // Transaktion starten
 
-foreach ($xml->automobile as $automobile) {
-    $model = (string)$automobile->varChar;
+foreach ($xml->children() as $automobile) {
+    $model = (string)$automobile->model;
     $HSN = (int)$automobile->HSN;
     $TSN = (int)$automobile->TSN;
     $Fahrzeugklasse = (string)$automobile->Fahrzeugklasse;
@@ -54,18 +71,15 @@ foreach ($xml->automobile as $automobile) {
     $co2EmissionKombiniertWLTP = (int)$automobile->co2EmissionKombiniertWLTP;
 
     $insertSql = "INSERT INTO fahrzeugdaten (model, HSN, TSN, Fahrzeugklasse, ArtAufbau, Marke, Fahrzeugvariante, HKB, Fahrzeugaufbau, EGT, Schadstoffklasse, Kraftstoff, innerorts, ausserorts, kombiniert, co2EmissionKombiniertNEFZ, sehrschnell, schnell, langsam, co2EmissionKombiniertWLTP) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                VALUES ('$model', $HSN, $TSN, '$Fahrzeugklasse', $ArtAufbau, '$Marke', '$Fahrzeugvariante', '$HKB', '$Fahrzeugaufbau', '$EGT', '$Schadstoffklasse', '$Kraftstoff', $innerorts, $ausserorts, $kombiniert, $co2EmissionKombiniertNEFZ, $sehrschnell, $schnell, $langsam, $co2EmissionKombiniertWLTP)";
 
-    $stmt = $mysqli->prepare($insertSql);
-    $stmt->bind_param("siissisississdddisdd", $model, $HSN, $TSN, $Fahrzeugklasse, $ArtAufbau, $Marke, $Fahrzeugvariante, $HKB, $Fahrzeugaufbau, $EGT, $Schadstoffklasse, $Kraftstoff, $innerorts, $ausserorts, $kombiniert, $co2EmissionKombiniertNEFZ, $sehrschnell, $schnell, $langsam, $co2EmissionKombiniertWLTP);
-
-    if ($stmt->execute()) {
-        echo "Datensatz erfolgreich eingefügt. ";
-    } else {
-        echo "Fehler beim Einfügen des Datensatzes: " . $stmt->error;
+        if ($mysqli->query($insertSql) === TRUE) {
+            echo "Datensatz erfolgreich eingefügt. ";
+        } else {
+            echo "Fehler beim Einfügen des Datensatzes: " . $mysqli->error;
+        }
     }
-    $stmt->close();
-}
+        
 
 // Transaktion bestätigen oder abbrechen
 if ($mysqli->commit()) {
@@ -99,4 +113,5 @@ if ($result && $result->num_rows > 0) {
 
 // Datenbankverbindung schließen
 $mysqli->close();
+
 ?>
