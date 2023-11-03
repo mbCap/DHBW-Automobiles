@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definition des Wurzelelements "automobiles" -->
+  <xs:element name="automobiles">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Definition des Elements "automobile" -->
+        <xs:element name="automobile" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <!-- Definition der einzelnen Datenfelder für das "automobile" Element -->
+              <xs:element name="model" type="xs:string"/>
+              <xs:element name="b2_1" type="xs:integer"/>
+              <xs:element name="b2_2" type="xs:integer"/>
+              <xs:element name="j" type="xs:string"/>
+              <xs:element name="_4" type="xs:integer"/>
+              <xs:element name="d1" type="xs:string"/>
+              <xs:element name="d2" type="xs:string"/>
+              <xs:element name="_2" type="xs:string"/>
+              <xs:element name="_5" type="xs:string"/>
+              <xs:element name="v9" type="xs:string"/>
+              <xs:element name="_14" type="xs:string"/>
+              <xs:element name="p3" type="xs:string"/>
+              <xs:element name="innerorts" type="xs:decimal"/>
+              <xs:element name="außerorts" type="xs:decimal"/>
+              <xs:element name="kombiniert" type="xs:decimal"/>
+              <xs:element name="co2EmissionKombiniert" type="xs:integer"/>
+              <xs:element name="sehrSchnell" type="xs:decimal"/>
+              <xs:element name="schnell" type="xs:decimal"/>
+              <xs:element name="langsam" type="xs:decimal"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
