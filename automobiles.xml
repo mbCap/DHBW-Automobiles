@@ -20,7 +20,7 @@
     <sehrSchnell>7.0</sehrSchnell>  <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
     <schnell>5.8</schnell>          <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
     <langsam>8.6</langsam>          <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
-    <co2EmissionKombiniert>153</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
+    <co2EmissionKombiniert>153</co2EmissionKombiniertWLTP>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
     <model>BMW 3er</model>            <!-- Modelname des Autos -->
@@ -42,7 +42,7 @@
     <sehrSchnell>8.8</sehrSchnell>   <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
     <schnell>6.9</schnell>           <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
     <langsam>9.5</langsam>           <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
-    <co2EmissionKombiniert>155</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
+    <co2EmissionKombiniert>155</co2EmissionKombiniertWLTP>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
     <model>Mercedes C-Klasse</model>    <!-- Modelname des Autos -->
@@ -64,7 +64,7 @@
     <sehrSchnell>6.9</sehrSchnell>   <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
     <schnell>5.2</schnell>           <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
     <langsam>7.8</langsam>           <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
-    <co2EmissionKombiniert>127</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
+    <co2EmissionKombiniert>127</co2EmissionKombiniertWLTPWLTP>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
     <model>Volkswagen Golf</model>  <!-- Modelname des Autos -->
@@ -86,7 +86,7 @@
     <sehrSchnell>6.5</sehrSchnell> <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
     <schnell>4.9</schnell>         <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
     <langsam>7.2</langsam>         <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
-    <co2EmissionKombiniert>129</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
+    <co2EmissionKombiniertWLTP>129</co2EmissionKombiniertWLTP>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
     <model>Ford Focus</model>  <!-- Modelname des Autos -->
@@ -108,7 +108,7 @@
     <sehrSchnell>6.8</sehrSchnell> <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
     <schnell>5.2</schnell>       <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
     <langsam>7.5</langsam>       <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
-    <co2EmissionKombiniert>132</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
+    <co2EmissionKombiniertWLTP>132</co2EmissionKombiniertWLTP>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
     <model>Toyota Yaris</model>  <!-- Modelname des Autos -->
@@ -130,7 +130,7 @@
     <sehrSchnell>6.0</sehrSchnell> <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
     <schnell>4.7</schnell>       <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
     <langsam>6.8</langsam>       <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
-    <co2EmissionKombiniert>123</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
+    <co2EmissionKombiniertWLTP>123</co2EmissionKombiniertWLTP>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
     <model>Honda Civic</model>  <!-- Modelname des Autos -->
