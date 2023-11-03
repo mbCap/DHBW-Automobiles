@@ -46,6 +46,10 @@
         
         <!--responsive.css-->
         <link rel="stylesheet" href="assets/css/responsive.css">
+
+		<!--Anbindung von automobiles.xml an index.html -->
+		<link rel="anbindung" href= "anbindung.php">
+
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -118,62 +122,28 @@
 			
 
 			<script>
-				// Lade die XML-Datei
-				var xhttp = new XMLHttpRequest();
-				xhttp.onreadystatechange = function () {
-					if (this.readyState === 4 && this.status === 200) {
-						// XML-Datei wurde erfolgreich geladen
-						parseXML(this);
-					}
-				};
-				xhttp.open("GET", "automobiles.xml", true);
-				xhttp.open("GET", "automobiles.xml", true);
-				xhttp.send();
-		
-				// Verarbeite die XML-Daten
-				function parseXML(xml) {
-					var xmlDoc = xml.responseXML;
-					var dataContainer = document.getElementById("data-container");
-		
-					// Extrahiere die Daten aus der XML-Datei
-					var years = xmlDoc.getElementsByTagName("year");
-					var styles = xmlDoc.getElementsByTagName("style");
-					var makes = xmlDoc.getElementsByTagName("make");
-		
-					// Erstelle ein Select-Element für jedes Attribut
-					var yearSelect = createSelect("year", years);
-					var styleSelect = createSelect("style", styles);
-					var makeSelect = createSelect("make", makes);
-		
-					// Füge die Select-Elemente in den Container ein
-					dataContainer.appendChild(yearSelect);
-					dataContainer.appendChild(styleSelect);
-					dataContainer.appendChild(makeSelect);
+				// Eine Funktion, die die Daten aus anbindung.php abruft und anzeigt
+				function ladeFahrzeugdaten() {
+					fetch('anbindung.php')
+						.then(response => response.text())
+						.then(data => {
+							const fahrzeugliste = document.getElementById('fahrzeugliste');
+							const fahrzeugdaten = data.split('\n');
+							fahrzeugdaten.forEach(datum => {
+								const listItem = document.createElement('li');
+								listItem.textContent = datum;
+								fahrzeugliste.appendChild(listItem);
+							});
+						})
+						.catch(error => console.error('Fehler beim Laden der Daten:', error));
 				}
 		
-				// Hilfsfunktion zum Erstellen eines Select-Elements
-				function createSelect(id, data) {
-					var select = document.createElement("select");
-					select.id = id + "-select";
-					select.className = "form-control";
-		
-					// Erstelle die "default" Option
-					var defaultOption = document.createElement("option");
-					defaultOption.value = "default";
-					defaultOption.textContent = id;
-					select.appendChild(defaultOption);
-		
-					// Füge die Optionen basierend auf den XML-Daten hinzu
-					for (var i = 0; i < data.length; i++) {
-						var option = document.createElement("option");
-						option.value = data[i].textContent;
-						option.textContent = data[i].textContent;
-						select.appendChild(option);
-					}
-		
-					return select;
-				}
+				// Lade die Fahrzeugdaten, wenn die Seite geladen ist
+				window.addEventListener('load', ladeFahrzeugdaten);
 			</script>
+
+
+
 
 
 			<div class="container">
