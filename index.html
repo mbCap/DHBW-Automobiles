@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="de">
 
     <head>
         <!-- meta data -->
@@ -59,6 +59,8 @@
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
+
+		<!-- jQuery-Bibliothek einbinden -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 		<script>
@@ -70,17 +72,16 @@
 						type: 'GET',
 						dataType: 'json',
 						data: {
-							// Hier Filterparameter hinzufügen
 							year: $('#year-filter').val(),
 							bodyStyle: $('#body-style-filter').val(),
-							make: $('#make-filter').val(),
+							make: $('#make-filter').val()
 							// Weitere Filter hinzufügen
 						},
 						success: function(data) {
 							if (data.length > 0) {
 								var dataContainer = $('#data-container');
 								dataContainer.empty();
-		
+	
 								$.each(data, function(index, item) {
 									var html = 'Model: ' + item.model + '<br>';
 									html += 'HSN: ' + item.HSN + '<br>';
@@ -98,7 +99,7 @@
 						}
 					});
 				}
-		
+	
 				// Klick-Ereignis für den "Filtern" -Button
 				$('#filter-btn').click(function() {
 					// Hier Filteroptionen überprüfen und AJAX-Aufruf auslösen
