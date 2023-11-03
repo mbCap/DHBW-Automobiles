@@ -68,7 +68,7 @@
 				// AJAX-Aufruf-Funktion
 				function makeAjaxCall() {
 					$.ajax({
-						url: 'convert.php', // Hier den URL-Pfad zur Datenquelle eintragen
+						url: 'anbindung.php', // Hier den URL-Pfad zur Datenquelle eintragen
 						type: 'GET',
 						dataType: 'json',
 						data: {
@@ -107,6 +107,19 @@
 				});
 			});
 		</script>
+
+		<div id="mein-element">Hier steht der ursprüngliche Text.</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		// Ihr JavaScript-Code hier, nachdem die Seite vollständig geladen wurde
+		// Zum Beispiel:
+		var element = document.getElementById("mein-element");
+		if (element) {
+			element.textContent = "Die Seite ist vollständig geladen!";
+		}
+	});
+</script>
 		
 
     </head>
@@ -203,7 +216,20 @@
 						<p>Magnus Blessmann - Alexander Gehring - Robin Kröll - Roman Sivirin</p>
 				</div>
 			</div>
+
 			
+			<div id="data-container"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Ihr JavaScript-Code hier, nachdem die Seite vollständig geladen wurde
+            var dataContainer = document.getElementById("data-container");
+            if (dataContainer) {
+                // Fügen Sie Ihre Elemente oder Manipulationen hier hinzu
+            }
+        });
+    </script>
+
 
 			<script>
 				// Eine Funktion, die die Daten aus anbindung.php abruft und anzeigt
