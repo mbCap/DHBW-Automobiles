@@ -1,224 +1,460 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <automobiles>
 <automobile>
-<model>Audi A3</model>
-<b2_1>1234</b2_1>
-<b2_2>5678</b2_2>
-<j>Kompaktklasse</j>
-<_4>123456</_4>
-<d1>Audi</d1>
-<d2>D5678</d2>
-<_2>Audi</_2>
-<_5>5</_5>
-<v9>V9</v9>
-<_14>14</_14>
-<p3>P3</p3>
-<innerorts>6.2</innerorts>
-<außerorts>4.1</außerorts>
-<kombiniert>4.9</kombiniert>
-<co2EmissionKombiniert>5.0</co2EmissionKombiniert>
-<sehrSchnell>3.8</sehrSchnell>
-<schnell>5.0</schnell>
-<langsam>6.9</langsam>
-<co2EmissionKombiniert>5.2</co2EmissionKombiniert>
+    <model>Audi A3</model>  <!-- Modelname des Autos -->
+    <b2_1>588</b2_1>       <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>743</b2_2>       <!-- Typschlüsselnummer (TSN) -->
+    <j>Kompaktklasse</j>    <!-- Fahrzeugklasse -->
+    <_4>123456</_4>         <!-- Art des Aufbaus -->
+    <d1>Audi</d1>           <!-- Marke -->
+    <d2>D5678</d2>          <!-- Typ/Variante/Version -->
+    <_2>Audi</_2>           <!-- Hersteller Kurzbezeichnung -->
+    <_5>Kompaktklasse</_5>              <!--Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2009</v9>             <!--Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>           <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>             <!-- Kraftstoffart -->
+    <innerorts>6.4</innerorts>      <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>4.4</außerorts>      <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>5.2</kombiniert>    <!-- Kraftstoffverbacuh kombiniert -->
+    <co2EmissionKombiniert>117</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>7.0</sehrSchnell>  <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>5.8</schnell>          <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>8.6</langsam>          <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>153</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
-<model>BMW 3er</model>
-<b2_1>2345</b2_1>
-<b2_2>6543</b2_2>
-<j>Mittelklasse</j>
-<_4>765432</_4>
-<d1>Bayrische Motoren Werke-BMW</d1>
-<d2>D6543</d2>
-<_2>Bayrische Motoren Werke-BMW</_2>
-<_5>8</_5>
-<v9>V13</v9>
-<_14>17</_14>
-<p3>P7</p3>
-<innerorts>6.8</innerorts>
-<außerorts>4.3</außerorts>
-<kombiniert>5.2</kombiniert>
-<co2EmissionKombiniert>125</co2EmissionKombiniert>
-<sehrSchnell>4.2</sehrSchnell>
-<schnell>5.8</schnell>
-<langsam>7.0</langsam>
-<co2EmissionKombiniert>6.0</co2EmissionKombiniert>
+    <model>BMW 3er</model>            <!-- Modelname des Autos -->
+    <b2_1>123</b2_1>                  <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>456</b2_2>                  <!-- Typschlüsselnummer (TSN) -->
+    <j>Mittelklasse</j>               <!-- Fahrzeugklasse -->
+    <_4>789012</_4>                  <!-- Art des Aufbaus -->
+    <d1>BMW</d1>                      <!-- Marke -->
+    <d2>320i</d2>                     <!-- Typ/Variante/Version -->
+    <_2>BMW</_2>                      <!-- Hersteller Kurzbezeichnung -->
+    <_5>Mittelklasse</_5>             <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2015</v9>                  <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>                 <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>                   <!-- Kraftstoffart -->
+    <innerorts>7.8</innerorts>       <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>5.4</außerorts>       <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>6.3</kombiniert>     <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>146</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>8.8</sehrSchnell>   <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>6.9</schnell>           <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>9.5</langsam>           <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>155</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
-<model>Mercedes C-Class</model>
-<b2_1>5678</b2_1>
-<b2_2>9876</b2_2>
-<j>Mittelklasse</j>
-<_4>654321</_4>
-<d1>Mercedes-Benz</d1>
-<d2>D9876</d2>
-<_2>Mercedes-Benz</_2>
-<_5>4</_5>
-<v9>V10</v9>
-<_14>13</_14>
-<p3>P4</p3>
-<innerorts>7.0</innerorts>
-<außerorts>4.5</außerorts>
-<kombiniert>5.6</kombiniert>
-<co2EmissionKombiniert>128</co2EmissionKombiniert>
-<sehrSchnell>4.5</sehrSchnell>
-<schnell>5.5</schnell>
-<langsam>7.2</langsam>
-<co2EmissionKombiniert>5.1</co2EmissionKombiniert>
+    <model>Mercedes C-Klasse</model>    <!-- Modelname des Autos -->
+    <b2_1>789</b2_1>                  <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>101</b2_2>                  <!-- Typschlüsselnummer (TSN) -->
+    <j>Mittelklasse</j>               <!-- Fahrzeugklasse -->
+    <_4>987654</_4>                  <!-- Art des Aufbaus -->
+    <d1>Mercedes-Benz</d1>           <!-- Marke -->
+    <d2>C220d</d2>                   <!-- Typ/Variante/Version -->
+    <_2>Mercedes</_2>                <!-- Hersteller Kurzbezeichnung -->
+    <_5>Mittelklasse</_5>             <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2018</v9>                  <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>                 <!-- Nationale Schadstoffklasse -->
+    <p3>Diesel</p3>                   <!-- Kraftstoffart -->
+    <innerorts>5.0</innerorts>       <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>3.6</außerorts>       <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>4.0</kombiniert>     <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>105</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>6.9</sehrSchnell>   <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>5.2</schnell>           <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>7.8</langsam>           <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>127</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
-<model>Volkswagen Golf</model>
-<b2_1>4321</b2_1>
-<b2_2>8765</b2_2>
-<j>Kompaktklasse</j>
-<_4>987654</_4>
-<d1>Volkswagen</d1>
-<d2>D8765</d2>
-<_2>Volkswagen-VW</_2>
-<_5>6</_5>
-<v9>V11</v9>
-<_14>15</_14>
-<p3>P5</p3>
-<innerorts>6.5</innerorts>
-<außerorts>4.2</außerorts>
-<kombiniert>5.0</kombiniert>
-<co2EmissionKombiniert>120</co2EmissionKombiniert>
-<sehrSchnell>4.0</sehrSchnell>
-<schnell>5.3</schnell>
-<langsam>6.5</langsam>
-<co2EmissionKombiniert>5.3</co2EmissionKombiniert>
+    <model>Volkswagen Golf</model>  <!-- Modelname des Autos -->
+    <b2_1>123</b2_1>               <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>456</b2_2>               <!-- Typschlüsselnummer (TSN) -->
+    <j>Kompaktklasse</j>           <!-- Fahrzeugklasse -->
+    <_4>654321</_4>               <!-- Art des Aufbaus -->
+    <d1>Volkswagen</d1>            <!-- Marke -->
+    <d2>Golf 7</d2>                <!-- Typ/Variante/Version -->
+    <_2>VW</_2>                   <!-- Hersteller Kurzbezeichnung -->
+    <_5>Kompaktklasse</_5>         <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2017</v9>               <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>              <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>                <!-- Kraftstoffart -->
+    <innerorts>5.8</innerorts>    <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>4.2</außerorts>    <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>4.8</kombiniert>  <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>109</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>6.5</sehrSchnell> <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>4.9</schnell>         <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>7.2</langsam>         <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>129</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
-<model>Ford Focus</model>
-<b2_1>3456</b2_1>
-<b2_2>7654</b2_2>
-<j>Kompaktklasse</j>
-<_4>876543</_4>
-<d1>Ford</d1>
-<d2>D7654</d2>
-<_2>Ford</_2>
-<_5>7</_5>
-<v9>V12</v9>
-<_14>16</_14>
-<p3>P6</p3>
-<innerorts>6.0</innerorts>
-<außerorts>4.0</außerorts>
-<kombiniert>4.8</kombiniert>
-<co2EmissionKombiniert>115</co2EmissionKombiniert>
-<sehrSchnell>3.5</sehrSchnell>
-<schnell>5.2</schnell>
-<langsam>6.7</langsam>
-<co2EmissionKombiniert>5.0</co2EmissionKombiniert>
+    <model>Ford Focus</model>  <!-- Modelname des Autos -->
+    <b2_1>123</b2_1>           <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>456</b2_2>           <!-- Typschlüsselnummer (TSN) -->
+    <j>Kompaktklasse</j>        <!-- Fahrzeugklasse -->
+    <_4>654321</_4>           <!-- Art des Aufbaus -->
+    <d1>Ford</d1>              <!-- Marke -->
+    <d2>Focus</d2>             <!-- Typ/Variante/Version -->
+    <_2>Ford</_2>             <!-- Hersteller Kurzbezeichnung -->
+    <_5>Kompaktklasse</_5>    <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2015</v9>          <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR05</_14>          <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>            <!-- Kraftstoffart -->
+    <innerorts>6.2</innerorts>  <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>4.6</außerorts>  <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>5.3</kombiniert>  <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>122</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>6.8</sehrSchnell> <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>5.2</schnell>       <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>7.5</langsam>       <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>132</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
-<model>Toyota Camry</model>
-<b2_1>6543</b2_1>
-<b2_2>4321</b2_2>
-<j>Mittelklasse</j>
-<_4>654321</_4>
-<d1>Toyota</d1>
-<d2>D4321</d2>
-<_2>Toyota</_2>
-<_5>9</_5>
-<v9>V14</v9>
-<_14>18</_14>
-<p3>P8</p3>
-<innerorts>5.5</innerorts>
-<außerorts>3.8</außerorts>
-<kombiniert>4.3</kombiniert>
-<co2EmissionKombiniert>100</co2EmissionKombiniert>
-<sehrSchnell>3.2</sehrSchnell>
-<schnell>4.5</schnell>
-<langsam>5.8</langsam>
-<co2EmissionKombiniert>4.8</co2EmissionKombiniert>
+    <model>Toyota Yaris</model>  <!-- Modelname des Autos -->
+    <b2_1>711</b2_1>           <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>835</b2_2>           <!-- Typschlüsselnummer (TSN) -->
+    <j>Kleinwagen</j>          <!-- Fahrzeugklasse -->
+    <_4>654321</_4>           <!-- Art des Aufbaus -->
+    <d1>Toyota</d1>            <!-- Marke -->
+    <d2>Yaris</d2>             <!-- Typ/Variante/Version -->
+    <_2>Toyota</_2>           <!-- Hersteller Kurzbezeichnung -->
+    <_5>Kleinwagen</_5>       <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2017</v9>          <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>          <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>            <!-- Kraftstoffart -->
+    <innerorts>5.4</innerorts>  <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>4.1</außerorts>  <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>4.6</kombiniert>  <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>105</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>6.0</sehrSchnell> <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>4.7</schnell>       <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>6.8</langsam>       <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>123</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
-<model>Honda Civic</model>
-<b2_1>7654</b2_1>
-<b2_2>3210</b2_2>
-<j>Kompaktklasse</j>
-<_4>765432</_4>
-<d1>Honda</d1>
-<d2>D3210</d2>
-<_2>Honda</_2>
-<_5>10</_5>
-<v9>V15</v9>
-<_14>19</_14>
-<p3>P9</p3>
-<innerorts>5.8</innerorts>
-<außerorts>3.9</außerorts>
-<kombiniert>4.5</kombiniert>
-<co2EmissionKombiniert>105</co2EmissionKombiniert>
-<sehrSchnell>3.5</sehrSchnell>
-<schnell>4.8</schnell>
-<langsam>6.0</langsam>
-<co2EmissionKombiniert>4.7</co2EmissionKombiniert>
+    <model>Honda Civic</model>  <!-- Modelname des Autos -->
+    <b2_1>712</b2_1>           <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>826</b2_2>           <!-- Typschlüsselnummer (TSN) -->
+    <j>Kompaktklasse</j>        <!-- Fahrzeugklasse -->
+    <_4>654321</_4>           <!-- Art des Aufbaus -->
+    <d1>Honda</d1>             <!-- Marke -->
+    <d2>Civic</d2>             <!-- Typ/Variante/Version -->
+    <_2>Honda</_2>             <!-- Hersteller Kurzbezeichnung -->
+    <_5>Kompaktklasse</_5>     <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2015</v9>           <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>          <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>            <!-- Kraftstoffart -->
+    <innerorts>6.6</innerorts>  <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>4.2</außerorts>  <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>5.0</kombiniert>  <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>115</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>6.5</sehrSchnell> <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>5.0</schnell>       <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>7.2</langsam>       <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>125</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
-<model>Nissan Leaf</model>
-<b2_1>8765</b2_1>
-<b2_2>2109</b2_2>
-<j>Kompaktklasse</j>
-<_4>876543</_4>
-<d1>Nissan</d1>
-<d2>D2109</d2>
-<_2>Nissan</_2>
-<_5>11</_5>
-<v9>V16</v9>
-<_14>20</_14>
-<p3>P10</p3>
-<innerorts>6.0</innerorts>
-<außerorts>4.0</außerorts>
-<kombiniert>4.8</kombiniert>
-<co2EmissionKombiniert>115</co2EmissionKombiniert>
-<sehrSchnell>3.5</sehrSchnell>
-<schnell>4.8</schnell>
-<langsam>6.0</langsam>
-<co2EmissionKombiniert>5.1</co2EmissionKombiniert>
+    <model>Nissan Qashqai</model>  <!-- Modelname des Autos -->
+    <b2_1>722</b2_1>              <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>831</b2_2>              <!-- Typschlüsselnummer (TSN) -->
+    <j>Kompakt-SUV</j>            <!-- Fahrzeugklasse -->
+    <_4>654322</_4>              <!-- Art des Aufbaus -->
+    <d1>Nissan</d1>               <!-- Marke -->
+    <d2>Qashqai</d2>             <!-- Typ/Variante/Version -->
+    <_2>Nissan</_2>              <!-- Hersteller Kurzbezeichnung -->
+    <_5>Kompakt-SUV</_5>         <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2015</v9>             <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>            <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>              <!-- Kraftstoffart -->
+    <innerorts>7.2</innerorts>   <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>5.0</außerorts>   <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>5.8</kombiniert> <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>134</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>8.0</sehrSchnell> <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>6.5</schnell>        <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>7.8</langsam>        <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>145</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
-<model>Hyundai i30</model>
-<b2_1>9876</b2_1>
-<b2_2>1098</b2_2>
-<j>Kompaktklasse</j>
-<_4>987654</_4>
-<d1>Hyuandai</d1>
-<d2>D1098</d2>
-<_2>Hyuandai</_2>
-<_5>12</_5>
-<v9>V17</v9>
-<_14>21</_14>
-<p3>P11</p3>
-<innerorts>5.6</innerorts>
-<außerorts>3.7</außerorts>
-<kombiniert>4.4</kombiniert>
-<co2EmissionKombiniert>105</co2EmissionKombiniert>
-<sehrSchnell>3.3</sehrSchnell>
-<schnell>4.6</schnell>
-<langsam>5.7</langsam>
-<co2EmissionKombiniert>4.5</co2EmissionKombiniert>
+    <model>Hyundai i30</model>       <!-- Modelname des Autos -->
+    <b2_1>123</b2_1>                 <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>456</b2_2>                 <!-- Typschlüsselnummer (TSN) -->
+    <j>Kompaktklasse</j>             <!-- Fahrzeugklasse -->
+    <_4>54321</_4>                   <!-- Art des Aufbaus -->
+    <d1>Hyundai</d1>                 <!-- Marke -->
+    <d2>i30</d2>                     <!-- Typ/Variante/Version -->
+    <_2>Hyundai</_2>                 <!-- Hersteller Kurzbezeichnung -->
+    <_5>Kompaktklasse</_5>           <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2010</v9>                 <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR05</_14>                 <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>                  <!-- Kraftstoffart -->
+    <innerorts>6.9</innerorts>      <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>4.6</außerorts>      <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>5.5</kombiniert>    <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>126</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>6.8</sehrSchnell>  <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>5.5</schnell>          <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>7.2</langsam>          <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>129</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
 </automobile>
 <automobile>
-<model>Opel Corsa</model>
-<b2_1>1234</b2_1>
-<b2_2>5678</b2_2>
-<j>Kleinwagen</j>
-<_4>987654</_4>
-<d1>Opel</d1>
-<d2>D5678</d2>
-<_2>Opel</_2>
-<_5>5</_5>
-<v9>V9</v9>
-<_14>14</_14>
-<p3>P3</p3>
-<innerorts>5.0</innerorts>
-<außerorts>3.5</außerorts>
-<kombiniert>4.0</kombiniert>
-<co2EmissionKombiniert>95</co2EmissionKombiniert>
-<sehrSchnell>3.0</sehrSchnell>
-<schnell>4.2</schnell>
-<langsam>5.5</langsam>
-<co2EmissionKombiniert>4.4</co2EmissionKombiniert>
+    <model>Opel Corsa</model>       <!-- Modelname des Autos -->
+    <b2_1>123</b2_1>                 <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>456</b2_2>                 <!-- Typschlüsselnummer (TSN) -->
+    <j>Kleinwagen</j>                <!-- Fahrzeugklasse -->
+    <_4>654321</_4>                 <!-- Art des Aufbaus -->
+    <d1>Opel</d1>                   <!-- Marke -->
+    <d2>Corsa</d2>                  <!-- Typ/Variante/Version -->
+    <_2>Opel</_2>                   <!-- Hersteller Kurzbezeichnung -->
+    <_5>Kleinwagen</_5>             <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2010</v9>                <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR05</_14>                <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>                 <!-- Kraftstoffart -->
+    <innerorts>7.2</innerorts>      <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>4.9</außerorts>      <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>5.8</kombiniert>    <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>135</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>6.6</sehrSchnell>  <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>5.4</schnell>          <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>7.0</langsam>          <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>139</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
 </automobile>
-<!-- Fügen Sie weitere Datensätze hinzu, um insgesamt 20 Beispieldatensätze zu haben -->
-</automobiles>
+<automobile>
+    <model>Porsche 911</model>  <!-- Modelname des Autos -->
+    <b2_1>123</b2_1>           <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>456</b2_2>           <!-- Typschlüsselnummer (TSN) -->
+    <j>Sportwagen</j>          <!-- Fahrzeugklasse -->
+    <_4>654321</_4>           <!-- Art des Aufbaus -->
+    <d1>Porsche</d1>           <!-- Marke -->
+    <d2>GT3</d2>               <!-- Typ/Variante/Version -->
+    <_2>Porsche</_2>           <!-- Hersteller Kurzbezeichnung -->
+    <_5>Sportwagen</_5>       <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2009</v9>           <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>           <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>            <!-- Kraftstoffart -->
+    <innerorts>12.5</innerorts>   <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>8.5</außerorts>    <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>10.0</kombiniert> <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>230</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>14.0</sehrSchnell>  <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>11.0</schnell>          <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>16.0</langsam>          <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+</automobile>
+<automobile>
+    <model>Volkswagen Passat</model>  <!-- Modelname des Autos -->
+    <b2_1>235</b2_1>                 <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>789</b2_2>                 <!-- Typschlüsselnummer (TSN) -->
+    <j>Mittelklasse</j>              <!-- Fahrzeugklasse -->
+    <_4>654321</_4>                 <!-- Art des Aufbaus -->
+    <d1>Volkswagen</d1>             <!-- Marke -->
+    <d2>TDI 2.0</d2>                <!-- Typ/Variante/Version -->
+    <_2>VW</_2>                     <!-- Hersteller Kurzbezeichnung -->
+    <_5>Mittelklasse</_5>           <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2014</v9>                <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>                <!-- Nationale Schadstoffklasse -->
+    <p3>Diesel</p3>                 <!-- Kraftstoffart -->
+    <innerorts>5.0</innerorts>      <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>3.5</außerorts>      <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>4.0</kombiniert>    <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>104</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>7.5</sehrSchnell>  <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>5.5</schnell>          <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>8.0</langsam>          <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+</automobile>
+<automobile>
+    <model>Audi A6</model>             <!-- Modelname des Autos -->
+    <b2_1>601</b2_1>                  <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>821</b2_2>                  <!-- Typschlüsselnummer (TSN) -->
+    <j>Mittelklasse</j>               <!-- Fahrzeugklasse -->
+    <_4>654321</_4>                  <!-- Art des Aufbaus -->
+    <d1>Audi</d1>                     <!-- Marke -->
+    <d2>C7890</d2>                    <!-- Typ/Variante/Version -->
+    <_2>Audi</_2>                     <!-- Hersteller Kurzbezeichnung -->
+    <_5>Mittelklasse</_5>             <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2015</v9>                  <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>                  <!-- Nationale Schadstoffklasse -->
+    <p3>Diesel</p3>                   <!-- Kraftstoffart -->
+    <innerorts>7.5</innerorts>        <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>5.0</außerorts>        <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>6.2</kombiniert>      <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>145</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>8.5</sehrSchnell>    <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>6.0</schnell>            <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>9.5</langsam>            <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+</automobile>
+<automobile>
+    <model>Fiat 500</model>           <!-- Modelname des Autos -->
+    <b2_1>456</b2_1>                  <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>789</b2_2>                  <!-- Typschlüsselnummer (TSN) -->
+    <j>Kleinstwagen</j>               <!-- Fahrzeugklasse -->
+    <_4>654321</_4>                  <!-- Art des Aufbaus -->
+    <d1>Fiat</d1>                     <!-- Marke -->
+    <d2>F1234</d2>                    <!-- Typ/Variante/Version -->
+    <_2>Fiat</_2>                     <!-- Hersteller Kurzbezeichnung -->
+    <_5>Kleinstwagen</_5>             <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2010</v9>                  <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR05</_14>                  <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>                   <!-- Kraftstoffart -->
+    <innerorts>5.6</innerorts>        <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>3.9</außerorts>        <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>4.5</kombiniert>      <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>104</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>6.5</sehrSchnell>    <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>4.7</schnell>            <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>7.8</langsam>            <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+</automobile>
+<automobile>
+    <model>Volkswagen Tiguan</model>  <!-- Modelname des Autos -->
+    <b2_1>123</b2_1>                  <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>456</b2_2>                  <!-- Typschlüsselnummer (TSN) -->
+    <j>SUV</j>                        <!-- Fahrzeugklasse -->
+    <_4>987654</_4>                  <!-- Art des Aufbaus -->
+    <d1>Volkswagen</d1>              <!-- Marke -->
+    <d2>T1234</d2>                   <!-- Typ/Variante/Version -->
+    <_2>VW</_2>                      <!-- Hersteller Kurzbezeichnung -->
+    <_5>SUV</_5>                     <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2015</v9>                 <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>                 <!-- Nationale Schadstoffklasse -->
+    <p3>Diesel</p3>                  <!-- Kraftstoffart -->
+    <innerorts>7.2</innerorts>       <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>5.5</außerorts>       <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>6.2</kombiniert>     <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>162</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>8.5</sehrSchnell>   <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>6.8</schnell>           <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>9.4</langsam>           <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+</automobile>
+<automobile>
+    <model>Mini Cooper</model>            <!-- Modelname des Autos -->
+    <b2_1>585</b2_1>                     <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>742</b2_2>                     <!-- Typschlüsselnummer (TSN) -->
+    <j>Kleinwagen</j>                    <!-- Fahrzeugklasse -->
+    <_4>654321</_4>                     <!-- Art des Aufbaus -->
+    <d1>Mini</d1>                        <!-- Marke -->
+    <d2>Cooper</d2>                     <!-- Typ/Variante/Version -->
+    <_2>Mini</_2>                        <!-- Hersteller Kurzbezeichnung -->
+    <_5>Kleinwagen</_5>                 <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2010</v9>                     <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR05</_14>                    <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>                      <!-- Kraftstoffart -->
+    <innerorts>6.5</innerorts>           <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>4.3</außerorts>           <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>5.1</kombiniert>         <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>123</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>7.2</sehrSchnell>       <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>5.7</schnell>               <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>8.9</langsam>               <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>134</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
+</automobile>
+<automobile>
+    <model>Mercedes S-Klasse</model>     <!-- Modelname des Autos -->
+    <b2_1>601</b2_1>                     <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>800</b2_2>                     <!-- Typschlüsselnummer (TSN) -->
+    <j>Oberklasse</j>                    <!-- Fahrzeugklasse -->
+    <_4>789012</_4>                     <!-- Art des Aufbaus -->
+    <d1>Mercedes</d1>                   <!-- Marke -->
+    <d2>S450</d2>                        <!-- Typ/Variante/Version -->
+    <_2>Mercedes</_2>                   <!-- Hersteller Kurzbezeichnung -->
+    <_5>Oberklasse</_5>                 <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2011</v9>                     <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>                    <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>                      <!-- Kraftstoffart -->
+    <innerorts>9.5</innerorts>           <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>6.0</außerorts>           <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>7.2</kombiniert>         <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>165</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>8.5</sehrSchnell>       <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>7.0</schnell>               <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>10.3</langsam>              <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>182</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
+</automobile>
+<automobile>
+    <model>BMW 2er</model>            <!-- Modelname des Autos -->
+    <b2_1>123</b2_1>                  <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>456</b2_2>                  <!-- Typschlüsselnummer (TSN) -->
+    <j>Kompaktklasse</j>              <!-- Fahrzeugklasse -->
+    <_4>789012</_4>                  <!-- Art des Aufbaus -->
+    <d1>BMW</d1>                      <!-- Marke -->
+    <d2>220i</d2>                     <!-- Typ/Variante/Version -->
+    <_2>BMW</_2>                      <!-- Hersteller Kurzbezeichnung -->
+    <_5>Kompaktklasse</_5>            <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2014</v9>                  <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>                 <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>                   <!-- Kraftstoffart -->
+    <innerorts>7.2</innerorts>       <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>5.0</außerorts>       <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>5.8</kombiniert>     <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>133</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>8.5</sehrSchnell>   <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>7.0</schnell>           <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>9.2</langsam>           <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>150</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
+</automobile>
+<automobile>
+    <model>Ford Kuga</model>  <!-- Modelname des Autos -->
+    <b2_1>123</b2_1>       <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>456</b2_2>       <!-- Typschlüsselnummer (TSN) -->
+    <j>SUV</j>              <!-- Fahrzeugklasse -->
+    <_4>789012</_4>         <!-- Art des Aufbaus -->
+    <d1>Ford</d1>           <!-- Marke -->
+    <d2>Kuga</d2>          <!-- Typ/Variante/Version -->
+    <_2>Ford</_2>           <!-- Hersteller Kurzbezeichnung -->
+    <_5>SUV</_5>              <!--Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2009</v9>             <!--Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>           <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>             <!-- Kraftstoffart -->
+    <innerorts>7.2</innerorts>      <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>5.1</außerorts>      <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>6.0</kombiniert>    <!-- Kraftstoffverbacuh kombiniert -->
+    <co2EmissionKombiniert>138</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert in g/km -->
+    <sehrSchnell>8.5</sehrSchnell>  <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>7.0</schnell>          <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>9.3</langsam>          <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+    <co2EmissionKombiniert>157</co2EmissionKombiniert>  <!-- Co2 Emission Kombiniert -->
+</automobile>
+<automobile>
+    <model>Lamborghini Urus</model>  <!-- Modelname des Autos -->
+    <b2_1>123</b2_1>       <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>456</b2_2>       <!-- Typschlüsselnummer (TSN) -->
+    <j>SUV</j>              <!-- Fahrzeugklasse -->
+    <_4>789012</_4>         <!-- Art des Aufbaus -->
+    <d1>Lamborghini</d1>     <!-- Marke -->
+    <d2>Urus</d2>            <!-- Typ/Variante/Version -->
+    <_2>Lamborghini</_2>    <!-- Hersteller Kurzbezeichnung -->
+    <_5>SUV</_5>              <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2023</v9>         <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR07</_14>         <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>          <!-- Kraftstoffart -->
+    <innerorts>20.3</innerorts>      <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>12.5</außerorts>      <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>15.6</kombiniert>    <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>359</co2EmissionKombiniert>  <!-- CO2-Emission kombiniert in g/km -->
+    <sehrSchnell>16.8</sehrSchnell>  <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>14.2</schnell>          <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>21.0</langsam>          <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+</automobile>
+<automobile>
+    <model>Ferrari 488</model>  <!-- Modelname des Autos -->
+    <b2_1>123</b2_1>       <!-- Herstellschlüsselnummer (HSN) -->
+    <b2_2>456</b2_2>       <!-- Typschlüsselnummer (TSN) -->
+    <j>Sportwagen</j>        <!-- Fahrzeugklasse -->
+    <_4>789012</_4>         <!-- Art des Aufbaus -->
+    <d1>Ferrari</d1>         <!-- Marke -->
+    <d2>488 GTB</d2>        <!-- Typ/Variante/Version -->
+    <_2>Ferrari</_2>        <!-- Hersteller Kurzbezeichnung -->
+    <_5>Sportwagen</_5>     <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
+    <v9>EC 2022</v9>        <!-- Für die EG-Typengenehmigung maßgebliche Schadstoffklasse -->
+    <_14>EUR06</_14>        <!-- Nationale Schadstoffklasse -->
+    <p3>Benzin</p3>          <!-- Kraftstoffart -->
+    <innerorts>18.5</innerorts>  <!-- Kraftstoffverbrauch innerorts in l/100km -->
+    <außerorts>10.2</außerorts>  <!-- Kraftstoffverbrauch außerorts -->
+    <kombiniert>13.2</kombiniert>  <!-- Kraftstoffverbrauch kombiniert -->
+    <co2EmissionKombiniert>306</co2EmissionKombiniert>  <!-- CO2-Emission kombiniert in g/km -->
+    <sehrSchnell>16.3</sehrSchnell>  <!-- Kraftstoffverbrauch bei durchschnittlich 131,3 km/h -->
+    <schnell>13.8</schnell>      <!-- Kraftstoffverbrauch bei durchschnittlich 97,4 km/h -->
+    <langsam>20.0</langsam>      <!-- Kraftstoffverbrauch bei durchschnittlich 56,5 km/h -->
+</automobile>
+
+
+</automobiles> <!-- Ende -->
