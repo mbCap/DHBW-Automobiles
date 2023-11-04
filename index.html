@@ -63,6 +63,7 @@
 		<!-- jQuery-Bibliothek einbinden -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+		<!--
 		<script>
 			$(document).ready(function() {
 				// AJAX-Aufruf-Funktion
@@ -107,7 +108,35 @@
 				});
 			});
 		</script>
+	-->
+
+	<script>
+		// Funktion um alle Fahrzeuge bei Aufruf der Webseite zu laden
+		function getFullList () {
+		// AJAX-Anfrage senden
+		var xhr = new XMLHttpRequest();
+		// Baut die URL für den Aufruf des JSON vom PHP zusammen
+		xhr.open('GET', 'http://localhost:8081/json.php', true);
 		
+		xhr.onload = function () {
+			// Prüft, ob Status 200 = OK
+			if (xhr.status === 200) {
+				// Speichert JSON in response Variable
+				var response = JSON.parse(xhr.responseText); 
+	
+				// Aufruf der create-Funktion mit Parametern.
+				// Erzeugt die Filter und die Buttons
+				
+				
+			} else {
+				// Fehler-Ausgabe in Konsole
+				console.log('Fehler bei Anfrage: ' + xhr.status);
+			}
+		};
+		xhr.send();
+	};
+		</script>
+	
 
     </head>
 	

@@ -1,0 +1,16 @@
+version: "3"
+ 
+services:
+  Backend:
+    image: php:8.2.10-apache
+    restart: 'always'
+    ports:
+      - '8081:80'
+    volumes:
+      - ./Backend:/var/www/html/  
+  Frontend:
+    image: php:8.2.10-apache
+    volumes:
+      - ./Frontend:/var/www/html/  
+    ports:
+      - "8080:80"
