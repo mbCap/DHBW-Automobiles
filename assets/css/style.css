@@ -261,6 +261,41 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 /*-------------------------------------
         4. Model-Search
 --------------------------------------*/
+
+/* Suchleiste-Styling */
+.single-model-search h2 {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+/* Styling für das Suchfeld */
+.model-select-icon .form-control {
+    outline: 0 !important;
+    box-shadow: none;
+    border: 1px solid #f8f8f8;
+    background: #f8f8f8;
+    height: 60px;
+}
+
+/* Entfernen des Dropdown-Pfeils im Select-Element */
+.model-select-icon:after {
+    content: none; /* Entfernt das Pfeil-Symbol */
+}
+
+/* Styling für den Suchen-Button */
+.welcome-btn.model-search-btn {
+    width: 160px;
+    margin-top: 80px;
+    margin-left: 53px;
+}
+
+
+
+
+/*Nicht von uns*/
+
 .model-search-content .col-sm-12 {padding: 0;}
 .model-search-content {
     padding: 40px 0;
