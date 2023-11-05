@@ -14,7 +14,7 @@ if ($mysqli->connect_error) {
 }
 
 // SQL-Abfrage, um alle Daten aus der Tabelle 'fahrzeugdaten' abzurufen
-$selectSql = "SELECT * FROM fahrzeugdaten";
+$selectSql = "SELECT DISTINCT * FROM fahrzeugdaten";
 $result = $mysqli->query($selectSql);
 
 if ($result && $result->num_rows > 0) {
@@ -40,13 +40,15 @@ if ($result && $result->num_rows > 0) {
         echo "schnell: " . $row["schnell"] . "<br>";
         echo "langsam: " . $row["langsam"] . "<br>";
         echo "co2EmissionKombiniertWLTP: " . $row["co2EmissionKombiniertWLTP"] . "<br>";
-
+        
         // Trennzeile zwischen Datensätzen
         echo "<hr>";
     }
+    
 } else {
     echo "Keine Daten gefunden.";
 }
+
 
 // Datenbankverbindung schließen
 $mysqli->close();
