@@ -263,34 +263,41 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 --------------------------------------*/
 
 /* Suchleiste-Styling */
-.single-model-search h2 {
+/* Buttons-Styling */
+.single-model-search2  {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 400px;
     text-transform: capitalize;
     margin-bottom: 20px;
+    height : 300px;
+    margin-left: 310px;
+}
+ 
+/* Suchleiste-Styling */
+.single-model-search3  {
+    font-size: 16px;
+    font-weight: 400px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    height : 200px;
+    margin-left: 10px;
+    width:650px;
 }
 
 /* Styling für das Suchfeld */
-.model-select-icon .form-control {
+.model-select-icon2 .form-control {
     outline: 0 !important;
     box-shadow: none;
     border: 1px solid #f8f8f8;
     background: #f8f8f8;
     height: 60px;
+    margin-top: 80px;
 }
 
 /* Entfernen des Dropdown-Pfeils im Select-Element */
 .model-select-icon:after {
     content: none; /* Entfernt das Pfeil-Symbol */
 }
-
-/* Styling für den Suchen-Button */
-.welcome-btn.model-search-btn {
-    width: 160px;
-    margin-top: 80px;
-    margin-left: 53px;
-}
-
 
 
 
