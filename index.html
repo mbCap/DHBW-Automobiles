@@ -63,52 +63,9 @@
 		<!-- jQuery-Bibliothek einbinden -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-		<!--
-		<script>
-			$(document).ready(function() {
-				// AJAX-Aufruf-Funktion
-				function makeAjaxCall() {
-					$.ajax({
-						url: 'convert.php', // Hier den URL-Pfad zur Datenquelle eintragen
-						type: 'GET',
-						dataType: 'json',
-						data: {
-							year: $('#year-filter').val(),
-							bodyStyle: $('#body-style-filter').val(),
-							make: $('#make-filter').val()
-							// Weitere Filter hinzufügen
-						},
-						success: function(data) {
-							if (data.length > 0) {
-								var dataContainer = $('#data-container');
-								dataContainer.empty();
-	
-								$.each(data, function(index, item) {
-									var html = 'Model: ' + item.model + '<br>';
-									html += 'HSN: ' + item.HSN + '<br>';
-									html += 'TSN: ' + item.TSN + '<br>';
-									// Füge weitere Datenfelder hinzu, die du anzeigen möchtest
-									html += '<hr>';
-									dataContainer.append(html);
-								});
-							} else {
-								$('#data-container').text('Keine Daten gefunden.');
-							}
-						},
-						error: function() {
-							$('#data-container').text('Fehler beim Abrufen der Daten.');
-						}
-					});
-				}
-	
-				// Klick-Ereignis für den "Filtern" -Button
-				$('#filter-btn').click(function() {
-					// Hier Filteroptionen überprüfen und AJAX-Aufruf auslösen
-					makeAjaxCall();
-				});
-			});
-		</script>
-	-->
+		<!-- Alles anzeigen JS-->
+		<script src="allesanzeigen.js"></script>
+
 
 	<script>
 		// Funktion um alle Fahrzeuge bei Aufruf der Webseite zu laden
@@ -146,39 +103,7 @@
         <![endif]-->
 
 		<div id="data-container"></div>
-    
-    <script>
-        $(document).ready(function() {
-            $.ajax({
-                url: 'convert.php', 
-                type: 'GET',
-                dataType: 'json',
-                success: function(data) {
-                    if (data.length > 0) {
-                        var dataContainer = $('#data-container');
-                        dataContainer.empty();
-
-                        $.each(data, function(index, item) {
-                            var html = 'Model: ' + item.model + '<br>';
-                            html += 'HSN: ' + item.HSN + '<br>';
-                            html += 'TSN: ' + item.TSN + '<br>';
-                            // Füge weitere Datenfelder hinzu, die du anzeigen möchtest
-                            html += '<hr>';
-                            dataContainer.append(html);
-                        });
-                    } else {
-                        $('#data-container').text('Keine Daten gefunden.');
-                    }
-                },
-                error: function() {
-                    $('#data-container').text('Fehler beim Abrufen der Daten.');
-                }
-            });
-        });
-    </script>
-
-
-	
+  
 		<!--welcome-hero start -->
 		<section id="home" class="welcome-hero">
 

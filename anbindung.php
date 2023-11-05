@@ -44,7 +44,7 @@ if ($mysqli->query($sql) === TRUE) {
     echo "Fehler beim Erstellen der Tabelle: " . $mysqli->error;
 }
   */
-$xml = simplexml_load_file('C:\Users\roman\Desktop\Testwebsite\automobiles.xml') or die("Error: Cannot create object");
+$xml = simplexml_load_file('C:\Users\roman\Desktop\Testwebsite\Backend\automobiles.xml') or die("Error: Cannot create object");
 
 $mysqli->begin_transaction(); // Transaktion starten
 
