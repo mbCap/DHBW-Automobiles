@@ -1,5 +1,4 @@
 <?php
-
 $servername = "localhost";
 $username = "root";
 $password = "Pappelweg!11";
@@ -18,7 +17,9 @@ $selectSql = "SELECT DISTINCT * FROM fahrzeugdaten";
 $result = $mysqli->query($selectSql);
 
 if ($result && $result->num_rows > 0) {
+    $data = array();
     while ($row = $result->fetch_assoc()) {
+        $data[] = $row;
         // Hier kannst du die Daten aus der Tabelle ausgeben
         echo "Model: " . $row["model"] . "<br>";
         echo "HSN: " . $row["HSN"] . "<br>";
@@ -43,10 +44,18 @@ if ($result && $result->num_rows > 0) {
         
         // Trennzeile zwischen Datensätzen
         echo "<hr>";
+
+        $jsonResponse = json_encode($data);
+
+        header('Content-Type: application/json');
+        var_dump($row);
+        echo $jsonResponse;
+
+
     }
     
 } else {
-    echo "Keine Daten gefunden.";
+    echo json_encode(array('message' => 'Keine Daten gefunden.'));
 }
 
 

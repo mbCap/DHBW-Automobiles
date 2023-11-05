@@ -159,26 +159,7 @@
 			</div>
 			
 
-			<script>
-				// Eine Funktion, die die Daten aus anbindung.php abruft und anzeigt
-				function ladeFahrzeugdaten() {
-					fetch('anbindung.php')
-						.then(response => response.text())
-						.then(data => {
-							const fahrzeugliste = document.getElementById('fahrzeugliste');
-							const fahrzeugdaten = data.split('\n');
-							fahrzeugdaten.forEach(datum => {
-								const listItem = document.createElement('li');
-								listItem.textContent = datum;
-								fahrzeugliste.appendChild(listItem);
-							});
-						})
-						.catch(error => console.error('Fehler beim Laden der Daten:', error));
-				}
-		
-				// Lade die Fahrzeugdaten, wenn die Seite geladen ist
-				window.addEventListener('load', ladeFahrzeugdaten);
-			</script>
+			
 
 			<!-- Suchleiste -->	
 			<div class="row">
@@ -341,7 +322,7 @@
 						<div class="col-md-4 col-sm-6">
 							<div class="single-service-item">
 								<div id="output">
-									<!-- Hier werden die Daten angezeigt -->
+									
 								</div>					
 							</div>
 						</div>
@@ -349,7 +330,7 @@
 				</div>
 			</div>
 		</section><!--/.service-->
-		<!--service end-->
+		<!--Tabelle Ende-->
 
 		<!--new-cars start -->
 		<section id="new-cars" class="new-cars">
