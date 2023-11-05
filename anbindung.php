@@ -91,7 +91,7 @@ if ($mysqli->commit()) {
 
 $countSql = "SELECT COUNT(*) as count FROM fahrzeugdaten";
 $result = $mysqli->query($countSql);
-
+/*
 // SQL-Abfrage, um alle Daten aus der Tabelle 'fahrzeugdaten' abzurufen
 $selectSql = "SELECT * FROM fahrzeugdaten";
 $result = $mysqli->query($selectSql);
@@ -113,5 +113,5 @@ if ($result && $result->num_rows > 0) {
 
 // Datenbankverbindung schließen
 $mysqli->close();
-
+*/
 ?>

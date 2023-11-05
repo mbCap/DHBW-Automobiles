@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     button.addEventListener("click", function() {
         // AJAX-Anfrage, um die Daten aus der PHP zu holen
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "anbindung.php", true);
+        xhr.open("GET", "anbindungausgabe.php", true);
         xhr.send();
 
         xhr.onreadystatechange = function() {
