@@ -67,7 +67,7 @@ foreach ($xml->children() as $automobile) {
     $co2EmissionKombiniertNEFZ = (int)$automobile->co2EmissionKombiniertNEFZ;
     $sehrSchnell = (float)$automobile->sehrSchnell;
     $schnell = (float)$automobile->schnell;
-    $langsam = (int)$automobile->langsam;
+    $langsam = (float)$automobile->langsam;
     $co2EmissionKombiniertWLTP = (int)$automobile->co2EmissionKombiniertWLTP;
 
     $insertSql = "INSERT INTO fahrzeugdaten (model, HSN, TSN, Fahrzeugklasse, ArtAufbau, Marke, Fahrzeugvariante, HKB, Fahrzeugaufbau, EGT, Schadstoffklasse, Kraftstoff, innerorts, ausserorts, kombiniert, co2EmissionKombiniertNEFZ, sehrSchnell, schnell, langsam, co2EmissionKombiniertWLTP) 
