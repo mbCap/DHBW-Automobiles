@@ -358,7 +358,7 @@
     <TSN>800</TSN>                     <!-- Typschlüsselnummer (TSN) -->
     <Fahrzeugklasse>Oberklasse</Fahrzeugklasse>                    <!-- Fahrzeugklasse -->
     <ArtAufbau>789012</ArtAufbau>                     <!-- Art des Aufbaus -->
-    <Marke>Mercedes</Marke>                   <!-- Marke -->
+    <Marke>Mercedes-Benz</Marke>                   <!-- Marke -->
     <Fahrzeugvariante>S450</Fahrzeugvariante>                        <!-- Typ/Variante/Version -->
     <HKB>Mercedes</HKB>                   <!-- Hersteller Kurzbezeichnung -->
     <Fahrzeugaufbau>Oberklasse</Fahrzeugaufbau>                 <!-- Bezeichnung Fahrzeugklasse/Aufbau -->
