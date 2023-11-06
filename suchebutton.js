@@ -4,7 +4,17 @@ document.addEventListener("DOMContentLoaded", function() {
     var searchButton = document.getElementById("search-button");
 
     // Wir fügen einen Event-Listener für den Klick auf den Suchen-Button hinzu
-    searchButton.addEventListener("click", function() {
+    searchButton.addEventListener("click", performSearch);
+
+    // Wir fügen einen Event-Listener für die Enter-Taste auf dem Such-Input-Feld hinzu
+    searchInput.addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+            performSearch();
+        }
+    });
+
+    // Die Funktion zur Durchführung der Suche
+    function performSearch() {
         // Holen Sie den eingegebenen Suchbegriff aus dem Input-Feld
         var searchTerm = searchInput.value;
 
@@ -29,5 +39,5 @@ document.addEventListener("DOMContentLoaded", function() {
             var searchResultElement = document.getElementById("search-result");
             searchResultElement.innerHTML = "Bitte geben Sie einen Suchbegriff ein.";
         }
-    });
+    }
 });
