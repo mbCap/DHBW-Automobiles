@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     button.addEventListener("click", function() {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "anbindungsausgabecopy.php", true);
-        console.log("Suchanfrage gesendet: " + searchTerm);
+       
         xhr.send();
 
         xhr.onreadystatechange = function() {
