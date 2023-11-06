@@ -26,13 +26,13 @@ if ($result && $result->num_rows > 0) {
 
     header('Content-Type: application/json');
     
-    var_dump($data);
-}
-  /*   echo json_encode($data, JSON_PRETTY_PRINT);
+    // var_dump($data);
+
+    echo json_encode($data, JSON_PRETTY_PRINT);
     
 } else {
     echo json_encode(array('message' => 'Keine Daten gefunden.'));
-} */
+} 
 
 // Datenbankverbindung schließen
 $mysqli->close();
