@@ -23,8 +23,11 @@ if ($result && $result->num_rows > 0) {
     }
     
     // JSON-Format umwandeln und ausgeben
+
     header('Content-Type: application/json');
-    echo json_encode($data);
+    
+    echo json_encode($data, JSON_PRETTY_PRINT);
+    
 } else {
     echo json_encode(array('message' => 'Keine Daten gefunden.'));
 }

@@ -30,7 +30,7 @@ $sql = "
         `ausserorts` DOUBLE NOT NULL,
         `kombiniert` DOUBLE NOT NULL,
         `co2EmissionKombiniertNEFZ` INT NOT NULL,
-        `sehrschnell` DOUBLE NOT NULL,
+        `sehrSchnell` DOUBLE NOT NULL,
         `schnell` DOUBLE NOT NULL,
         `langsam` DOUBLE NOT NULL,
         `co2EmissionKombiniertWLTP` INT NOT NULL
@@ -65,13 +65,13 @@ foreach ($xml->children() as $automobile) {
     $ausserorts = (float)$automobile->ausserorts;
     $kombiniert = (float)$automobile->kombiniert;
     $co2EmissionKombiniertNEFZ = (int)$automobile->co2EmissionKombiniertNEFZ;
-    $sehrschnell = (float)$automobile->sehrschnell;
+    $sehrSchnell = (float)$automobile->sehrSchnell;
     $schnell = (float)$automobile->schnell;
     $langsam = (int)$automobile->langsam;
     $co2EmissionKombiniertWLTP = (int)$automobile->co2EmissionKombiniertWLTP;
 
-    $insertSql = "INSERT INTO fahrzeugdaten (model, HSN, TSN, Fahrzeugklasse, ArtAufbau, Marke, Fahrzeugvariante, HKB, Fahrzeugaufbau, EGT, Schadstoffklasse, Kraftstoff, innerorts, ausserorts, kombiniert, co2EmissionKombiniertNEFZ, sehrschnell, schnell, langsam, co2EmissionKombiniertWLTP) 
-                VALUES ('$model', $HSN, $TSN, '$Fahrzeugklasse', $ArtAufbau, '$Marke', '$Fahrzeugvariante', '$HKB', '$Fahrzeugaufbau', '$EGT', '$Schadstoffklasse', '$Kraftstoff', $innerorts, $ausserorts, $kombiniert, $co2EmissionKombiniertNEFZ, $sehrschnell, $schnell, $langsam, $co2EmissionKombiniertWLTP)";
+    $insertSql = "INSERT INTO fahrzeugdaten (model, HSN, TSN, Fahrzeugklasse, ArtAufbau, Marke, Fahrzeugvariante, HKB, Fahrzeugaufbau, EGT, Schadstoffklasse, Kraftstoff, innerorts, ausserorts, kombiniert, co2EmissionKombiniertNEFZ, sehrSchnell, schnell, langsam, co2EmissionKombiniertWLTP) 
+                VALUES ('$model', $HSN, $TSN, '$Fahrzeugklasse', $ArtAufbau, '$Marke', '$Fahrzeugvariante', '$HKB', '$Fahrzeugaufbau', '$EGT', '$Schadstoffklasse', '$Kraftstoff', $innerorts, $ausserorts, $kombiniert, $co2EmissionKombiniertNEFZ, $sehrSchnell, $schnell, $langsam, $co2EmissionKombiniertWLTP)";
 
         if ($mysqli->query($insertSql) === TRUE) {
             echo "Datensatz erfolgreich eingefügt. ";
