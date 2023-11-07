@@ -5,7 +5,8 @@ FROM php:8.2.10-apache
 EXPOSE 80
 
 # Kopiere den Inhalt des Backend-Verzeichnisses in das Webroot-Verzeichnis des Containers
-COPY ./Backend /var/www/html/
+COPY ./Backend /var/www/html/DHBW-Automobiles/Backend
+
 
 # Konfiguriere den Apache-Server, um das Webroot-Verzeichnis zu verwenden
 RUN sed -i 's!/var/www/html!/var/www/html/!g' /etc/apache2/sites-available/000-default.conf
