@@ -44,6 +44,28 @@
         <langsam>9.5</langsam>           
         <co2EmissionKombiniertWLTP>155</co2EmissionKombiniertWLTP>  
     </automobile>
+     <automobile>
+        <model>GLS Maybach</model>            
+        <HSN>900</HSN>                  
+        <TSN>600</TSN>                  
+        <Fahrzeugklasse>SUV</Fahrzeugklasse>               
+        <ArtAufbau>789018</ArtAufbau>                
+        <Marke>Mercedes-Benz</Marke>                     
+        <Fahrzeugvariante>600</Fahrzeugvariante>          
+        <HKB>Mercedes</HKB>              
+        <Fahrzeugaufbau>SUV</Fahrzeugaufbau>           
+        <EGT>EC 2021</EGT>                 
+        <Schadstoffklasse>EUR06</Schadstoffklasse>         
+        <Kraftstoff>Benzin</Kraftstoff>       
+        <innerorts>14,8</innerorts>     
+        <ausserorts>13,6</ausserorts>       
+        <kombiniert>14,2</kombiniert>     
+        <co2EmissionKombiniertNEFZ>220</co2EmissionKombiniertNEFZ>  
+        <sehrSchnell>10.8</sehrSchnell>   
+        <schnell>8.9</schnell>        
+        <langsam>12.5</langsam>           
+        <co2EmissionKombiniertWLTP>212</co2EmissionKombiniertWLTP>  
+    </automobile>
     <automobile>
         <model>Mercedes C-Klasse</model>    
         <HSN>789</HSN>                
