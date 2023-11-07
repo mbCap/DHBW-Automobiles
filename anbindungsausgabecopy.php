@@ -28,12 +28,18 @@ if ($result && $result->num_rows > 0) {
     
      //var_dump($data);
 
-    echo json_encode($data, JSON_PRETTY_PRINT);
+    // echo json_encode($data, JSON_PRETTY_PRINT); // Variable speichern --> außerhalb --> Oder Skript hat Rückgabewert
+    
+    // JSON-Format umwandeln und in einer Variablen speichern
+    $json_data = json_encode($data, JSON_PRETTY_PRINT);
+    
+    return $json_data;
+    
     
 } else {
     echo json_encode(array('message' => 'Keine Daten gefunden.'));
 } 
-
+// return 
 // Datenbankverbindung schließen
 $mysqli->close();
 ?>
