@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (xhr.status === 200) {
                     try {
                         var response = xhr.responseText;
+                       // console.log(response); // Ausgabe der erhaltenen Daten zur Überprüfung
                         var jsonData = JSON.parse(response);
                         var outputElement = document.getElementById("output");
                         var htmlString = "";
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         outputElement.innerHTML = htmlString;
                     } catch (error) {
                         console.error("JSON-Parsing-Fehler: " + error);
+                        console.error("JSON-Daten, die geparst werden sollten: " + response);
                     }
                 } else {
                     console.error("Fehler beim Abrufen der Daten. Statuscode: " + xhr.status);
