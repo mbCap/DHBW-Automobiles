@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var xhr = new XMLHttpRequest();
 
         // Konfiguriere die Anfrage (Methode, URL)
-        xhr.open("GET", "http://localhost/DHBW-Automobiles/Backend/automobiles.xml"); // Ersetze "URL_DER_DATENQUELLE" durch die tatsächliche URL, von der du die Daten abrufen möchtest.
+        xhr.open("GET", "http://localhost/DHBW-Automobiles/htdocs/Backend/automobiles.xml"); // Ersetze "URL_DER_DATENQUELLE" durch die tatsächliche URL, von der du die Daten abrufen möchtest.
 
 
         xhr.onreadystatechange = function() {
@@ -31,9 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         var kombiniert = automobile.getElementsByTagName("kombiniert")[0].textContent;
                         var co2EmissionKombiniertNEFZ = automobile.getElementsByTagName("co2EmissionKombiniertNEFZ")[0].textContent;
                         var co2EmissionKombiniertWLTP = automobile.getElementsByTagName("co2EmissionKombiniertWLTP")[0].textContent;
-                        
-                        
-                        
+
 
                         // Hier kannst du weitere Daten aus der XML extrahieren und in deiner Ausgabe verwenden
 
