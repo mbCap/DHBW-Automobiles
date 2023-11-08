@@ -22,7 +22,7 @@ function performSearch() {
     // Überprüfen, ob ein Suchbegriff eingegeben wurde
     if (searchTerm) {
 
-        searchTerm = "%" + searchTerm + "%"; 
+         
 
         // Hier senden wir eine AJAX-Anfrage, um die automobiles.xml-Datei abzurufen
         var xhr = new XMLHttpRequest();
@@ -40,14 +40,25 @@ function performSearch() {
 
                     for (var i = 0; i < automobiles.length; i++) {
                         var automobile = automobiles[i];
-                        var marke = automobile.getElementsByTagName("Marke")[0].textContent;
+                        var attributes = automobile.children; // Alle Kindknoten des "automobile"-Elements
 
-                        // Überprüfen, ob die Marke dem Suchbegriff entspricht (ignoriert Groß- und Kleinschreibung)
-                        if (marke.toLowerCase().includes(searchTerm)) {
-                            var modell = automobile.getElementsByTagName("model")[0].textContent; // "model" für Modell; keine gute Attributsbezeichnung
+                        var matchFound = false;
+
+                        for (var j = 0; j < attributes.length; j++) {
+                            var attribute = attributes[j];
+                            var attributeValue = attribute.textContent;
+
+                            // Überprüfen, ob der Attributwert dem Suchbegriff entspricht (ignoriert Groß- und Kleinschreibung)
+                            if (attributeValue.toLowerCase().includes(searchTerm)) {
+                                matchFound = true;
+                                break; // Sobald ein Treffer gefunden wurde, die Schleife beenden
+                            }
+                        }
+
+                        if (matchFound) {
                             var result = {
-                                Marke: marke,
-                                Modell: modell
+                                Marke: automobile.getElementsByTagName("Marke")[0].textContent,
+                                Modell: automobile.getElementsByTagName("model")[0].textContent
                             };
                             searchResults.push(result);
                         }
