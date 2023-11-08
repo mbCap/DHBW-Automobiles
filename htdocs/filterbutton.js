@@ -10,11 +10,11 @@ xhttp.onreadystatechange = function() {
         // Die XML-Daten als JavaScript-Objekt speichern
         xmlData = parseXMLData(xmlDoc);
 
-        // Den Rest deines Codes (z.B. Event-Listener) ausführen
+       
         initializeFiltersAndListeners(); // Neue Funktion hinzugefügt
     }
 };
-xhttp.open("GET", "backend/automobiles.xml", true);
+xhttp.open("GET", "http://localhost/DHBW-Automobiles/htdocs/Backend/automobiles.xml", true);
 xhttp.send();
 
     // Funktion zur Umwandlung des XML-Dokuments in ein JavaScript-Objekt
@@ -137,7 +137,7 @@ function initializeFiltersAndListeners() {
          });
     }
 
-    // Hier ist der fehlende Teil deines Codes
+   
     function initializeFiltersAndListeners() {
     // Finde die HTML-Elemente, die deine Filter und den Filter-Button darstellen
     var filterButtons = document.querySelectorAll(".filter-button");
