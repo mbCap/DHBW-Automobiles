@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var kraftstoffInput = document.getElementById("kraftstoffverbrauch-filter");
 
     // Filterbutton
-    var filterButton = document.getElementById("filer-btn"); // Hier sollte es "welcome-btn-model-search-btn" sein
+    var filterButton = document.getElementById("filter-btn"); // Hier sollte es "welcome-btn-model-search-btn" sein
     // Definieren, wo die Ergebnisse ausgegeben werden sollen
     var filterResultElement = document.getElementById("output");
 
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         var result = filterResults[j];
                         htmlString += "Marke: " + result.Marke + "<br>";
                         htmlString += "Modell: " + result.Modell + "<br>";
-                        // Hier weitere Eigenschaften hinzufügen, je nach Bedarf
+                        // Hier weitere Eigenschaften hinzufügen
                         htmlString += "<hr>";
                     }
 
