@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Wir wählen das Such-Input-Feld und den Suchen-Button aus
     var searchInput = document.getElementById("search-input");
     var searchButton = document.getElementById("search-button");
-    var searchResultElement = document.getElementById("search-result");
+    var searchResultElement = document.getElementById("output");
 
     // Wir fügen einen Event-Listener für den Klick auf den Suchen-Button hinzu
     searchButton.addEventListener("click", performSearch);
