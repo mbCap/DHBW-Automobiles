@@ -58,7 +58,16 @@ function performSearch() {
                         if (matchFound) {
                             var result = {
                                 Marke: automobile.getElementsByTagName("Marke")[0].textContent,
-                                Modell: automobile.getElementsByTagName("model")[0].textContent
+                                Modell: automobile.getElementsByTagName("model")[0].textContent,
+                                Fahrzeugklasse: automobile.getElementsByTagName("Fahrzeugklasse")[0].textContent,
+                                Schadstoffklasse: automobile.getElementsByTagName("Schadstoffklasse")[0].textContent,
+                                Kraftstoff: automobile.getElementsByTagName("Kraftstoff")[0].textContent,
+                                innerorts: automobile.getElementsByTagName("innerorts")[0].textContent,
+                                ausserots: automobile.getElementsByTagName("ausserorts")[0].textContent,
+                                kombiniert: automobile.getElementsByTagName("kombiniert")[0].textContent,
+                                co2EmissionKombiniertNEFZ: automobile.getElementsByTagName("co2EmissionKombiniertNEFZ")[0].textContent,
+                                co2EmissionKombiniertWLTP: automobile.getElementsByTagName("co2EmissionKombiniertWLTP")[0].textContent
+
                             };
                             searchResults.push(result);
                         }
@@ -68,9 +77,17 @@ function performSearch() {
                     var htmlString = "";
                     for (var j = 0; j < searchResults.length; j++) {
                         var result = searchResults[j];
+
                         htmlString += "Marke: " + result.Marke + "<br>";
                         htmlString += "Modell: " + result.Modell + "<br>";
-                        htmlString += "<hr>";
+                        htmlString += "Fahrzeugklasse: " + result.Fahrzeugklasse + "<br>";
+                        htmlString += "Schadstoffklasse: " + result.Schadstoffklasse + "<br>";
+                        htmlString += "Kraftstoff: " + result.Kraftstoff + "<br>";
+                        htmlString += "innerorts: " + result.innerorts + "<br>";
+                        htmlString += "ausserots: " + result.ausserorts + "<br>";
+                        htmlString += "kombiniert: " + result.kombiniert + "<br>";
+                        htmlString += "co2EmissionKombiniertNEFZ: " + result.co2EmissionKombiniertNEFZ + "<br>";
+                        htmlString += "co2EmissionKombiniertWLTP: " + result.co2EmissionKombiniertWLTP + "<br>";
                     }
 
                     // Wenn keine Übereinstimmungen gefunden wurden
