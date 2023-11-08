@@ -380,6 +380,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     -ms-transition:.3s linear; 
     -o-transition:.3s linear;
     transition: .3s linear;
+    width: 1200px;
 }
 
 
