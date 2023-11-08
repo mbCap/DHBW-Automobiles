@@ -412,6 +412,10 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     margin-top: 32px;
 }
 /*.new-cars-txt*/
+.new-cars-txt h2 a:hover {
+    color: inherit; /* Übernimmt die Standardfarbe des Elternelements */
+}
+
 
 /*.owl-dots */
 .new-cars .owl-theme .owl-dots .owl-dot span {
