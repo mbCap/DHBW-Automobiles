@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Funktion zur Ermittlung der Fahrzeugklasse einer Marke aus den XML-Daten
     function getFahrzeugklasseFromMarke(marke) {
-      var nodes = xmlDoc.getElementsByTagName("marke");
+      var nodes = xmlDoc.getElementsByTagName("Marke");
       for (var i = 0; i < nodes.length; i++) {
         if (nodes[i].textContent === marke) {
           var parent = nodes[i].parentNode;
