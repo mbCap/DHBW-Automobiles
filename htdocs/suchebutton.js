@@ -21,6 +21,9 @@ function performSearch() {
 
     // Überprüfen, ob ein Suchbegriff eingegeben wurde
     if (searchTerm) {
+
+        searchTerm = "%" + searchTerm + "%"; 
+
         // Hier senden wir eine AJAX-Anfrage, um die automobiles.xml-Datei abzurufen
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "http://localhost/DHBW-Automobiles/htdocs/Backend/automobiles.xml", true);
