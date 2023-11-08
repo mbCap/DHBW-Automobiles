@@ -63,7 +63,7 @@ function performSearch() {
                                 Schadstoffklasse: automobile.getElementsByTagName("Schadstoffklasse")[0].textContent,
                                 Kraftstoff: automobile.getElementsByTagName("Kraftstoff")[0].textContent,
                                 innerorts: automobile.getElementsByTagName("innerorts")[0].textContent,
-                                ausserots: automobile.getElementsByTagName("ausserorts")[0].textContent,
+                                ausserorts: automobile.getElementsByTagName("ausserorts")[0].textContent,
                                 kombiniert: automobile.getElementsByTagName("kombiniert")[0].textContent,
                                 co2EmissionKombiniertNEFZ: automobile.getElementsByTagName("co2EmissionKombiniertNEFZ")[0].textContent,
                                 co2EmissionKombiniertWLTP: automobile.getElementsByTagName("co2EmissionKombiniertWLTP")[0].textContent
@@ -84,10 +84,11 @@ function performSearch() {
                         htmlString += "Schadstoffklasse: " + result.Schadstoffklasse + "<br>";
                         htmlString += "Kraftstoff: " + result.Kraftstoff + "<br>";
                         htmlString += "innerorts: " + result.innerorts + "<br>";
-                        htmlString += "ausserots: " + result.ausserorts + "<br>";
+                        htmlString += "ausserorts: " + result.ausserorts + "<br>";
                         htmlString += "kombiniert: " + result.kombiniert + "<br>";
                         htmlString += "co2EmissionKombiniertNEFZ: " + result.co2EmissionKombiniertNEFZ + "<br>";
                         htmlString += "co2EmissionKombiniertWLTP: " + result.co2EmissionKombiniertWLTP + "<br>";
+                        
                     }
 
                     // Wenn keine Übereinstimmungen gefunden wurden
