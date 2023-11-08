@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var kraftstoffInput = document.getElementById("kraftstoffverbrauch-filter");
 
     // Filterbutton
-    var filterButton = document.getElementById("welcome-btn model-search-btn"); // Hier sollte es "welcome-btn-model-search-btn" sein
+    var filterButton = document.getElementById("filer-btn"); // Hier sollte es "welcome-btn-model-search-btn" sein
     // Definieren, wo die Ergebnisse ausgegeben werden sollen
     var filterResultElement = document.getElementById("output");
 
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         var marke = automobile.getElementsByTagName("Marke")[0].textContent;
                         var modell = automobile.getElementsByTagName("model")[0].textContent;
                         var fahrzeugklasse = automobile.getElementsByTagName("Fahrzeugklasse")[0].textContent;
-                        var kraftstoffverbrauch = automobile.getElementsByTagName("Kraftstoffverbrauch")[0].textContent;
+                        var kraftstoffverbrauch = automobile.getElementsByTagName("kombiniert")[0].textContent;
                         var schadstoffklasse = automobile.getElementsByTagName("Schadstoffklasse")[0].textContent;
                         var kraftstoff = automobile.getElementsByTagName("Kraftstoff")[0].textContent;
 
