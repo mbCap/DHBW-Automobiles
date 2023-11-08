@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         // Hier kannst du weitere Daten aus der XML extrahieren und in deiner Ausgabe verwenden
 
                         htmlString += "Marke: " + marke + "<br>";
-                        htmlString += "Model: " + model + "<br>";
+                        htmlString += "Modell: " + model + "<br>";
                         htmlString += "Fahrzeugklasse: " + fahrzeugklasse + "<br>";
                         htmlString += "Schadstoffklasse: " + schadstoffklasse + "<br>";
                         htmlString += "Kraftstoff: " + kraftstoff + "<br>";

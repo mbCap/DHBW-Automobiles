@@ -69,7 +69,7 @@ function performSearch() {
                     for (var j = 0; j < searchResults.length; j++) {
                         var result = searchResults[j];
                         htmlString += "Marke: " + result.Marke + "<br>";
-                        htmlString += "model: " + result.Modell + "<br>";
+                        htmlString += "Modell: " + result.Modell + "<br>";
                         htmlString += "<hr>";
                     }
 
