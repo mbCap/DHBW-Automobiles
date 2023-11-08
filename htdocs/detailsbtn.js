@@ -72,5 +72,5 @@ xhttp.onreadystatechange = function() {
         parseXMLData(xmlDoc);
     }
 };
-xhttp.open("GET", "automobiles.xml", true);
+xhttp.open("GET", "http://localhost/DHBW-Automobiles/htdocs/Backend/automobiles.xml", true);
 xhttp.send();
