@@ -75,12 +75,14 @@ document.addEventListener("DOMContentLoaded", function() {
                     var htmlString = "";
                     for (var j = 0; j < filterResults.length; j++) {
                         var result = filterResults[j];
-                        htmlString += "Marke: " + result.Marke + "<br>";
-                        htmlString += "Modell: " + result.Modell + "<br>";
-                        htmlString += "Fahrzeugklasse: " + result.Fahrzeugklasse + "<br>";
-                        htmlString += "Schadstoffklasse: " + result.Schadstoffklasse + "<br>";
-                        htmlString += "Kraftstoff: " + result.Kraftstoff + "<br>";
-                        htmlString += "kombinierter Verbrauch: " + result.Kraftstoffverbrauch + " l / 100 km" + "<br>";
+                        htmlString += "<div style='margin-bottom: 10px; text-align: left;'>"; // Container-Div mit etwas Abstand nach unten und linksbündiger Ausrichtung
+                        htmlString += "<strong>Marke:</strong> " + result.Marke + "<br>";
+                        htmlString += "<strong>Modell:</strong> " + result.Modell + "<br>";
+                        htmlString += "<strong>Fahrzeugklasse:</strong> " + result.Fahrzeugklasse + "<br>";
+                        htmlString += "<strong>Schadstoffklasse:</strong> " + result.Schadstoffklasse + "<br>";
+                        htmlString += "<strong>Kraftstoff: </strong>" + result.Kraftstoff + "<br>";
+                        htmlString += "<strong>kombinierter Verbrauch:</strong> " + result.Kraftstoffverbrauch + " l/100 km" + "<br>";
+                        htmlString += "</div>"; // Ende des Container-Divs
                         // Hier weitere Eigenschaften hinzufügen
                         htmlString += "<hr>";
                     }

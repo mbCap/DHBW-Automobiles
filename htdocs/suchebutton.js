@@ -78,17 +78,19 @@ document.addEventListener("DOMContentLoaded", function() {
                         var htmlString = "";
                         for (var j = 0; j < searchResults.length; j++) {
                             var result = searchResults[j];
-
-                            htmlString += "Marke: " + result.Marke + "<br>";
-                            htmlString += "Modell: " + result.Modell + "<br>";
-                            htmlString += "Fahrzeugklasse: " + result.Fahrzeugklasse + "<br>";
-                            htmlString += "Schadstoffklasse: " + result.Schadstoffklasse + "<br>";
-                            htmlString += "Kraftstoff: " + result.Kraftstoff + "<br>";
-                            htmlString += "Verbrauch innerorts: " + result.innerorts + " l/100km" +"<br>";
-                            htmlString += "Verbrauch ausserorts: " + result.ausserorts + " l/100km" + "<br>";
-                            htmlString += "Verbrauch kombiniert: " + result.kombiniert + " l/100km" + "<br>";
-                            htmlString += "Co2-Emissionen kombiniert: " + result.co2EmissionKombiniertNEFZ + " g/km (NEFZ)" + "<br>";
-                            htmlString += "Co2-Emission Kombiniert: " + result.co2EmissionKombiniertWLTP + " g/km (WLTP)" + "<br>";
+ 
+                            htmlString += "<div style='margin-bottom: 10px; text-align: left;'>"; // Container-Div mit etwas Abstand nach unten und linksbündiger Ausrichtung
+                            htmlString += "<strong>Marke:</strong> " + result.Marke + "<br>";
+                            htmlString += "<strong>Modell:</strong> " + result.Modell + "<br>";
+                            htmlString += "<strong>Fahrzeugklasse:</strong> " + result.Fahrzeugklasse + "<br>";
+                            htmlString += "<strong>Schadstoffklasse:</strong> " + result.Schadstoffklasse + "<br>";
+                            htmlString += "<strong>Kraftstoff: </strong>" + result.Kraftstoff + "<br>";
+                            htmlString += "<strong>Verbrauch innerorts: </strong>" + result.innerorts + " l/100km" +"<br>";
+                            htmlString += "<strong>Verbrauch ausserorts: </strong>" + result.ausserorts + " l/100km" + "<br>";
+                            htmlString += "<strong>kombinierter Verbrauch: </strong>" + result.kombiniert + " l/100km" + "<br>";
+                            htmlString += "<strong>Co2-Emissionen kombiniert: </strong>" + result.co2EmissionKombiniertNEFZ + " g/km (NEFZ)" + "<br>";
+                            htmlString += "<strong>Co2-Emission Kombiniert: </strong>" + result.co2EmissionKombiniertWLTP + " g/km (WLTP)" + "<br>";
+                            htmlString += "</div>"; // Ende des Container-Divs
                             htmlString += "<hr>";
                             
                         }
