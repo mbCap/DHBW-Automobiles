@@ -31,18 +31,18 @@ document.addEventListener("DOMContentLoaded", function() {
                         var kombiniert = automobile.getElementsByTagName("kombiniert")[0].textContent;
                         var co2EmissionKombiniertNEFZ = automobile.getElementsByTagName("co2EmissionKombiniertNEFZ")[0].textContent;
                         var co2EmissionKombiniertWLTP = automobile.getElementsByTagName("co2EmissionKombiniertWLTP")[0].textContent;
-                        var images = outputElement.href = 'http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/' + auto.marke + '&typ=' + auto.typ;
-                        console.log("Inhalt von images für Automobil #" + i + ":", images);
+                        var imagesElement = automobile.getElementsByTagName("images")[0];
                         
-                        
-                       /*  if (imagesElement) {
+       
+                
+                        if (imagesElement) {
                             var images = imagesElement.textContent;
                             
                         } else {
                             console.warn("Das 'images'-Element wurde nicht gefunden für Automobil #" + i + ". Ein Platzhalterbild wird verwendet.");
-                            var images = 'http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/AudiA3.png'; // Setze hier den Pfad zu deinem Platzhalterbild
+                            var images = 'http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/default.png'; // Setze hier den Pfad zu deinem Platzhalterbild
                         }
- */
+ 
 
                         // Hier kannst du weitere Daten aus der XML extrahieren und in deiner Ausgabe verwenden
 
