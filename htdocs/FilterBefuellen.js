@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("fahrzeugklasse-filter").addEventListener("change", function() {
       var selectedFahrzeugklasse = this.value;
       filterMarkeOptionsByFahrzeugklasse(selectedFahrzeugklasse);
+      filterModellOptionsByFahrzeugklasse(selectedFahrzeugklasse);
     });
 
     // Filterfunktion für Marke basierend auf auswählter Fahrzeugklasse
@@ -73,6 +74,25 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       select.value = "auswählen";
     }
+
+     // Filterfunktion für Modell basierend auf auswählter Fahrzeugklasse
+     function filterModellOptionsByFahrzeugklasse(selectedFahrzeugklasse) {
+      var select = document.getElementById("modell-filter");
+      select.innerHTML = ""; // Dropdown-Liste leeren
+
+      for (var i = 0; i < modellOptions.length; i++) {
+        var modell = modellOptions[i];
+        if (modell === "auswählen" || getFahrzeugklasseFrommodell(modell) === selectedFahrzeugklasse) {
+          var optionElement = document.createElement("option");
+          optionElement.value = modell;
+          optionElement.textContent = modell;
+          select.appendChild(optionElement);
+        }
+      }
+      select.value = "auswählen";
+    }
+
+
 
     // Funktion zur Ermittlung der Marke eines Modells aus den XML-Daten
     function getMarkeFromModel(model) {
@@ -97,6 +117,19 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       return null;
     }
+
+    // Funktion zur Ermittlung der Fahrzeugklasse einer Marke aus den XML-Daten
+    function getFahrzeugklasseFrommodell(modell) {
+      var nodes = xmlDoc.getElementsByTagName("model");
+      for (var i = 0; i < nodes.length; i++) {
+        if (nodes[i].textContent === modell) {
+          var parent = nodes[i].parentNode;
+          return parent.getElementsByTagName("Fahrzeugklasse")[0].textContent;
+        }
+      }
+      return null;
+    }
+
 	// Event-Listener für Marke hinzu
     document.getElementById("marke-filter").addEventListener("change", function() {
       var selectedMarke = this.value;
