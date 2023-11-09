@@ -7,104 +7,111 @@ document.addEventListener("DOMContentLoaded", function() {
     // Wir fügen einen Event-Listener für den Klick auf den Suchen-Button hinzu
     searchButton.addEventListener("click", performSearch);
 
-    // Wir fügen einen Event-Listener hinzu, um die Suche bei Drücken der "Enter"-Taste auszulösen
+    // Event-Listener, um die Suche bei Drücken der "Enter"-Taste auszulösen, wenn enter gedrückt wird, werden performSearch und scrollDown aufgerufen
     searchInput.addEventListener("keyup", function(event) {
         if (event.key === "Enter") {
             performSearch();
+            scrollDown();
         }
     });
 
     // Die Funktion zur Durchführung der Suche
-function performSearch() {
-    // Holen Sie den eingegebenen Suchbegriff aus dem Input-Feld und konvertieren Sie ihn zu Kleinbuchstaben
-    var searchTerm = searchInput.value.toLowerCase();
+    function performSearch() {
+        // Holen Sie den eingegebenen Suchbegriff aus dem Input-Feld und konvertieren Sie ihn zu Kleinbuchstaben
+        var searchTerm = searchInput.value.toLowerCase();
 
-    // Überprüfen, ob ein Suchbegriff eingegeben wurde
-    if (searchTerm) {
+        // Überprüfen, ob ein Suchbegriff eingegeben wurde
+        if (searchTerm) {
 
          
 
-        // Hier senden wir eine AJAX-Anfrage, um die automobiles.xml-Datei abzurufen
-        var xhr = new XMLHttpRequest();
-        xhr.open("GET", "http://localhost/DHBW-Automobiles/htdocs/Backend/automobiles.xml", true);
-        xhr.send();
+            // Hier senden wir eine AJAX-Anfrage, um die automobiles.xml-Datei abzurufen
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://localhost/DHBW-Automobiles/htdocs/Backend/automobiles.xml", true);
+            xhr.send();
 
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === 4) {
-                if (xhr.status === 200) {
-                    var response = xhr.responseXML; // Die Daten aus der automobiles.xml-Datei
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200) {
+                        var response = xhr.responseXML; // Die Daten aus der automobiles.xml-Datei
 
-                    // Verarbeite die XML-Daten und filtere nach dem Suchbegriff (ignoriert Groß- und Kleinschreibung)
-                    var automobiles = response.getElementsByTagName("automobile");
-                    var searchResults = [];
+                        // Verarbeite die XML-Daten und filtere nach dem Suchbegriff (ignoriert Groß- und Kleinschreibung)
+                        var automobiles = response.getElementsByTagName("automobile");
+                        var searchResults = [];
 
-                    for (var i = 0; i < automobiles.length; i++) {
-                        var automobile = automobiles[i];
-                        var attributes = automobile.children; // Alle Kindknoten des "automobile"-Elements
+                        for (var i = 0; i < automobiles.length; i++) {
+                            var automobile = automobiles[i];
+                            var attributes = automobile.children; // Alle Kindknoten des "automobile"-Elements
 
-                        var matchFound = false;
+                            var matchFound = false;
 
-                        for (var j = 0; j < attributes.length; j++) {
-                            var attribute = attributes[j];
-                            var attributeValue = attribute.textContent;
+                            for (var j = 0; j < attributes.length; j++) {
+                                var attribute = attributes[j];
+                                var attributeValue = attribute.textContent;
 
-                            // Überprüfen, ob der Attributwert dem Suchbegriff entspricht (ignoriert Groß- und Kleinschreibung)
-                            if (attributeValue.toLowerCase().includes(searchTerm)) {
-                                matchFound = true;
-                                break; // Sobald ein Treffer gefunden wurde, die Schleife beenden
+                                // Überprüfen, ob der Attributwert dem Suchbegriff entspricht (ignoriert Groß- und Kleinschreibung)
+                                if (attributeValue.toLowerCase().includes(searchTerm)) {
+                                    matchFound = true;
+                                    break; // Sobald ein Treffer gefunden wurde, die Schleife beenden
+                                }
+                            }
+
+                            if (matchFound) {
+                                var result = {
+                                    Marke: automobile.getElementsByTagName("Marke")[0].textContent,
+                                    Modell: automobile.getElementsByTagName("model")[0].textContent,
+                                    Fahrzeugklasse: automobile.getElementsByTagName("Fahrzeugklasse")[0].textContent,
+                                    Schadstoffklasse: automobile.getElementsByTagName("Schadstoffklasse")[0].textContent,
+                                    Kraftstoff: automobile.getElementsByTagName("Kraftstoff")[0].textContent,
+                                    innerorts: automobile.getElementsByTagName("innerorts")[0].textContent,
+                                    ausserorts: automobile.getElementsByTagName("ausserorts")[0].textContent,
+                                    kombiniert: automobile.getElementsByTagName("kombiniert")[0].textContent,
+                                    co2EmissionKombiniertNEFZ: automobile.getElementsByTagName("co2EmissionKombiniertNEFZ")[0].textContent,
+                                    co2EmissionKombiniertWLTP: automobile.getElementsByTagName("co2EmissionKombiniertWLTP")[0].textContent
+
+                                };
+                                searchResults.push(result);
                             }
                         }
 
-                        if (matchFound) {
-                            var result = {
-                                Marke: automobile.getElementsByTagName("Marke")[0].textContent,
-                                Modell: automobile.getElementsByTagName("model")[0].textContent,
-                                Fahrzeugklasse: automobile.getElementsByTagName("Fahrzeugklasse")[0].textContent,
-                                Schadstoffklasse: automobile.getElementsByTagName("Schadstoffklasse")[0].textContent,
-                                Kraftstoff: automobile.getElementsByTagName("Kraftstoff")[0].textContent,
-                                innerorts: automobile.getElementsByTagName("innerorts")[0].textContent,
-                                ausserorts: automobile.getElementsByTagName("ausserorts")[0].textContent,
-                                kombiniert: automobile.getElementsByTagName("kombiniert")[0].textContent,
-                                co2EmissionKombiniertNEFZ: automobile.getElementsByTagName("co2EmissionKombiniertNEFZ")[0].textContent,
-                                co2EmissionKombiniertWLTP: automobile.getElementsByTagName("co2EmissionKombiniertWLTP")[0].textContent
+                        // Erzeuge eine HTML-Liste der Suchergebnisse
+                        var htmlString = "";
+                        for (var j = 0; j < searchResults.length; j++) {
+                            var result = searchResults[j];
 
-                            };
-                            searchResults.push(result);
+                            htmlString += "Marke: " + result.Marke + "<br>";
+                            htmlString += "Modell: " + result.Modell + "<br>";
+                            htmlString += "Fahrzeugklasse: " + result.Fahrzeugklasse + "<br>";
+                            htmlString += "Schadstoffklasse: " + result.Schadstoffklasse + "<br>";
+                            htmlString += "Kraftstoff: " + result.Kraftstoff + "<br>";
+                            htmlString += "innerorts: " + result.innerorts + "<br>";
+                            htmlString += "ausserorts: " + result.ausserorts + "<br>";
+                            htmlString += "kombiniert: " + result.kombiniert + "<br>";
+                            htmlString += "co2EmissionKombiniertNEFZ: " + result.co2EmissionKombiniertNEFZ + "<br>";
+                            htmlString += "co2EmissionKombiniertWLTP: " + result.co2EmissionKombiniertWLTP + "<br>";
+                            htmlString += "<hr>";
+                            
                         }
+
+                        // Wenn keine Übereinstimmungen gefunden wurden
+                        if (htmlString === "") {
+                            htmlString = "Keine Übereinstimmungen gefunden.";
+                        }
+
+                        searchResultElement.innerHTML = htmlString;
+                    } else {
+                        console.error("Fehler beim Abrufen der Daten. Statuscode: " + xhr.status);
                     }
-
-                    // Erzeuge eine HTML-Liste der Suchergebnisse
-                    var htmlString = "";
-                    for (var j = 0; j < searchResults.length; j++) {
-                        var result = searchResults[j];
-
-                        htmlString += "Marke: " + result.Marke + "<br>";
-                        htmlString += "Modell: " + result.Modell + "<br>";
-                        htmlString += "Fahrzeugklasse: " + result.Fahrzeugklasse + "<br>";
-                        htmlString += "Schadstoffklasse: " + result.Schadstoffklasse + "<br>";
-                        htmlString += "Kraftstoff: " + result.Kraftstoff + "<br>";
-                        htmlString += "innerorts: " + result.innerorts + "<br>";
-                        htmlString += "ausserorts: " + result.ausserorts + "<br>";
-                        htmlString += "kombiniert: " + result.kombiniert + "<br>";
-                        htmlString += "co2EmissionKombiniertNEFZ: " + result.co2EmissionKombiniertNEFZ + "<br>";
-                        htmlString += "co2EmissionKombiniertWLTP: " + result.co2EmissionKombiniertWLTP + "<br>";
-                        htmlString += "<hr>";
-                        
-                    }
-
-                    // Wenn keine Übereinstimmungen gefunden wurden
-                    if (htmlString === "") {
-                        htmlString = "Keine Übereinstimmungen gefunden.";
-                    }
-
-                    searchResultElement.innerHTML = htmlString;
-                } else {
-                    console.error("Fehler beim Abrufen der Daten. Statuscode: " + xhr.status);
                 }
-            }
-        };
-    } else {
-        searchResultElement.innerHTML = "Bitte geben Sie einen Suchbegriff ein.";
+            };
+        } else {
+            searchResultElement.innerHTML = "Bitte geben Sie einen Suchbegriff ein.";
+        }
     }
-}
+
+    // Diese Methode bewirkt, dass wenn man in der Suchleiste etwas eingibt und enter drückt, es zum ergebnis scrollt
+    function scrollDown() {
+        var targetElement = document.getElementById("service"); // Hier musst du das ID-Attribut des Ziels eintragen
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
 });
