@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
     button.addEventListener("click", function() {
         var xhr = new XMLHttpRequest();
 
-        // Konfiguriere die Anfrage (Methode, URL)
+        // Konfigurieren der Anfrage (Methode, URL)
         xhr.open("GET", "http://localhost/DHBW-Automobiles/htdocs/Backend/automobiles.xml"); // Ersetze "URL_DER_DATENQUELLE" durch die tatsächliche URL, von der du die Daten abrufen möchtest.
 
 
@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", function() {
                             
                         } else {
                             console.warn("Das 'images'-Element wurde nicht gefunden für Automobil #" + i + ". Ein Platzhalterbild wird verwendet.");
-                            var images = 'http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/default.png'; // Setze hier den Pfad zu deinem Platzhalterbild
+                            var images = 'http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/default.png'; // Setze hier den Pfad zum Platzhalterbild
                         }
  
 
-                        // Hier kannst du weitere Daten aus der XML extrahieren und in deiner Ausgabe verwenden
+                        // Hier werden weitere Daten aus der XML extrahieren und in der Ausgabe verwendet
 
                         htmlString += "Marke: " + marke + "<br>";
                         htmlString += "Modell: " + model + "<br>";
