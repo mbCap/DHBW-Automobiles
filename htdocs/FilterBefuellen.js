@@ -51,12 +51,25 @@ document.addEventListener("DOMContentLoaded", function() {
     var kraftstoffOptions = fillFilterDropdown("kraftstoff-filter", "Kraftstoff");
 
 
+
+    //Eventlistener für verschiedene Filter
+
     // Eventlistener für Fahrzeugklasse
     document.getElementById("fahrzeugklasse-filter").addEventListener("change", function() {
       var selectedFahrzeugklasse = this.value;
       filterMarkeOptionsByFahrzeugklasse(selectedFahrzeugklasse);
       filterModellOptionsByFahrzeugklasse(selectedFahrzeugklasse);
     });
+
+    // Event-Listener für Marke hinzu
+    document.getElementById("marke-filter").addEventListener("change", function() {
+        var selectedMarke = this.value;
+        filterModellOptions(selectedMarke);
+    });
+
+
+
+    //Filterfunktionen
 
     // Filterfunktion für Marke basierend auf auswählter Fahrzeugklasse
     function filterMarkeOptionsByFahrzeugklasse(selectedFahrzeugklasse) {
@@ -93,6 +106,25 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 
+    // Filterfunktion für Modell-Optionen basierend auf der ausgewählten Marke
+    function filterModellOptions(selectedMarke) {
+    var select = document.getElementById("modell-filter");
+    select.innerHTML = ""; // Dropdown-Liste leeren
+
+      for (var i = 0; i < modellOptions.length; i++) {
+        var modell = modellOptions[i];
+        if (modell === "auswählen" || getMarkeFromModel(modell) === selectedMarke) {
+          var optionElement = document.createElement("option");
+          optionElement.value = modell;
+          optionElement.textContent = modell;
+          select.appendChild(optionElement);
+        }
+      }
+      select.value = "auswählen";
+    }
+
+
+    //Ermittlung der Daten aus der XML-Datei
 
     // Funktion zur Ermittlung der Marke eines Modells aus den XML-Daten
     function getMarkeFromModel(model) {
@@ -118,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
       return null;
     }
 
-    // Funktion zur Ermittlung der Fahrzeugklasse einer Marke aus den XML-Daten
+    // Funktion zur Ermittlung der Fahrzeugklasse eines Modells aus den XML-Daten
     function getFahrzeugklasseFrommodell(modell) {
       var nodes = xmlDoc.getElementsByTagName("model");
       for (var i = 0; i < nodes.length; i++) {
@@ -130,28 +162,6 @@ document.addEventListener("DOMContentLoaded", function() {
       return null;
     }
 
-	// Event-Listener für Marke hinzu
-    document.getElementById("marke-filter").addEventListener("change", function() {
-      var selectedMarke = this.value;
-      filterModellOptions(selectedMarke);
-    });
-
-// Filterfunktion für Modell-Optionen basierend auf der ausgewählten Marke
-    function filterModellOptions(selectedMarke) {
-      var select = document.getElementById("modell-filter");
-      select.innerHTML = ""; // Dropdown-Liste leeren
-
-      for (var i = 0; i < modellOptions.length; i++) {
-        var modell = modellOptions[i];
-        if (modell === "auswählen" || getMarkeFromModel(modell) === selectedMarke) {
-          var optionElement = document.createElement("option");
-          optionElement.value = modell;
-          optionElement.textContent = modell;
-          select.appendChild(optionElement);
-        }
-      }
-      select.value = "auswählen";
-    }
 
    // Funktion zur Ermittlung der Marke eines Modells aus den XML-Daten
     function getMarkeFromModel(model) {
@@ -160,11 +170,11 @@ document.addEventListener("DOMContentLoaded", function() {
         if (nodes[i].textContent === model) {
           var parent = nodes[i].parentNode;
           return parent.getElementsByTagName("Marke")[0].textContent;
+          }
         }
+        return null;
       }
-      return null;
-    }
-	}
+	  }
   
   
   
