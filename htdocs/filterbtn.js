@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function() {
     var fahrzeugInput = document.getElementById("fahrzeugklasse-filter");
     var markeInput = document.getElementById("marke-filter");
     var modellInput = document.getElementById("modell-filter");
-    var kraftstoffverbrauchInput = document.getElementById("kraftstoff-filter");
+    var kraftstoffverbrauchInput = document.getElementById("kraftstoffverbrauch-filter");
     var schadstoffklasseInput = document.getElementById("schadstoffklasse-filter");
-    var kraftstoffInput = document.getElementById("kraftstoffverbrauch-filter");
+    var kraftstoffInput = document.getElementById("kraftstoff-filter");
 
     // Filterbutton
     var filterButton = document.getElementById("filter-btn"); 
@@ -77,6 +77,10 @@ document.addEventListener("DOMContentLoaded", function() {
                         var result = filterResults[j];
                         htmlString += "Marke: " + result.Marke + "<br>";
                         htmlString += "Modell: " + result.Modell + "<br>";
+                        htmlString += "Fahrzeugklasse: " + result.Fahrzeugklasse + "<br>";
+                        htmlString += "Schadstoffklasse: " + result.Schadstoffklasse + "<br>";
+                        htmlString += "Kraftstoff: " + result.Kraftstoff + "<br>";
+                        htmlString += "kombiniert: " + result.Kraftstoffverbrauch + "<br>";
                         // Hier weitere Eigenschaften hinzufügen
                         htmlString += "<hr>";
                     }
