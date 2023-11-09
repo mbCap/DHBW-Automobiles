@@ -11,7 +11,7 @@ $mysqli = new mysqli($servername, $username, $password, $database);
 if ($mysqli->connect_error) {
     die("Verbindung zur Datenbank fehlgeschlagen: " . $mysqli->connect_error);
 }
-  
+   
 $sql = "
     CREATE TABLE `fahrzeugdaten` (
         `model` VARCHAR(50),
@@ -44,8 +44,8 @@ if ($mysqli->query($sql) === TRUE) {
 } else {
     echo "Fehler beim Erstellen der Tabelle: " . $mysqli->error;
 }
-  
-$xml = simplexml_load_file('C:\Users\roman\Desktop\Testwebsite\Backend\automobiles.xml') or die("Error: Cannot create object");
+   
+$xml = simplexml_load_file('http://localhost/DHBW-Automobiles/htdocs/Backend/automobiles.xml') or die("Error: Cannot create object");
 
 $mysqli->begin_transaction(); // Transaktion starten
 

@@ -31,8 +31,18 @@ document.addEventListener("DOMContentLoaded", function() {
                         var kombiniert = automobile.getElementsByTagName("kombiniert")[0].textContent;
                         var co2EmissionKombiniertNEFZ = automobile.getElementsByTagName("co2EmissionKombiniertNEFZ")[0].textContent;
                         var co2EmissionKombiniertWLTP = automobile.getElementsByTagName("co2EmissionKombiniertWLTP")[0].textContent;
-                        var images = automobile.getElementsByTagName("images")[0].textContent;
-
+                        var images = automobile.getElementsByTagName("images")[0].value;
+                        console.log("Inhalt von images für Automobil #" + i + ":", images);
+                        
+                        
+                       /*  if (imagesElement) {
+                            var images = imagesElement.textContent;
+                            
+                        } else {
+                            console.warn("Das 'images'-Element wurde nicht gefunden für Automobil #" + i + ". Ein Platzhalterbild wird verwendet.");
+                            var images = 'http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/AudiA3.png'; // Setze hier den Pfad zu deinem Platzhalterbild
+                        }
+ */
 
                         // Hier kannst du weitere Daten aus der XML extrahieren und in deiner Ausgabe verwenden
 
@@ -46,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         htmlString += "kombiniert: " + kombiniert + "<br>";
                         htmlString += "co2EmissionKombiniertNEFZ: " + co2EmissionKombiniertNEFZ + "<br>";
                         htmlString += "co2EmissionKombiniertWLTP: " + co2EmissionKombiniertWLTP + "<br>";
-                        htmlString += "" + images + "<br>";
+                        htmlString += "<img src='" + images + "' alt='" + model + " - " + marke + " Automobile Image'><br>";
                         htmlString += "<hr>";
                     }
 
