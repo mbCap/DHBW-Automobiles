@@ -180,12 +180,12 @@
         <model>Nissan Qashqai</model>  
         <HSN>722</HSN>              
         <TSN>831</TSN>              
-        <Fahrzeugklasse>Kompakt-SUV</Fahrzeugklasse>            
+        <Fahrzeugklasse>SUV</Fahrzeugklasse>            
         <ArtAufbau>654322</ArtAufbau>              
         <Marke>Nissan</Marke>               
         <Fahrzeugvariante>Qashqai</Fahrzeugvariante>            
         <HKB>Nissan</HKB>             
-        <Fahrzeugaufbau>Kompakt-SUV</Fahrzeugaufbau>         
+        <Fahrzeugaufbau>SUV</Fahrzeugaufbau>         
         <EGT>EC 2015</EGT>            
         <Schadstoffklasse>EUR06</Schadstoffklasse>           
         <Kraftstoff>Benzin</Kraftstoff>              
