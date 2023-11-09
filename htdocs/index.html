@@ -1,6 +1,9 @@
+<!-- SIEHE FÜR DAS VERWENDETE TEMPLATE README -->
 <!doctype html>
 <html class="no-js" lang="de">
 
+
+	<!-- Hier werden vorarllem Dateien verlinkt und integriert -->
     <head>
         <!-- meta data -->
         <meta charset="utf-8">
@@ -13,7 +16,7 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet">
         
-        <!-- title of site -->
+        <!-- Titel der Seite -->
         <title>DHBW Automobile</title>
 
         <!-- For favicon png -->
@@ -50,16 +53,6 @@
 		<!--Anbindung von automobiles.xml an index.html -->
 		<link rel="anbindung" href= "anbindung.php">
 
-        
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		
-        <!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-
 		<!-- jQuery-Bibliothek einbinden -->
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -77,61 +70,18 @@
 
 		<!--Anbindung von des Filtern-->
 		<script src="filterbtn.js"></script>
-
-
-
-
-		
-		
-		
-		<script src="detailsbtn.js"></script>
-
-
-		
-
-
-
-	<script>
-		// Funktion um alle Fahrzeuge bei Aufruf der Webseite zu laden
-		function getFullList () {
-		// AJAX-Anfrage senden
-		var xhr = new XMLHttpRequest();
-		// Baut die URL für den Aufruf des JSON vom PHP zusammen
-		xhr.open('GET', 'http://localhost:8081/connectionjson.php', true);
-		
-		xhr.onload = function () {
-			// Prüft, ob Status 200 = OK
-			if (xhr.status === 200) {
-				// Speichert JSON in response Variable
-				var response = JSON.parse(xhr.responseText); 
-	
-				// Aufruf der create-Funktion mit Parametern.
-				// Erzeugt die Filter und die Buttons
-				
-				
-			} else {
-				// Fehler-Ausgabe in Konsole
-				console.log('Fehler bei Anfrage: ' + xhr.status);
-			}
-		};
-		xhr.send();
-	};
-		</script>
 	
 
     </head>
 	
 	<body>
-		<!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
+		
 		<div id="data-container"></div>
   
-		<!--welcome-hero start -->
+		<!-- Willkommen -->	
 		<section id="home" class="welcome-hero">
 
-			<!-- top-area Start -->
+			<!-- Hier wird der Kopfzeile defniert -->
 			<div class="top-area">
 				<div class="header-area">
 					<!-- Start Navigation -->
@@ -166,8 +116,7 @@
 			    <div class="clearfix"></div>
 
 			</div><!-- /.top-area-->
-			<!-- top-area End -->
-
+			<!-- Ende Kopfzeile -->
 
 
 			<!-- Oberste Ansicht -->
@@ -181,8 +130,7 @@
 						<p>Magnus Blessmann - Alexander Gehring - Robin Kröll - Roman Sivirin</p>
 				</div>
 			</div>
-			
-
+			<!-- Ende Oberste Ansicht -->
 			
 
 			<!-- Suchleiste -->	
@@ -212,8 +160,9 @@
 					</div>
 				</div>
 			</div>
+			<!-- Ende Suchleiste -->	
 		
-
+			<!-- Hier wird die Filter Box definiert -->	
 			<div class="container">
 				<div class="row">
 					<div class="col-md-12">
@@ -285,380 +234,359 @@
 					</div>
 				</div>
 			</div>
+			<!-- Ende Filter Box -->	
 
-		</section><!--/.welcome-hero-->
-		<!--welcome-hero end -->
+			</section>
+			<!--Ende Willkommen -->
 
-		<!-- Für die Tabelle -->
-        <section id="service" class="service">
-			
-            <div class="container">
-                <div class="service-content">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-service-item">
-                                <div id="output">
-								
-                                    	<div></div>
-							
-                                </div>                  
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="row">
-                        <div class="col-md-4 col-sm-6">
-                            <div class="single-service-item">
-                                <div id="search-result">
-								<div></div>
-                                </div>                  
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-        </section><!--/.service-->
-        <!--Tabelle Ende-->
 
-		<!--new-cars start -->
-		<section id="new-cars" class="new-cars">
-			<div class="container">
-				<div class="section-header">
-					<h2>Neueste Autos</h2>
-				</div><!--/.section-header-->
-				<div class="new-cars-content">
-					<div class="owl-carousel owl-theme" id="new-cars-carousel">
-						<div class="new-cars-item">
-							<div class="single-new-cars-item">
-								<div class="row">
-									<div class="col-md-7 col-sm-12">
-										<div class="new-cars-img">
-											<img src="assets/images/overview_cars/21.png" alt="img"/>
-										</div><!--/.new-cars-img-->
-									</div>
-									<div class="col-md-5 col-sm-12">
-										<div class="new-cars-txt">
-											<h2><a>Lamborghini Urus</a></h2>
-											<p>
-												Der Lamborghini Urus ist das erste Super Sport Utility Vehicle der Welt, das die Seele eines Supersportwagens mit der praktischen Funktionalität eines SUV vereint. Mit seinem 4,0-Liter-V8-Biturbomotor ist der Urus konsequent leistungsorientiert ausgelegt und kombiniert Fahrspaß und beeindruckende Fahrzeugeigenschaften miteinander.
-											</p>
-											
-										</div><!--/.new-cars-txt-->	
-									</div><!--/.col-->
-								</div><!--/.row-->
-							</div><!--/.single-new-cars-item-->
-						</div><!--/.new-cars-item-->
-						<div class="new-cars-item">
-							<div class="single-new-cars-item">
-								<div class="row">
-									<div class="col-md-7 col-sm-12">
-										<div class="new-cars-img">
-											<img src="assets/images/overview_cars/3.png" alt="img"/>
-										</div><!--/.new-cars-img-->
-									</div>
-									<div class="col-md-5 col-sm-12">
-										<div class="new-cars-txt">
-											<h2><a>GLS Maybach</a></h2>
-											<p>
-												Das Design des Mercedes-Maybach GLS verkörpert ultimativen Luxus. Maybach-typische Eleganz trifft auf die charakteristische Dominanz eines SUV. Die großzügigen Dimensionen des Exterieurs sorgen für einen standesgemäßen Auftritt. Entdecken Sie den gravierten Maybach-Schriftzug des aktualisierten Kühlergrills mit neu gestalteten Lufteinlässen, die Zweifarbenlackierung oder die animierte Projektion des Maybach-Logos.
-											</p>
-											
-										</div><!--/.new-cars-txt-->	
-									</div><!--/.col-->
-								</div><!--/.row-->
-							</div><!--/.single-new-cars-item-->
-						</div><!--/.new-cars-item-->
-						<div class="new-cars-item">
-							<div class="single-new-cars-item">
-								<div class="row">
-									<div class="col-md-7 col-sm-12">
-										<div class="new-cars-img">
-											<img src="assets/images/overview_cars/22.png" alt="img"/>
-										</div><!--/.new-cars-img-->
-									</div>
-									<div class="col-md-5 col-sm-12">
-										<div class="new-cars-txt">
-											<h2><a>Ferrari 488</a></h2>
-											<p>
-												Der Ferrari 488 ist ein Mittelmotor-Sportwagen des italienischen Herstellers Ferrari. Er ist Nachfolgemodell des Ferrari 458 und wurde Anfang März 2015 auf dem 85. Genfer Auto-Salon erstmals der Öffentlichkeit vorgestellt. Es ist nach dem California T der zweite Ferrari-Sportwagen mit aufgeladenem Motor seit dem Produktionsende des F40 im Jahr 1992.
-											</p>
-											
-										</div><!--/.new-cars-txt-->	
-									</div><!--/.col-->
-								</div><!--/.row-->	
-							</div><!--/.single-new-cars-item-->
-						</div><!--/.new-cars-item-->
-						<div class="new-cars-item">
-							<div class="single-new-cars-item">
-								<div class="row">
-									<div class="col-md-7 col-sm-12">
-										<div class="new-cars-img">
-											<img src="assets/images/overview_cars/12.png" alt="img"/>
-										</div><!--/.new-cars-img-->
-									</div>
-									<div class="col-md-5 col-sm-12">
-										<div class="new-cars-txt">
-											<h2><a>Porsche 911</a></h2>
-											<p>
-												Der Porsche 911 ist ein Sportwagen, der von Porsche hergestellt wird. Dieses Fahrzeug ist eine Weiterentwicklung der vorherigen Generation des Porsche 911 und wird sowohl als Coupé als auch als Cabriolet angeboten. Das Design des Porsche 911 ist zeitlos und klassisch. Es zeichnet sich durch klare Linien und eine aerodynamische Form aus. Die Innenausstattung ist hochwertig und bietet Komfort und Luxus.
-											</p>
-											
-										</div><!--/.new-cars-txt-->	
-									</div><!--/.col-->
-								</div><!--/.row-->
-							</div><!--/.single-new-cars-item-->
-						</div><!--/.new-cars-item-->
-					</div><!--/#new-cars-carousel-->
-				</div><!--/.new-cars-content-->
-			</div><!--/.container-->
-
-		</section><!--/.new-cars-->
-		<!--new-cars end -->
-
-<!-- clients-say strat -->
-<section id="clients-say"  class="clients-say">
-	<div class="container">
-		<div class="section-header">
-			<h2>Kundenbewertungen</h2>
-		</div><!--/.section-header-->
-		<div class="row">
-			<div class="owl-carousel testimonial-carousel">
-				<div class="col-sm-3 col-xs-12">
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-info">
-								<div class="testimonial-img">
-									<img src="assets/images/clients/horstmann.jpg" alt="image of clients person" />
-								</div><!--/.testimonial-img-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-									So eine geile Website habe ich noch nie gesehen! 
-								</p>
-							</div><!--/.testimonial-comment-->
-							<div class="testimonial-person">
-								<h2><a href="#">niels horstmann</a></h2>
-								<h4>stuttgart</h4>
-							</div><!--/.testimonial-person-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-				</div><!--/.col-->
-
-				<div class="col-sm-3 col-xs-12">
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-info">
-								<div class="testimonial-img">
-									<img src="assets/images/clients/schwenk.jpg" alt="image of clients person" />
-								</div><!--/.testimonial-img-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-									Ihr seid die Besten! Selbst ich konnte etwas von euch lernen.  
-								</p>
-							</div><!--/.testimonial-comment-->
-							<div class="testimonial-person">
-								<h2><a href="#">Thomas J. Schwenk</a></h2>
-								<h4>stuttgart</h4>
-							</div><!--/.testimonial-person-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-				</div><!--/.col-->
-				<div class="col-sm-3 col-xs-12">
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-info">
-								<div class="testimonial-img">
-									<img src="assets/images/clients/wenger.jpg" alt="image of clients person" />
-								</div><!--/.testimonial-img-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-									Für diese tolle Leistungs gibts direkt den Bachelor.  
-								</p>
-							</div><!--/.testimonial-comment-->
-							<div class="testimonial-person">
-								<h2><a href="#">wolf wenger</a></h2>
-								<h4>stuttgart</h4>
-							</div><!--/.testimonial-person-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-				</div><!--/.col-->
-				<div class="col-sm-3 col-xs-12">
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-info">
-								<div class="testimonial-img">
-									<img src="assets/images/clients/ronaldo.webp" alt="image of clients person" />
-								</div><!--/.testimonial-img-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-									Muchas gracias aficiones, esto es para vosotros: Siuuu!
-								</p>
-							</div><!--/.testimonial-comment-->
-							<div class="testimonial-person">
-								<h2><a href="#">Cristiano Ronaldo</a></h2>
-								<h4>Madeira</h4>
-							</div><!--/.testimonial-person-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-				</div><!--/.col-->
-				<div class="col-sm-3 col-xs-12">
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-info">
-								<div class="testimonial-img">
-									<img src="assets/images/clients/drachenlord.jpg" alt="image of clients person" />
-								</div><!--/.testimonial-img-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-									Denn was braucht auch Nahrung um zu wachsen? richtig Wasser.
-								</p>
-							</div><!--/.testimonial-comment-->
-							<div class="testimonial-person">
-								<h2><a href="#">Rainer Winkler</a></h2>
-								<h4>Neustadt an der Aisch</h4>
-							</div><!--/.testimonial-person-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-				</div><!--/.col-->
-				<div class="col-sm-3 col-xs-12">
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-info">
-								<div class="testimonial-img">
-									<img src="assets/images/clients/frosch.jpg" alt="image of clients person" />
-								</div><!--/.testimonial-img-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-									Wegen euch habe ich aufgehört mit Rauchen!  
-								</p>
-							</div><!--/.testimonial-comment-->
-							<div class="testimonial-person">
-								<h2><a href="#">Walter Frosch</a></h2>
-								<h4>Hamburg</h4>
-							</div><!--/.testimonial-person-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-				</div><!--/.col-->
-				<div class="col-sm-3 col-xs-12">
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-info">
-								<div class="testimonial-img">
-									<img src="assets/images/clients/olafscholz.jpg" alt="image of clients person" />
-								</div><!--/.testimonial-img-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-									Einigkeit und Recht und Freiheit für das deutsche Vaterland!
-								</p>
-								
-								
-							</div><!--/.testimonial-comment-->
-							<div class="testimonial-person">
-								<h2><a href="#">Olaf Scholz</a></h2>
-								<h4>Berlin</h4>
-			</div><!--/.testimonial-carousel-->
-		</div><!--/.row-->
-	</div><!--/.container-->
-
-</section><!--/.clients-say-->  
-<!-- clients-say end -->
-		
-
-		<!--blog start -->
-		<section id="blog" class="blog"></section><!--/.blog-->
-		<!--blog end -->
-
-		<!--contact start-->
-		<footer id="contact"  class="contact">
-			<div class="container">
-				<div class="footer-top">
-					<div class="row">
-						<div class="col-md-3 col-sm-6">
-							<div class="single-footer-widget">
-								<div class="footer-logo">
-									<a href="index.html">DHBW Automobile</a>
+			<!-- Ausgabe der Ergebnisse -->
+			<section id="service" class="service">
+				
+				<div class="container">
+					<div class="service-content">
+						<div class="row">
+							<div class="col-md-4 col-sm-6">
+								<div class="single-service-item">
+									<div id="output">
+									</div>                  
 								</div>
-								<p>
-									Bei jeglichen Fragen zu unseren Fahrzeugen, rufen Sie uns an oder schreiben Sie bitte eine Mail an:
-								</p>
-								<div class="footer-contact">
-									<p>info@dhbwautomobiles.com</p>
-									<p>+49 (171) 6590438</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-2 col-sm-6">
-							<div class="single-footer-widget">
-								
-							</div>
-						</div>
-						<div class="col-md-3 col-xs-12">
-                            <div class="single-footer-widget">
-                                <h2>DHBW Stuttgart:</h2>
-                                <div class="row">
-                                    <div class="col-md-7 col-xs-6">
-                                        <a href="https://www.dhbw-stuttgart.de">DHBW Stuttgart Webseite</a>
-                                    </div>
-                                    <div class="col-md-7 col-xs-6">
-                                        <a href="https://www.dhbw-stuttgart.de/studium/rund-ums-studium/e-learning/">DHBW Stuttgart Moodle</a>
-                                    </div>
-                                </div>
-                            </div>                      
-                        </div>
-						<div class="col-md-offset-1 col-md-3 col-sm-6">
-							<div class="single-footer-widget">
-								<h2>Newsletter</h2>
-								<div class="footer-newsletter">
-									<p>
-										Für die neuesten Updates und Infos zu Fahrzeugdaten hinterlegen Sie bitte ihre Mail:
-									</p>
-								</div>
-								<div class="hm-foot-email">
-									<div class="foot-email-box">
-										<input type="text" class="form-control" placeholder="E-Mail eintragen">
-									</div><!--/.foot-email-box-->
-									<div class="foot-email-subscribe">
-										<span><i class="fa fa-arrow-right"></i></span>
-									</div><!--/.foot-email-icon-->
-								</div><!--/.hm-foot-email-->
 							</div>
 						</div>
 					</div>
 				</div>
-				
-			</div><!--/.container-->
+			</section><!--/.service-->
+			<!-- Ende Ergebnisse-->
+
+			<!-- Section Neueste Autos -->
+			<section id="new-cars" class="new-cars">
+				<div class="container">
+					<div class="section-header">
+						<h2>Neueste Autos</h2>
+					</div><!--/.section-header-->
+					<div class="new-cars-content">
+						<div class="owl-carousel owl-theme" id="new-cars-carousel">
+							<div class="new-cars-item">
+								<div class="single-new-cars-item">
+									<div class="row">
+										<div class="col-md-7 col-sm-12">
+											<div class="new-cars-img">
+												<img src="assets/images/overview_cars/21.png" alt="img"/>
+											</div><!--/.new-cars-img-->
+										</div>
+										<div class="col-md-5 col-sm-12">
+											<div class="new-cars-txt">
+												<h2><a>Lamborghini Urus</a></h2>
+												<p>
+													Der Lamborghini Urus ist das erste Super Sport Utility Vehicle der Welt, das die Seele eines Supersportwagens mit der praktischen Funktionalität eines SUV vereint. Mit seinem 4,0-Liter-V8-Biturbomotor ist der Urus konsequent leistungsorientiert ausgelegt und kombiniert Fahrspaß und beeindruckende Fahrzeugeigenschaften miteinander.
+												</p>
+												
+											</div><!--/.new-cars-txt-->	
+										</div><!--/.col-->
+									</div><!--/.row-->
+								</div><!--/.single-new-cars-item-->
+							</div><!--/.new-cars-item-->
+							<div class="new-cars-item">
+								<div class="single-new-cars-item">
+									<div class="row">
+										<div class="col-md-7 col-sm-12">
+											<div class="new-cars-img">
+												<img src="assets/images/overview_cars/3.png" alt="img"/>
+											</div><!--/.new-cars-img-->
+										</div>
+										<div class="col-md-5 col-sm-12">
+											<div class="new-cars-txt">
+												<h2><a>GLS Maybach</a></h2>
+												<p>
+													Das Design des Mercedes-Maybach GLS verkörpert ultimativen Luxus. Maybach-typische Eleganz trifft auf die charakteristische Dominanz eines SUV. Die großzügigen Dimensionen des Exterieurs sorgen für einen standesgemäßen Auftritt. Entdecken Sie den gravierten Maybach-Schriftzug des aktualisierten Kühlergrills mit neu gestalteten Lufteinlässen, die Zweifarbenlackierung oder die animierte Projektion des Maybach-Logos.
+												</p>
+												
+											</div><!--/.new-cars-txt-->	
+										</div><!--/.col-->
+									</div><!--/.row-->
+								</div><!--/.single-new-cars-item-->
+							</div><!--/.new-cars-item-->
+							<div class="new-cars-item">
+								<div class="single-new-cars-item">
+									<div class="row">
+										<div class="col-md-7 col-sm-12">
+											<div class="new-cars-img">
+												<img src="assets/images/overview_cars/22.png" alt="img"/>
+											</div><!--/.new-cars-img-->
+										</div>
+										<div class="col-md-5 col-sm-12">
+											<div class="new-cars-txt">
+												<h2><a>Ferrari 488</a></h2>
+												<p>
+													Der Ferrari 488 ist ein Mittelmotor-Sportwagen des italienischen Herstellers Ferrari. Er ist Nachfolgemodell des Ferrari 458 und wurde Anfang März 2015 auf dem 85. Genfer Auto-Salon erstmals der Öffentlichkeit vorgestellt. Es ist nach dem California T der zweite Ferrari-Sportwagen mit aufgeladenem Motor seit dem Produktionsende des F40 im Jahr 1992.
+												</p>
+												
+											</div><!--/.new-cars-txt-->	
+										</div><!--/.col-->
+									</div><!--/.row-->	
+								</div><!--/.single-new-cars-item-->
+							</div><!--/.new-cars-item-->
+							<div class="new-cars-item">
+								<div class="single-new-cars-item">
+									<div class="row">
+										<div class="col-md-7 col-sm-12">
+											<div class="new-cars-img">
+												<img src="assets/images/overview_cars/12.png" alt="img"/>
+											</div><!--/.new-cars-img-->
+										</div>
+										<div class="col-md-5 col-sm-12">
+											<div class="new-cars-txt">
+												<h2><a>Porsche 911</a></h2>
+												<p>
+													Der Porsche 911 ist ein Sportwagen, der von Porsche hergestellt wird. Dieses Fahrzeug ist eine Weiterentwicklung der vorherigen Generation des Porsche 911 und wird sowohl als Coupé als auch als Cabriolet angeboten. Das Design des Porsche 911 ist zeitlos und klassisch. Es zeichnet sich durch klare Linien und eine aerodynamische Form aus. Die Innenausstattung ist hochwertig und bietet Komfort und Luxus.
+												</p>
+												
+											</div><!--/.new-cars-txt-->	
+										</div><!--/.col-->
+									</div><!--/.row-->
+								</div><!--/.single-new-cars-item-->
+							</div><!--/.new-cars-item-->
+						</div><!--/#new-cars-carousel-->
+					</div><!--/.new-cars-content-->
+				</div><!--/.container-->
+
+			</section><!--/.new-cars-->
+			<!-- Ende Neueste Autos -->
+
+
+			<!-- Kundenbewertungen -->
+			<section id="clients-say"  class="clients-say">
+				<div class="container">
+					<div class="section-header">
+						<h2>Kundenbewertungen</h2>
+					</div><!--/.section-header-->
+					<div class="row">
+						<div class="owl-carousel testimonial-carousel">
+							<div class="col-sm-3 col-xs-12">
+								<div class="single-testimonial-box">
+									<div class="testimonial-description">
+										<div class="testimonial-info">
+											<div class="testimonial-img">
+												<img src="assets/images/clients/horstmann.jpg" alt="image of clients person" />
+											</div><!--/.testimonial-img-->
+										</div><!--/.testimonial-info-->
+										<div class="testimonial-comment">
+											<p>
+												So eine geile Website habe ich noch nie gesehen! 
+											</p>
+										</div><!--/.testimonial-comment-->
+										<div class="testimonial-person">
+											<h2><a href="#">niels horstmann</a></h2>
+											<h4>stuttgart</h4>
+										</div><!--/.testimonial-person-->
+									</div><!--/.testimonial-description-->
+								</div><!--/.single-testimonial-box-->
+							</div><!--/.col-->
+
+							<div class="col-sm-3 col-xs-12">
+								<div class="single-testimonial-box">
+									<div class="testimonial-description">
+										<div class="testimonial-info">
+											<div class="testimonial-img">
+												<img src="assets/images/clients/schwenk.jpg" alt="image of clients person" />
+											</div><!--/.testimonial-img-->
+										</div><!--/.testimonial-info-->
+										<div class="testimonial-comment">
+											<p>
+												Der WWI2022A Kurs ist mein liebster Kurs an der DHBW Stuttgart.  
+											</p>
+										</div><!--/.testimonial-comment-->
+										<div class="testimonial-person">
+											<h2><a href="#">Thomas J. Schwenk</a></h2>
+											<h4>stuttgart</h4>
+										</div><!--/.testimonial-person-->
+									</div><!--/.testimonial-description-->
+								</div><!--/.single-testimonial-box-->
+							</div><!--/.col-->
+							<div class="col-sm-3 col-xs-12">
+								<div class="single-testimonial-box">
+									<div class="testimonial-description">
+										<div class="testimonial-info">
+											<div class="testimonial-img">
+												<img src="assets/images/clients/wenger.jpg" alt="image of clients person" />
+											</div><!--/.testimonial-img-->
+										</div><!--/.testimonial-info-->
+										<div class="testimonial-comment">
+											<p>
+												Für diese tolle Leistungs gibts direkt den Bachelor.  
+											</p>
+										</div><!--/.testimonial-comment-->
+										<div class="testimonial-person">
+											<h2><a href="#">wolf wenger</a></h2>
+											<h4>stuttgart</h4>
+										</div><!--/.testimonial-person-->
+									</div><!--/.testimonial-description-->
+								</div><!--/.single-testimonial-box-->
+							</div><!--/.col-->
+							<div class="col-sm-3 col-xs-12">
+								<div class="single-testimonial-box">
+									<div class="testimonial-description">
+										<div class="testimonial-info">
+											<div class="testimonial-img">
+												<img src="assets/images/clients/ronaldo.webp" alt="image of clients person" />
+											</div><!--/.testimonial-img-->
+										</div><!--/.testimonial-info-->
+										<div class="testimonial-comment">
+											<p>
+												Muchas gracias aficiones, esto es para vosotros: Siuuu!
+											</p>
+										</div><!--/.testimonial-comment-->
+										<div class="testimonial-person">
+											<h2><a href="#">Cristiano Ronaldo</a></h2>
+											<h4>Madeira</h4>
+										</div><!--/.testimonial-person-->
+									</div><!--/.testimonial-description-->
+								</div><!--/.single-testimonial-box-->
+							</div><!--/.col-->
+							<div class="col-sm-3 col-xs-12">
+								<div class="single-testimonial-box">
+									<div class="testimonial-description">
+										<div class="testimonial-info">
+											<div class="testimonial-img">
+												<img src="assets/images/clients/drachenlord.jpg" alt="image of clients person" />
+											</div><!--/.testimonial-img-->
+										</div><!--/.testimonial-info-->
+										<div class="testimonial-comment">
+											<p>
+												Denn was braucht auch Nahrung um zu wachsen? richtig Wasser.
+											</p>
+										</div><!--/.testimonial-comment-->
+										<div class="testimonial-person">
+											<h2><a href="#">Rainer Winkler</a></h2>
+											<h4>Neustadt an der Aisch</h4>
+										</div><!--/.testimonial-person-->
+									</div><!--/.testimonial-description-->
+								</div><!--/.single-testimonial-box-->
+							</div><!--/.col-->
+							<div class="col-sm-3 col-xs-12">
+								<div class="single-testimonial-box">
+									<div class="testimonial-description">
+										<div class="testimonial-info">
+											<div class="testimonial-img">
+												<img src="assets/images/clients/frosch.jpg" alt="image of clients person" />
+											</div><!--/.testimonial-img-->
+										</div><!--/.testimonial-info-->
+										<div class="testimonial-comment">
+											<p>
+												Wegen euch habe ich aufgehört mit Rauchen!  
+											</p>
+										</div><!--/.testimonial-comment-->
+										<div class="testimonial-person">
+											<h2><a href="#">Walter Frosch</a></h2>
+											<h4>Hamburg</h4>
+										</div><!--/.testimonial-person-->
+									</div><!--/.testimonial-description-->
+								</div><!--/.single-testimonial-box-->
+							</div><!--/.col-->
+							<div class="col-sm-3 col-xs-12">
+								<div class="single-testimonial-box">
+									<div class="testimonial-description">
+										<div class="testimonial-info">
+											<div class="testimonial-img">
+												<img src="assets/images/clients/olafscholz.jpg" alt="image of clients person" />
+											</div><!--/.testimonial-img-->
+										</div><!--/.testimonial-info-->
+										<div class="testimonial-comment">
+											<p>
+												Einigkeit und Recht und Freiheit für das deutsche Vaterland!
+											</p>
+											
+											
+										</div><!--/.testimonial-comment-->
+										<div class="testimonial-person">
+											<h2><a href="#">Olaf Scholz</a></h2>
+											<h4>Berlin</h4>
+						</div><!--/.testimonial-carousel-->
+					</div><!--/.row-->
+				</div><!--/.container-->
+			</section>  
+			<!-- Ende Kundenbewertungen -->
+		
+
+			<!-- Footer -->
+			<footer id="contact"  class="contact">
+				<div class="container">
+					<div class="footer-top">
+						<div class="row">
+							<div class="col-md-3 col-sm-6">
+								<div class="single-footer-widget">
+									<div class="footer-logo">
+										<a href="index.html">DHBW Automobile</a>
+									</div>
+									<p>
+										Bei jeglichen Fragen zu unseren Fahrzeugen, rufen Sie uns an oder schreiben Sie bitte eine Mail an:
+									</p>
+									<div class="footer-contact">
+										<p>info@dhbwautomobiles.com</p>
+										<p>+49 (171) 6590438</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-2 col-sm-6">
+								<div class="single-footer-widget"></div>	
+							</div>
+							<div class="col-md-3 col-xs-12">
+								<div class="single-footer-widget">
+									<h2>DHBW Stuttgart:</h2>
+									<div class="row">
+										<div class="col-md-7 col-xs-6">
+											<a href="https://www.dhbw-stuttgart.de">DHBW Stuttgart Webseite</a>
+										</div>
+										<div class="col-md-7 col-xs-6">
+											<a href="https://www.dhbw-stuttgart.de/studium/rund-ums-studium/e-learning/">DHBW Stuttgart Moodle</a>
+										</div>
+									</div>
+								</div>                      
+							</div>
+							<div class="col-md-offset-1 col-md-3 col-sm-6">
+								<div class="single-footer-widget">
+									<h2>Newsletter</h2>
+									<div class="footer-newsletter">
+										<p>
+											Für die neuesten Updates und Infos zu Fahrzeugdaten hinterlegen Sie bitte ihre Mail:
+										</p>
+									</div>
+									<div class="hm-foot-email">
+										<div class="foot-email-box">
+											<input type="text" class="form-control" placeholder="E-Mail eintragen">
+										</div><!--/.foot-email-box-->
+										<div class="foot-email-subscribe">
+											<span><i class="fa fa-arrow-right"></i></span>
+										</div><!--/.foot-email-icon-->
+									</div><!--/.hm-foot-email-->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--/.container-->
+			</footer>
+			<!-- Ende Footer-->
+
+
+			<!-- Integrierte Plugins -->
+
+			<script src="assets/js/jquery.js"></script>
 			
-        </footer><!--/.contact-->
-		<!--contact end-->
+			<!--modernizr.min.js-->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+			
+			<!--bootstrap.min.js-->
+			<script src="assets/js/bootstrap.min.js"></script>
+			
+			<!-- bootsnav js -->
+			<script src="assets/js/bootsnav.js"></script>
 
+			<!--owl.carousel.js-->
+			<script src="assets/js/owl.carousel.min.js"></script>
 
-		
-		<!-- Include all js compiled plugins (below), or include individual files as needed -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
 
-		<script src="assets/js/jquery.js"></script>
-        
-        <!--modernizr.min.js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
-		<!--bootstrap.min.js-->
-        <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- bootsnav js -->
-		<script src="assets/js/bootsnav.js"></script>
-
-		<!--owl.carousel.js-->
-        <script src="assets/js/owl.carousel.min.js"></script>
-
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-        <!--Custom JS-->
-        <script src="assets/js/custom.js"></script>
+			<script src="assets/js/custom.js"></script>
         
     </body>
-	
 </html>
