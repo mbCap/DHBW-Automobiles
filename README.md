@@ -7,9 +7,9 @@
 - Roman Sivirin      wi22107
 
 ## Localhostports
-Der Docker, der aus der docker-compose.yml erstellt wird, belegt die folgenden Ports: 
-- Frontend: [localhost:8080](http://localhost:8080)
-- Backend: [localhost:8081/...](http://localhost:8081/)
+Der Docker, der aus der docker-compose.yml erstellt wird, belegt den folgenden Port: 
+- [localhost:8080](http://localhost:8080)
+
 
 ## Struktur
 - Fronted
@@ -60,7 +60,5 @@ Der Docker, der aus der docker-compose.yml erstellt wird, belegt die folgenden P
 
 
 
->Die Unterseiten Impressum und Kontakt sind im Footer verortet.
+>Die Unterseiten DHBW Stuttgart Website und DHBW Stuttgart Moodle sind im Footer lokalisiert.
 
->[!NOTE]
->## Test
