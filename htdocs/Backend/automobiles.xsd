@@ -30,6 +30,7 @@
               <xs:element name="schnell" type="xs:decimal"/>
               <xs:element name="langsam" type="xs:integer"/>
               <xs:element name="co2EmissionKombiniertWLTP" type="xs:integer"/>
+              <xs:element name="images" type="xs:string"/>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
