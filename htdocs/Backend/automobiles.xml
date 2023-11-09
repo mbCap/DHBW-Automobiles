@@ -20,7 +20,8 @@
         <sehrSchnell>7.0</sehrSchnell>  
         <schnell>5.8</schnell>          
         <langsam>8.6</langsam>         
-        <co2EmissionKombiniertWLTP>153</co2EmissionKombiniertWLTP>  
+        <co2EmissionKombiniertWLTP>153</co2EmissionKombiniertWLTP> 
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/AudiA3.png </images>
     </automobile>
     <automobile>
         <model>BMW 3er</model>            
@@ -57,9 +58,9 @@
         <EGT>EC 2021</EGT>                 
         <Schadstoffklasse>EUR06</Schadstoffklasse>         
         <Kraftstoff>Benzin</Kraftstoff>       
-        <innerorts>14,8</innerorts>     
-        <ausserorts>13,6</ausserorts>       
-        <kombiniert>14,2</kombiniert>     
+        <innerorts>14.8</innerorts>     
+        <ausserorts>13.6</ausserorts>       
+        <kombiniert>14.2</kombiniert>     
         <co2EmissionKombiniertNEFZ>220</co2EmissionKombiniertNEFZ>  
         <sehrSchnell>10.8</sehrSchnell>   
         <schnell>8.9</schnell>        
@@ -191,7 +192,7 @@
         <Kraftstoff>Benzin</Kraftstoff>              
         <innerorts>7.2</innerorts>   
         <ausserorts>5.0</ausserorts>   
-        <kombiniert>5.8</kombiniert> 
+        <kombiniert>5.9</kombiniert> 
         <co2EmissionKombiniertNEFZ>134</co2EmissionKombiniertNEFZ>  
         <sehrSchnell>8.0</sehrSchnell> 
         <schnell>6.5</schnell>        
@@ -279,7 +280,7 @@
         <Kraftstoff>Diesel</Kraftstoff>                 
         <innerorts>5.0</innerorts>      
         <ausserorts>3.5</ausserorts>      
-        <kombiniert>4.0</kombiniert>    
+        <kombiniert>3.8</kombiniert>    
         <co2EmissionKombiniertNEFZ>104</co2EmissionKombiniertNEFZ>  
         <sehrSchnell>7.5</sehrSchnell>  
         <schnell>5.5</schnell>          
@@ -301,7 +302,7 @@
         <Kraftstoff>Diesel</Kraftstoff>                   
         <innerorts>7.5</innerorts>        
         <ausserorts>5.0</ausserorts>        
-        <kombiniert>6.2</kombiniert>      
+        <kombiniert>6.5</kombiniert>      
         <co2EmissionKombiniertNEFZ>125</co2EmissionKombiniertNEFZ>  
         <sehrSchnell>8.5</sehrSchnell>    
         <schnell>6.0</schnell>            
@@ -411,7 +412,7 @@
         <Kraftstoff>Benzin</Kraftstoff>                   
         <innerorts>7.2</innerorts>       
         <ausserorts>5.0</ausserorts>       
-        <kombiniert>5.8</kombiniert>     
+        <kombiniert>6.1</kombiniert>     
         <co2EmissionKombiniertNEFZ>133</co2EmissionKombiniertNEFZ>  
         <sehrSchnell>8.5</sehrSchnell>   
         <schnell>7.0</schnell>           

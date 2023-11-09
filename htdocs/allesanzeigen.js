@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         var kombiniert = automobile.getElementsByTagName("kombiniert")[0].textContent;
                         var co2EmissionKombiniertNEFZ = automobile.getElementsByTagName("co2EmissionKombiniertNEFZ")[0].textContent;
                         var co2EmissionKombiniertWLTP = automobile.getElementsByTagName("co2EmissionKombiniertWLTP")[0].textContent;
+                        var images = automobile.getElementsByTagName("images")[0].textContent;
 
 
                         // Hier kannst du weitere Daten aus der XML extrahieren und in deiner Ausgabe verwenden
@@ -45,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         htmlString += "kombiniert: " + kombiniert + "<br>";
                         htmlString += "co2EmissionKombiniertNEFZ: " + co2EmissionKombiniertNEFZ + "<br>";
                         htmlString += "co2EmissionKombiniertWLTP: " + co2EmissionKombiniertWLTP + "<br>";
+                        htmlString += "" + images + "<br>";
                         htmlString += "<hr>";
                     }
 
