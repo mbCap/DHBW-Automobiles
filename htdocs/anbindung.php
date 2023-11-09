@@ -11,9 +11,10 @@ $mysqli = new mysqli($servername, $username, $password, $database);
 if ($mysqli->connect_error) {
     die("Verbindung zur Datenbank fehlgeschlagen: " . $mysqli->connect_error);
 }
-   
+/*    
 $sql = "
     CREATE TABLE `fahrzeugdaten` (
+        `id` INT NOT NULL,
         `model` VARCHAR(50),
         `HSN` INT NOT NULL,
         `TSN` INT NOT NULL,
@@ -43,13 +44,14 @@ if ($mysqli->query($sql) === TRUE) {
     echo "Tabelle 'Fahrzeugdaten' erfolgreich erstellt";
 } else {
     echo "Fehler beim Erstellen der Tabelle: " . $mysqli->error;
-}
+} */
    
 $xml = simplexml_load_file('http://localhost/DHBW-Automobiles/htdocs/Backend/automobiles.xml') or die("Error: Cannot create object");
 
 $mysqli->begin_transaction(); // Transaktion starten
 
 foreach ($xml->children() as $automobile) {
+    $id = (int)$automobile->id;
     $model = (string)$automobile->model;
     $HSN = (int)$automobile->HSN;
     $TSN = (int)$automobile->TSN;
@@ -72,8 +74,8 @@ foreach ($xml->children() as $automobile) {
     $co2EmissionKombiniertWLTP = (int)$automobile->co2EmissionKombiniertWLTP;
     $images = (string)$automobile->images;
 
-    $insertSql = "INSERT INTO fahrzeugdaten (model, HSN, TSN, Fahrzeugklasse, ArtAufbau, Marke, Fahrzeugvariante, HKB, Fahrzeugaufbau, EGT, Schadstoffklasse, Kraftstoff, innerorts, ausserorts, kombiniert, co2EmissionKombiniertNEFZ, sehrSchnell, schnell, langsam, co2EmissionKombiniertWLTP, images) 
-                VALUES ('$model', $HSN, $TSN, '$Fahrzeugklasse', $ArtAufbau, '$Marke', '$Fahrzeugvariante', '$HKB', '$Fahrzeugaufbau', '$EGT', '$Schadstoffklasse', '$Kraftstoff', $innerorts, $ausserorts, $kombiniert, $co2EmissionKombiniertNEFZ, $sehrSchnell, $schnell, $langsam, $co2EmissionKombiniertWLTP, '$images')";
+    $insertSql = "INSERT INTO fahrzeugdaten (id, model, HSN, TSN, Fahrzeugklasse, ArtAufbau, Marke, Fahrzeugvariante, HKB, Fahrzeugaufbau, EGT, Schadstoffklasse, Kraftstoff, innerorts, ausserorts, kombiniert, co2EmissionKombiniertNEFZ, sehrSchnell, schnell, langsam, co2EmissionKombiniertWLTP, images) 
+                VALUES ($id, '$model', $HSN, $TSN, '$Fahrzeugklasse', $ArtAufbau, '$Marke', '$Fahrzeugvariante', '$HKB', '$Fahrzeugaufbau', '$EGT', '$Schadstoffklasse', '$Kraftstoff', $innerorts, $ausserorts, $kombiniert, $co2EmissionKombiniertNEFZ, $sehrSchnell, $schnell, $langsam, $co2EmissionKombiniertWLTP, '$images')";
 
         if ($mysqli->query($insertSql) === TRUE) {
             echo "Datensatz erfolgreich eingefügt. ";
@@ -93,27 +95,7 @@ if ($mysqli->commit()) {
 
 $countSql = "SELECT COUNT(*) as count FROM fahrzeugdaten";
 $result = $mysqli->query($countSql);
-/*
-// SQL-Abfrage, um alle Daten aus der Tabelle 'fahrzeugdaten' abzurufen
-$selectSql = "SELECT * FROM fahrzeugdaten";
-$result = $mysqli->query($selectSql);
-
-if ($result && $result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        // Hier kannst du die Daten aus der Tabelle ausgeben
-        echo "Model: " . $row["model"] . "<br>";
-        echo "HSN: " . $row["HSN"] . "<br>";
-        echo "TSN: " . $row["TSN"] . "<br>";
-        // Füge weitere Spalten hinzu, die du ausgeben möchtest
-
-        // Trennzeile zwischen Datensätzen
-        echo "<hr>";
-    }
-} else {
-    echo "Keine Daten gefunden.";
-}
 
 // Datenbankverbindung schließen
 $mysqli->close();
-*/
 ?>
