@@ -1,6 +1,6 @@
 version: '3'  # Docker Compose-Version
 
-volumes:  # Definition von Volumes für Docker-Dienste
+volumes:  # Definition von Volumes (Docker-Volumes "datenbank" und "code" ermöglichen die persistente Speicherung von Daten für MySQL und den Webserver.) für Docker-Dienste                                                   
   datenbank:  # Volume für die Datenbank
   code:  # Volume für den Code (Nicht klar definiert, fehlt möglicherweise eine Zielangabe)
 
@@ -24,3 +24,7 @@ services:  # Definition von Docker-Diensten
      - MYSQL_PASSWORD="Pappelweg!11"  # MySQL-Benutzerpasswort
     volumes:  # Volume für die Datenbank
      - datenbank:/var/lib/mysql  # Das Volume "datenbank" wird mit /var/lib/mysql im Container verbunden
+
+
+
+     

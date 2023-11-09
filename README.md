@@ -2,11 +2,11 @@
 
 ## Gruppenmitglieder
 - Magnus Blessmann   wi22157
-- Alexander Gehring  wi
-- Robin Kröll        wi
+- Alexander Gehring  wi22099
+- Robin Kröll        wi22125
 - Roman Sivirin      wi22107
 
-## Localhostports
+## Localhostport
 Der Docker, der aus der docker-compose.yml erstellt wird, belegt den folgenden Port: 
 - [localhost:8080](http://localhost:8080)
 
