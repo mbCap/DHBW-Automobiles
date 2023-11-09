@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         htmlString += "<strong>CO2-Emissionen kombiniert:</strong> " + co2EmissionKombiniertNEFZ + "g/km (NEFZ)" + "<br>";
                         htmlString += "<strong>CO2-Emissionen kombiniert:</strong> " + co2EmissionKombiniertWLTP + "g/km (NEFZ)" + "<br>";
                         htmlString += "</div>"; // Ende des Container-Divs
+                        htmlString += "<hr>";
                     }
 
                     outputElement.innerHTML = htmlString;
