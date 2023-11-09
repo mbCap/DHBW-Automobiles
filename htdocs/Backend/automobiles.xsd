@@ -10,6 +10,7 @@
           <xs:complexType>
             <xs:sequence>
               <!-- Definition der einzelnen Datenfelder für das "automobile" Element -->
+              <xs:element name="id" type="xs:integer"/>
               <xs:element name="model" type="xs:string"/>
               <xs:element name="HSN" type="xs:integer"/>
               <xs:element name="TSN" type="xs:integer"/>
