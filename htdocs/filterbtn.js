@@ -51,12 +51,12 @@ document.addEventListener("DOMContentLoaded", function() {
                         var kraftstoff = automobile.getElementsByTagName("Kraftstoff")[0].textContent;
 
                         if (
-                            (selectedMarke === "" || marke.toLowerCase().includes(selectedMarke)) &&
-                            (selectedModell === "" || modell.toLowerCase().includes(selectedModell)) &&
-                            (selectedFahrzeugklasse === "" || fahrzeugklasse.toLowerCase().includes(selectedFahrzeugklasse)) &&
-                            (selectedKraftstoffverbrauch === "" || kraftstoffverbrauch.toLowerCase().includes(selectedKraftstoffverbrauch)) &&
-                            (selectedSchadstoffklasse === "" || schadstoffklasse.toLowerCase().includes(selectedSchadstoffklasse)) &&
-                            (selectedKraftstoff === "" || kraftstoff.toLowerCase().includes(selectedKraftstoff))
+                            (selectedMarke === "default" || marke.toLowerCase().includes(selectedMarke)) &&
+                            (selectedModell === "default" || modell.toLowerCase().includes(selectedModell)) &&
+                            (selectedFahrzeugklasse === "default" || fahrzeugklasse.toLowerCase().includes(selectedFahrzeugklasse)) &&
+                            (selectedKraftstoffverbrauch === "default" || kraftstoffverbrauch.toLowerCase().includes(selectedKraftstoffverbrauch)) &&
+                            (selectedSchadstoffklasse === "default" || schadstoffklasse.toLowerCase().includes(selectedSchadstoffklasse)) &&
+                            (selectedKraftstoff === "default" || kraftstoff.toLowerCase().includes(selectedKraftstoff))
                         ) {
                             var result = {
                                 Marke: marke,
@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             filterResults.push(result);
                         }
                     }
+                    //console.log("Anzahl der Filterergebnisse:", filterResults.length);
 
                     // Erzeuge eine HTML-Liste der Suchergebnisse
                     var htmlString = "";

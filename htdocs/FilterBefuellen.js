@@ -50,33 +50,12 @@ document.addEventListener("DOMContentLoaded", function() {
     var modellOptions = fillFilterDropdown("modell-filter", "model");
     var kraftstoffOptions = fillFilterDropdown("kraftstoff-filter", "Kraftstoff");
 
-    // Event-Listener für Marke hinzu
-    document.getElementById("marke-filter").addEventListener("change", function() {
-      var selectedMarke = this.value;
-      filterModellOptions(selectedMarke);
-    });
 
     // Eventlistener für Fahrzeugklasse
     document.getElementById("fahrzeugklasse-filter").addEventListener("change", function() {
       var selectedFahrzeugklasse = this.value;
       filterMarkeOptionsByFahrzeugklasse(selectedFahrzeugklasse);
     });
-
-    // Filterfunktion für Modell-Optionen basierend auf der ausgewählten Marke
-    function filterModellOptions(selectedMarke) {
-      var select = document.getElementById("modell-filter");
-      select.innerHTML = ""; // Dropdown-Liste leeren
-
-      for (var i = 0; i < modellOptions.length; i++) {
-        var modell = modellOptions[i];
-        if (modell === "auswählen" || getMarkeFromModel(modell) === selectedMarke) {
-          var optionElement = document.createElement("option");
-          optionElement.value = modell;
-          optionElement.textContent = modell;
-          select.appendChild(optionElement);
-        }
-      }
-    }
 
     // Filterfunktion für Marke basierend auf auswählter Fahrzeugklasse
     function filterMarkeOptionsByFahrzeugklasse(selectedFahrzeugklasse) {
@@ -92,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
           select.appendChild(optionElement);
         }
       }
+      select.value = "auswählen";
     }
 
     // Funktion zur Ermittlung der Marke eines Modells aus den XML-Daten
@@ -117,7 +97,44 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       return null;
     }
-  }
+	// Event-Listener für Marke hinzu
+    document.getElementById("marke-filter").addEventListener("change", function() {
+      var selectedMarke = this.value;
+      filterModellOptions(selectedMarke);
+    });
+
+// Filterfunktion für Modell-Optionen basierend auf der ausgewählten Marke
+    function filterModellOptions(selectedMarke) {
+      var select = document.getElementById("modell-filter");
+      select.innerHTML = ""; // Dropdown-Liste leeren
+
+      for (var i = 0; i < modellOptions.length; i++) {
+        var modell = modellOptions[i];
+        if (modell === "auswählen" || getMarkeFromModel(modell) === selectedMarke) {
+          var optionElement = document.createElement("option");
+          optionElement.value = modell;
+          optionElement.textContent = modell;
+          select.appendChild(optionElement);
+        }
+      }
+      select.value = "auswählen";
+    }
+
+   // Funktion zur Ermittlung der Marke eines Modells aus den XML-Daten
+    function getMarkeFromModel(model) {
+      var nodes = xmlDoc.getElementsByTagName("model");
+      for (var i = 0; i < nodes.length; i++) {
+        if (nodes[i].textContent === model) {
+          var parent = nodes[i].parentNode;
+          return parent.getElementsByTagName("Marke")[0].textContent;
+        }
+      }
+      return null;
+    }
+	}
+  
+  
+  
 
   // Die XML-Datei laden und die Dropdown-Listen füllen, wenn das Dokument geladen ist
   loadXML();

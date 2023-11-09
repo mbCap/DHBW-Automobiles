@@ -88,6 +88,7 @@ function performSearch() {
                         htmlString += "kombiniert: " + result.kombiniert + "<br>";
                         htmlString += "co2EmissionKombiniertNEFZ: " + result.co2EmissionKombiniertNEFZ + "<br>";
                         htmlString += "co2EmissionKombiniertWLTP: " + result.co2EmissionKombiniertWLTP + "<br>";
+                        htmlString += "<hr>";
                         
                     }
 
