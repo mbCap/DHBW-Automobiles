@@ -13,35 +13,21 @@ Der Docker, der aus der docker-compose.yml erstellt wird, belegt den folgenden P
 
 ## Struktur
 - Fronted
-  - index.php
-  - details.php
-  - kontakt.php
-  - impressum.php
+  - script
+    - index.html
+      - fulllist.js
+      - searchbtn.js
+      - fillfilter.js
   - docker-compose.yml
   - README.md
-    - /content
-      - Websitelemente
-      - [...]
-    - /pictures
-      - statische Bilder
-      - [...]
-    - /script
-      - einzelne JavaScripts
-      - [...]
-    - /stlye
-      - style.css
+   
 - Backend
-  - createFilterArrays.php
-  - filter.php
-  - createFullList.php
-  - createSearchTerm.php
-  - detailsBackend.php
-    - /pictures
-      - Autobilder & Werbebanner
-      - [...]
-    - /xml
-      - autos.xml
-      - autos.xsd
+  - dbconnection.php
+  - convert.php
+
+  - xml
+      - automobiles.xml
+      - automobiles.xsd
 
 
 >### Aufbau der CSS-Datei
