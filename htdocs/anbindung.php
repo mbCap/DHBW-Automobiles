@@ -47,10 +47,15 @@ if ($mysqli->query($sql) === TRUE) {
 } */
    
 $xml = simplexml_load_file('http://localhost/DHBW-Automobiles/htdocs/Backend/automobiles.xml') or die("Error: Cannot create object");
+// Die XML-Datei mit den Automobildaten wird geladen oder es wird ein Fehler ausgegeben, wenn dies nicht möglich ist.
 
 $mysqli->begin_transaction(); // Transaktion starten
+// Eine MySQL-Transaktion wird gestartet, um sicherzustellen, dass alle Daten korrekt eingefügt werden.
 
 foreach ($xml->children() as $automobile) {
+    // Für jedes Kind-Element in der XML-Datei (jedes Automobil) wird eine Schleife durchgeführt.
+
+    // Die Daten aus der XML werden in Variablen gespeichert.
     $id = (int)$automobile->id;
     $model = (string)$automobile->model;
     $HSN = (int)$automobile->HSN;
@@ -74,15 +79,18 @@ foreach ($xml->children() as $automobile) {
     $co2EmissionKombiniertWLTP = (int)$automobile->co2EmissionKombiniertWLTP;
     $images = (string)$automobile->images;
 
+    // SQL-Abfrage zum Einfügen der Daten in die Datenbank.
     $insertSql = "INSERT INTO fahrzeugdaten (id, model, HSN, TSN, Fahrzeugklasse, ArtAufbau, Marke, Fahrzeugvariante, HKB, Fahrzeugaufbau, EGT, Schadstoffklasse, Kraftstoff, innerorts, ausserorts, kombiniert, co2EmissionKombiniertNEFZ, sehrSchnell, schnell, langsam, co2EmissionKombiniertWLTP, images) 
                 VALUES ($id, '$model', $HSN, $TSN, '$Fahrzeugklasse', $ArtAufbau, '$Marke', '$Fahrzeugvariante', '$HKB', '$Fahrzeugaufbau', '$EGT', '$Schadstoffklasse', '$Kraftstoff', $innerorts, $ausserorts, $kombiniert, $co2EmissionKombiniertNEFZ, $sehrSchnell, $schnell, $langsam, $co2EmissionKombiniertWLTP, '$images')";
 
-        if ($mysqli->query($insertSql) === TRUE) {
-            echo "Datensatz erfolgreich eingefügt. ";
-        } else {
-            echo "Fehler beim Einfügen des Datensatzes: " . $mysqli->error;
-        }
+    // Überprüfung, ob die SQL-Abfrage erfolgreich war, und entsprechende Ausgabe.
+    if ($mysqli->query($insertSql) === TRUE) {
+        echo "Datensatz erfolgreich eingefügt. ";
+    } else {
+        echo "Fehler beim Einfügen des Datensatzes: " . $mysqli->error;
     }
+}
+
         
 
 // Transaktion bestätigen oder abbrechen
