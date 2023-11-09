@@ -1,27 +1,30 @@
-version: '3'
+version: '3'  # Docker Compose-Version
 
-volumes:
-  datenbank:
-  code:
+volumes:  # Definition von Volumes (Docker-Volumes "datenbank" und "code" ermöglichen die persistente Speicherung von Daten für MySQL und den Webserver.) für Docker-Dienste                                                   
+  datenbank:  # Volume für die Datenbank
+  code:  # Volume für den Code (Nicht klar definiert, fehlt möglicherweise eine Zielangabe)
 
-services: 
-  webserver:
-    build: webserver
-    ports: 
-     - 80:80
-    volumes:
-      - .htdocs:/var/www/html 
-  database:
-    image: mysql:latest
-    container_name: mysql
-    ports: 
-     - 3306:3306
-    environment:
-     - MYSQL_ROOT_PASSWORD="Pappelweg!11"
-     - MYSQL_DATABASE="WebProgrammierung"
-     - MYSQL_USER="root"
-     - MYSQL_PASSWORD="Pappelweg!11"
-    volumes:
-     - datenbank:/var/lib/mysql 
-    
+services:  # Definition von Docker-Diensten
+  webserver:  # Docker-Dienst für den Webserver
+    build: webserver  # Verwenden des Build-Verzeichnisses "webserver" für den Webserver-Dienst
+    ports:  # Port-Mapping für den Webserver-Dienst
+     - 8080:80  # Port 8080 auf dem Host wird auf Port 80 im Container gemappt
+    volumes:  # Volumes für den Webserver-Dienst
+      - .htdocs:/var/www/html  # Das aktuelle Verzeichnis (wo die Docker Compose-Datei liegt) wird mit /var/www/html im Container verbunden
 
+  database:  # Docker-Dienst für die Datenbank
+    image: mysql:latest  # Verwendung des neuesten MySQL-Images aus dem Docker Hub
+    container_name: mysql  # Festlegen des Container-Namens als "mysql"
+    ports:  # Port-Mapping für den Datenbank-Dienst
+     - 3306:3306  # Port 3306 auf dem Host wird auf Port 3306 im Container gemappt
+    environment:  # Umgebungsvariablen für die MySQL-Datenbankkonfiguration
+     - MYSQL_ROOT_PASSWORD="Pappelweg!11"  # Root-Passwort für die MySQL-Datenbank
+     - MYSQL_DATABASE="WebProgrammierung"  # Name der MySQL-Datenbank
+     - MYSQL_USER="root"  # MySQL-Benutzername
+     - MYSQL_PASSWORD="Pappelweg!11"  # MySQL-Benutzerpasswort
+    volumes:  # Volume für die Datenbank
+     - datenbank:/var/lib/mysql  # Das Volume "datenbank" wird mit /var/lib/mysql im Container verbunden
+
+
+
+     

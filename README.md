@@ -2,46 +2,32 @@
 
 ## Gruppenmitglieder
 - Magnus Blessmann   wi22157
-- Alexander Gehring  wi
-- Robin Kröll        wi
+- Alexander Gehring  wi22099
+- Robin Kröll        wi22125
 - Roman Sivirin      wi22107
 
-## Localhostports
-Der Docker, der aus der docker-compose.yml erstellt wird, belegt die folgenden Ports: 
-- Frontend: [localhost:8080](http://localhost:8080)
-- Backend: [localhost:8081/...](http://localhost:8081/)
+## Localhostport
+Der Docker, der aus der docker-compose.yml erstellt wird, belegt den folgenden Port: 
+- [localhost:8080](http://localhost:8080)
+
 
 ## Struktur
 - Fronted
-  - index.php
-  - details.php
-  - kontakt.php
-  - impressum.php
+  - script
+    - index.html
+      - fulllist.js
+      - searchbtn.js
+      - fillfilter.js
   - docker-compose.yml
   - README.md
-    - /content
-      - Websitelemente
-      - [...]
-    - /pictures
-      - statische Bilder
-      - [...]
-    - /script
-      - einzelne JavaScripts
-      - [...]
-    - /stlye
-      - style.css
+   
 - Backend
-  - createFilterArrays.php
-  - filter.php
-  - createFullList.php
-  - createSearchTerm.php
-  - detailsBackend.php
-    - /pictures
-      - Autobilder & Werbebanner
-      - [...]
-    - /xml
-      - autos.xml
-      - autos.xsd
+  - dbconnection.php
+  - convert.php
+
+  - xml
+      - automobiles.xml
+      - automobiles.xsd
 
 
 >### Aufbau der CSS-Datei
@@ -60,14 +46,3 @@ Der Docker, der aus der docker-compose.yml erstellt wird, belegt die folgenden P
 
 >[!NOTE]
 >## Test
-
-
- 
- 
-###Template Info:
------------------------
-CarVilla is a one page bootstrap 3 based Car Dealer Automotive website template.
-Name: 		CarVilla - Free Bootstrap One Page Car Dealer Automotive website template
-Version: 	1.0
-Author: 	ThemeSINE
-Website: 	https://www.themesine.com/

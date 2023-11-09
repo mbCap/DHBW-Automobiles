@@ -60,20 +60,21 @@ document.addEventListener("DOMContentLoaded", function() {
                             var images = 'http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/default.png'; // Setze hier den Pfad zu deinem Platzhalterbild
                         }
 
-                        // Füge die extrahierten Daten dem HTML-String hinzu
+                        // Hier kannst du weitere Daten aus der XML extrahieren und in deiner Ausgabe verwenden
+ 
                         htmlString += "<div style='margin-bottom: 10px; text-align: left;'>"; // Container-Div mit etwas Abstand nach unten und linksbündiger Ausrichtung
                         htmlString += "<strong>Marke:</strong> " + marke + "<br>";
                         htmlString += "<strong>Modell:</strong> " + model + "<br>";
                         htmlString += "<strong>Fahrzeugklasse:</strong> " + fahrzeugklasse + "<br>";
                         htmlString += "<strong>Schadstoffklasse:</strong> " + schadstoffklasse + "<br>";
                         htmlString += "<strong>Kraftstoff:</strong> " + kraftstoff + "<br>";
-                        htmlString += "<strong>Verbrauch innerorts:</strong> " + innerorts + "<br>";
-                        htmlString += "<strong>Verbrauch ausserorts:</strong> " + ausserorts + "<br>";
-                        htmlString += "<strong>kombinierter Verbrauch:</strong> " + kombiniert + "<br>";
-                        htmlString += "<strong>CO2-Emission kombiniert:</strong> " + co2EmissionKombiniertNEFZ + "<br>";
-                        htmlString += "<strong>co2EmissionKombiniertWLTP:</strong> " + co2EmissionKombiniertWLTP + "<br>";
+                        htmlString += "<strong>Verbrauch innerorts:</strong> " + innerorts + "l/100 km" + "<br>";
+                        htmlString += "<strong>Verbrauch ausserorts:</strong> " + ausserorts + "l/100 km" + "<br>";
+                        htmlString += "<strong>kombinierter Verbrauch:</strong> " + kombiniert + "l/100 km" + "<br>";
+                        htmlString += "<strong>CO2-Emissionen kombiniert:</strong> " + co2EmissionKombiniertNEFZ + "g/km (NEFZ)" + "<br>";
+                        htmlString += "<strong>CO2-Emissionen kombiniert:</strong> " + co2EmissionKombiniertWLTP + "g/km (NEFZ)" + "<br>";
                         htmlString += "</div>"; // Ende des Container-Divs
-                        htmlString += "<hr>"; // Füge eine horizontale Linie hinzu, um die einzelnen Datensätze zu trennen.
+                        htmlString += "<hr>";
                     }
 
                     outputElement.innerHTML = htmlString;
