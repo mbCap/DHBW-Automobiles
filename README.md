@@ -31,18 +31,15 @@ Der Docker, der aus der docker-compose.yml erstellt wird, belegt den folgenden P
 
 
 >### Aufbau der CSS-Datei
->Die CSS-Datei ist nach der folgenden Struktur aufgebaut:
->1. root
->2. html
->3. body
->4. header
->5. navbar
->6. main
->7. footer
->
->Die @media-Tags sind ebenfalls den einzelen Elementen zugeordnet.
->
->Die Unterseiten Impressum und Kontakt sind im Footer verortet.
+1.  General css (Reset code)
+2.  Top-area
+3.  Welcome-hero
+4.  Model-search
+5.  Output
+6.  Neueste Autos
+7.  Kundenbewertungen
+8.  Contact
 
->[!NOTE]
->## Test
+
+
+>Die Unterseiten DHBW Stuttgart Website und DHBW Stuttgart Moodle sind im Footer lokalisiert.
