@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         var kombiniert = automobile.getElementsByTagName("kombiniert")[0].textContent;
                         var co2EmissionKombiniertNEFZ = automobile.getElementsByTagName("co2EmissionKombiniertNEFZ")[0].textContent;
                         var co2EmissionKombiniertWLTP = automobile.getElementsByTagName("co2EmissionKombiniertWLTP")[0].textContent;
-                        var images = automobile.getElementsByTagName("images")[0].value;
+                        var images = outputElement.href = 'http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/' + auto.marke + '&typ=' + auto.typ;
                         console.log("Inhalt von images für Automobil #" + i + ":", images);
                         
                         

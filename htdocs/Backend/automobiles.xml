@@ -98,13 +98,13 @@
     </automobile>
     <automobile>
         <id>5</id>
-        <model>Volkswagen Golf</model>  
+        <model>Volkswagen Golf 7</model>  
         <HSN>123</HSN>               
         <TSN>456</TSN>               
         <Fahrzeugklasse>Kompaktklasse</Fahrzeugklasse>           
         <ArtAufbau>654321</ArtAufbau>                
         <Marke>Volkswagen</Marke>            
-        <Fahrzeugvariante>Golf 7</Fahrzeugvariante>               
+        <Fahrzeugvariante>Golf</Fahrzeugvariante>               
         <HKB>VW</HKB>                  
         <Fahrzeugaufbau>Kompaktklasse</Fahrzeugaufbau>         
         <EGT>EC 2017</EGT>              
@@ -296,7 +296,7 @@
         <Fahrzeugklasse>Mittelklasse</Fahrzeugklasse>              
         <ArtAufbau>654321</ArtAufbau>                 
         <Marke>Volkswagen</Marke>             
-        <Fahrzeugvariante>TDI 2.0</Fahrzeugvariante>               
+        <Fahrzeugvariante>TDI</Fahrzeugvariante>               
         <HKB>VW</HKB>                    
         <Fahrzeugaufbau>Mittelklasse</Fahrzeugaufbau>           
         <EGT>EC 2014</EGT>               
@@ -512,7 +512,7 @@
         <Fahrzeugklasse>Sportwagen</Fahrzeugklasse>        
         <ArtAufbau>789012</ArtAufbau>         
         <Marke>Ferrari</Marke>         
-        <Fahrzeugvariante>488 GTB</Fahrzeugvariante>       
+        <Fahrzeugvariante>488</Fahrzeugvariante>       
         <HKB>Ferrari</HKB>       
         <Fahrzeugaufbau>Sportwagen</Fahrzeugaufbau>     
         <EGT>EC 2022</EGT>       
