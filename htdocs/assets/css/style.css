@@ -15,13 +15,10 @@ font-family: 'Rufina', serif;
 2.  Top-area
 3.  Welcome-hero
 4.  Model-search
-5.  Service
-6.  New-cars
-7.  Featured-cars
-8. Clients say
-9.  Brand
-10. Blog
-11. Contact
+5.  Output
+6.  Neueste Autos
+7.  Kundenbewertungen
+8. Contact
 ==========================================*/
 
 /*-------------------------------------
@@ -304,10 +301,6 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     content: none; /* Entfernt das Pfeil-Symbol */
 }
 
-
-
-/*Nicht von uns*/
-
 .model-search-content .col-sm-12 {padding: 0;}
 .model-search-content {
     padding: 40px 0;
@@ -370,7 +363,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 /*.single-model-search*/
 
 /*-------------------------------------
-        5. Service 
+        5. Output 
 --------------------------------------*/
 .service { padding: 260px 0 87px;}
 
@@ -391,7 +384,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 
 
 /*-------------------------------------
-        6. New-cars
+        6. Neueste Autos
 --------------------------------------*/
 .new-cars{
     background: #f8f9fb;
@@ -431,7 +424,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
 /*.owl-dots */
 
 /*-------------------------------------       
-        8. Clients-say 
+        7. Kundenbewertungen
 --------------------------------------*/
 .clients-say{padding:115px 0 80px;background: #f8f9fb;}
 
@@ -503,15 +496,9 @@ nav.navbar.bootsnav .navbar-toggle i{color: #4e4ffa;}
     border-radius:50%;
     margin:0 auto;
 }
-/*owl carousel*/
-
 
 /*-------------------------------------
-        10. Blog
---------------------------------------*/
-
-/*-------------------------------------
-        12. Contact
+        8. Footer
 --------------------------------------*/
 .contact {
     background: #2a2d54;

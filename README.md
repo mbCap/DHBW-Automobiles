@@ -60,3 +60,14 @@ Der Docker, der aus der docker-compose.yml erstellt wird, belegt die folgenden P
 
 >[!NOTE]
 >## Test
+
+
+ 
+ 
+###Template Info:
+-----------------------
+CarVilla is a one page bootstrap 3 based Car Dealer Automotive website template.
+Name: 		CarVilla - Free Bootstrap One Page Car Dealer Automotive website template
+Version: 	1.0
+Author: 	ThemeSINE
+Website: 	https://www.themesine.com/

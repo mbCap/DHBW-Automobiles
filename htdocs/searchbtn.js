@@ -22,9 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Überprüfen, ob ein Suchbegriff eingegeben wurde
         if (searchTerm) {
-
-         
-
             // Hier senden wir eine AJAX-Anfrage, um die automobiles.xml-Datei abzurufen
             var xhr = new XMLHttpRequest();
             xhr.open("GET", "http://localhost/DHBW-Automobiles/htdocs/Backend/automobiles.xml", true);
@@ -108,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function() {
             searchResultElement.innerHTML = "Bitte geben Sie einen Suchbegriff ein.";
         }
     }
-
     // Diese Methode bewirkt, dass wenn man in der Suchleiste etwas eingibt und enter drückt, es zum ergebnis scrollt
     function scrollDown() {
         var targetElement = document.getElementById("service"); // Hier musst du das ID-Attribut des Ziels eintragen

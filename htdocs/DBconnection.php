@@ -11,7 +11,8 @@ $mysqli = new mysqli($servername, $username, $password, $database);
 if ($mysqli->connect_error) {
     die("Verbindung zur Datenbank fehlgeschlagen: " . $mysqli->connect_error);
 }
-/*    
+  
+// An dieser Stelle wird eine Tabelle erstellt, um die Daten der XML darin abzulegen
 $sql = "
     CREATE TABLE `fahrzeugdaten` (
         `id` INT NOT NULL,
@@ -44,18 +45,19 @@ if ($mysqli->query($sql) === TRUE) {
     echo "Tabelle 'Fahrzeugdaten' erfolgreich erstellt";
 } else {
     echo "Fehler beim Erstellen der Tabelle: " . $mysqli->error;
-} */
-   
+} 
+
+// Die XML-Datei mit den Automobildaten wird geladen oder es wird ein Fehler ausgegeben, wenn dies nicht möglich ist
 $xml = simplexml_load_file('http://localhost/DHBW-Automobiles/htdocs/Backend/automobiles.xml') or die("Error: Cannot create object");
-// Die XML-Datei mit den Automobildaten wird geladen oder es wird ein Fehler ausgegeben, wenn dies nicht möglich ist.
 
-$mysqli->begin_transaction(); // Transaktion starten
-// Eine MySQL-Transaktion wird gestartet, um sicherzustellen, dass alle Daten korrekt eingefügt werden.
 
+// Transaktion starten
+$mysqli->begin_transaction(); 
+
+// Für jedes Kind-Element in der XML-Datei (jedes Automobil) wird eine Schleife durchgeführt
 foreach ($xml->children() as $automobile) {
-    // Für jedes Kind-Element in der XML-Datei (jedes Automobil) wird eine Schleife durchgeführt.
-
-    // Die Daten aus der XML werden in Variablen gespeichert.
+    
+    // Die Daten aus der XML werden in Variablen gespeichert
     $id = (int)$automobile->id;
     $model = (string)$automobile->model;
     $HSN = (int)$automobile->HSN;
@@ -79,7 +81,7 @@ foreach ($xml->children() as $automobile) {
     $co2EmissionKombiniertWLTP = (int)$automobile->co2EmissionKombiniertWLTP;
     $images = (string)$automobile->images;
 
-    // SQL-Abfrage zum Einfügen der Daten in die Datenbank.
+    // SQL-Abfrage zum Einfügen der Daten in die Datenbank
     $insertSql = "INSERT INTO fahrzeugdaten (id, model, HSN, TSN, Fahrzeugklasse, ArtAufbau, Marke, Fahrzeugvariante, HKB, Fahrzeugaufbau, EGT, Schadstoffklasse, Kraftstoff, innerorts, ausserorts, kombiniert, co2EmissionKombiniertNEFZ, sehrSchnell, schnell, langsam, co2EmissionKombiniertWLTP, images) 
                 VALUES ($id, '$model', $HSN, $TSN, '$Fahrzeugklasse', $ArtAufbau, '$Marke', '$Fahrzeugvariante', '$HKB', '$Fahrzeugaufbau', '$EGT', '$Schadstoffklasse', '$Kraftstoff', $innerorts, $ausserorts, $kombiniert, $co2EmissionKombiniertNEFZ, $sehrSchnell, $schnell, $langsam, $co2EmissionKombiniertWLTP, '$images')";
 
@@ -90,10 +92,8 @@ foreach ($xml->children() as $automobile) {
         echo "Fehler beim Einfügen des Datensatzes: " . $mysqli->error;
     }
 }
-
         
-
-// Transaktion bestätigen oder abbrechen
+// Transaktion bestätigen mit commit oder komplett abbrechen mit rollback
 if ($mysqli->commit()) {
     echo "Transaktion erfolgreich abgeschlossen.";
 } else {
@@ -107,6 +107,4 @@ $result = $mysqli->query($countSql);
 
 // Datenbankverbindung schließen
 $mysqli->close();
-
-
 ?>

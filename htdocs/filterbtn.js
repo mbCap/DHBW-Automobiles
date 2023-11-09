@@ -69,10 +69,10 @@ document.addEventListener("DOMContentLoaded", function() {
                             filterResults.push(result);
                         }
                     }
-                    //console.log("Anzahl der Filterergebnisse:", filterResults.length);
+                    
  
-                    // Erzeuge eine HTML-Liste der Suchergebnisse
-                    var htmlString = "";
+                // Erzeuge eine HTML-Liste der Suchergebnisse
+                var htmlString = "";
                     for (var j = 0; j < filterResults.length; j++) {
                         var result = filterResults[j];
                         htmlString += "Marke: " + result.Marke + "<br>";
@@ -85,8 +85,8 @@ document.addEventListener("DOMContentLoaded", function() {
                         htmlString += "<hr>";
                     }
  
-                    // Wenn keine Übereinstimmungen gefunden wurden
-                    if (htmlString === "") {
+                // Wenn keine Übereinstimmungen gefunden wurden
+                if (htmlString === "") {
                         htmlString = "Keine Übereinstimmungen gefunden.";
                     }
  
