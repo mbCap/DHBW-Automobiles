@@ -1,59 +1,69 @@
 <?php
 
-//Laden xml
+// Laden der XML-Datei
 $xml = simplexml_load_file('automobiles.xml');
 
-    // Arrays erstellen, um entsprechende Daten als Filter auf der Website auszugeben
-    $markeArray = Array();
-    $modelArray = Array();
-    $schadstoffklasseArray = Array();
-    $kombiniertArray = Array();
-    $fahrzeugklasseArray = Array();
-    $kraftstoffArray = Array();
+// Arrays erstellen, um entsprechende Daten als Filter auf der Website auszugeben
+$markeArray = Array();
+$modelArray = Array();
+$schadstoffklasseArray = Array();
+$kombiniertArray = Array();
+$fahrzeugklasseArray = Array();
+$kraftstoffArray = Array();
 
-
-
-    //Befüllen Arrays mit einer Schleife, Prüfen ob Wert schon vorhanden
-    foreach ($xml -> automobiles as $automobiles) {
-        $marke = (string) $automobiles->Marke;
-    if (!in_array($marke,$markeArray)) {
+// Befüllen der Arrays mit einer Schleife, Prüfen ob Wert schon vorhanden
+foreach ($xml->automobiles as $automobiles) {
+    // Marke extrahieren und prüfen, ob bereits im Array vorhanden
+    $marke = (string) $automobiles->Marke;
+    if (!in_array($marke, $markeArray)) {
         $markeArray [] = $marke;
-    }  
-    $model = (string) $automobiles->model;
-    if (!in_array($model,$modelArray)) {
-        $modelArray [] = $model;
-    }  
-    $schadstoffklasse = (string) $automobiles->Schadstoffklasse;
-    if (!in_array($schadstoffklasse,$schadstoffklasseArray)) {
-        $schadstoffklasseArray [] = $schadstoffklasse;
-    } 
-    $kombiniert = (string) $automobiles->kombiniert;
-    if (!in_array($kombiniert,$kombiniertArray)) {
-        $kombiniertArray [] = $kombiniert;
-    } 
-    $fahrzeugklasse = (string) $automobiles->Fahrzeugklasse;
-    if (!in_array($fahrzeugklasse,$fahrzeugklasseArray)) {
-        $fahrzeugklasseArray [] = $fahrzeugklasse;
-    } 
-    $kraftstoff = (string) $automobiles->Kraftstoff;
-    if (!in_array($kraftstoff,$kraftstoffArray)) {
-        $kraftstoffArray [] = $kraftstoff;
-    } 
     }
 
+    // Model extrahieren und prüfen, ob bereits im Array vorhanden
+    $model = (string) $automobiles->model;
+    if (!in_array($model, $modelArray)) {
+        $modelArray [] = $model;
+    }
 
-    //Gesamtarrays aus allen oberen Arrays
-    $Gesamtarray = array(
-        "marke" => $markeArray,  // Marke ist Identifier für Array
-        "model" => $modelArray,
-        "Schadstoffklasse" => $schadstoffklasseArray,
-        "kombiniert" => $kombiniertArray,
-        "Fahrzeugklasse" => $fahrzeugklasseArray,
-        "Kraftstoff" => $kraftstoffArray  
-    );
+    // Schadstoffklasse extrahieren und prüfen, ob bereits im Array vorhanden
+    $schadstoffklasse = (string) $automobiles->Schadstoffklasse;
+    if (!in_array($schadstoffklasse, $schadstoffklasseArray)) {
+        $schadstoffklasseArray [] = $schadstoffklasse;
+    }
 
-    $jsonumwandler = json_encode($Gesamtarray);
+    // Kombiniert extrahieren und prüfen, ob bereits im Array vorhanden
+    $kombiniert = (string) $automobiles->kombiniert;
+    if (!in_array($kombiniert, $kombiniertArray)) {
+        $kombiniertArray [] = $kombiniert;
+    }
 
-    echo $jsonumwandler;
+    // Fahrzeugklasse extrahieren und prüfen, ob bereits im Array vorhanden
+    $fahrzeugklasse = (string) $automobiles->Fahrzeugklasse;
+    if (!in_array($fahrzeugklasse, $fahrzeugklasseArray)) {
+        $fahrzeugklasseArray [] = $fahrzeugklasse;
+    }
+
+    // Kraftstoff extrahieren und prüfen, ob bereits im Array vorhanden
+    $kraftstoff = (string) $automobiles->Kraftstoff;
+    if (!in_array($kraftstoff, $kraftstoffArray)) {
+        $kraftstoffArray [] = $kraftstoff;
+    }
+}
+
+// Gesamtarrays aus allen oberen Arrays erstellen
+$Gesamtarray = array(
+    "marke" => $markeArray,  // Marke ist Identifier für das Array
+    "model" => $modelArray,
+    "Schadstoffklasse" => $schadstoffklasseArray,
+    "kombiniert" => $kombiniertArray,
+    "Fahrzeugklasse" => $fahrzeugklasseArray,
+    "Kraftstoff" => $kraftstoffArray  
+);
+
+// JSON-Konvertierung
+$jsonumwandler = json_encode($Gesamtarray);
+
+// Ausgabe des JSON-Daten
+echo $jsonumwandler;
 
 ?>
