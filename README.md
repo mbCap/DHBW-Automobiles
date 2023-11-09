@@ -46,16 +46,20 @@ Der Docker, der aus der docker-compose.yml erstellt wird, belegt die folgenden P
 
 >### Aufbau der CSS-Datei
 >Die CSS-Datei ist nach der folgenden Struktur aufgebaut:
->1. root
->2. html
->3. body
->4. header
->5. navbar
->6. main
->7. footer
->
->Die @media-Tags sind ebenfalls den einzelen Elementen zugeordnet.
->
+>1. General css (Reset code)
+>2. Top-area
+>3. Welcome-hero
+>4. Model-search
+>5. Service
+>6. New-cars
+>7. Featured-cars
+>8. Clients say
+>9. Brand
+>10. Blog
+>11. Contact
+
+
+
 >Die Unterseiten Impressum und Kontakt sind im Footer verortet.
 
 >[!NOTE]
