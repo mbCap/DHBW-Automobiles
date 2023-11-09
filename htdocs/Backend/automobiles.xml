@@ -43,7 +43,8 @@
         <sehrSchnell>8.8</sehrSchnell>   
         <schnell>6.9</schnell>        
         <langsam>9.5</langsam>           
-        <co2EmissionKombiniertWLTP>155</co2EmissionKombiniertWLTP>  
+        <co2EmissionKombiniertWLTP>155</co2EmissionKombiniertWLTP>
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/BMW3er.png </images>  
     </automobile>
      <automobile>
         <model>GLS Maybach</model>            
@@ -66,6 +67,7 @@
         <schnell>8.9</schnell>        
         <langsam>12.5</langsam>           
         <co2EmissionKombiniertWLTP>212</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/new-cars-model/GLS.png </images>
     </automobile>
     <automobile>
         <model>Mercedes C-Klasse</model>    
@@ -88,6 +90,7 @@
         <schnell>5.2</schnell>           
         <langsam>7.8</langsam>           
         <co2EmissionKombiniertWLTP>127</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/MercedesC-Klasse.png </images>
     </automobile>
     <automobile>
         <model>Volkswagen Golf</model>  
@@ -109,7 +112,8 @@
         <sehrSchnell>6.5</sehrSchnell> 
         <schnell>4.9</schnell>         
         <langsam>7.2</langsam>         
-        <co2EmissionKombiniertWLTP>129</co2EmissionKombiniertWLTP>  
+        <co2EmissionKombiniertWLTP>129</co2EmissionKombiniertWLTP> 
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/Volkswagen_Golf.png </images> 
     </automobile>
     <automobile>
         <model>Ford Focus</model>  
@@ -131,7 +135,8 @@
         <sehrSchnell>6.8</sehrSchnell> 
         <schnell>5.2</schnell>       
         <langsam>7.5</langsam>       
-        <co2EmissionKombiniertWLTP>132</co2EmissionKombiniertWLTP>  
+        <co2EmissionKombiniertWLTP>132</co2EmissionKombiniertWLTP> 
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/FordFocus.png </images> 
     </automobile>
     <automobile>
         <model>Toyota Yaris</model>  
@@ -154,6 +159,7 @@
         <schnell>4.7</schnell>       
         <langsam>6.8</langsam>       
         <co2EmissionKombiniertWLTP>123</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/ToyotaYaris.png </images>
     </automobile>
     <automobile>
         <model>Honda Civic</model>  
@@ -176,6 +182,7 @@
         <schnell>5.0</schnell>       
         <langsam>7.2</langsam>       
         <co2EmissionKombiniertWLTP>125</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/HondaCivic.png </images>
     </automobile>
     <automobile>
         <model>Nissan Qashqai</model>  
@@ -198,6 +205,7 @@
         <schnell>6.5</schnell>        
         <langsam>7.8</langsam>        
         <co2EmissionKombiniertWLTP>145</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/NissanQashqai.png </images>
     </automobile>
     <automobile>
         <model>Hyundai i30</model>       
@@ -220,6 +228,7 @@
         <schnell>5.5</schnell>          
         <langsam>7.2</langsam>          
         <co2EmissionKombiniertWLTP>129</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/HyundaiI30.png </images>
     </automobile>
     <automobile>
         <model>Opel Corsa</model>       
@@ -242,6 +251,7 @@
         <schnell>5.4</schnell>          
         <langsam>7.0</langsam>          
         <co2EmissionKombiniertWLTP>139</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/OpelCorsa.png </images>
     </automobile>
     <automobile>
         <model>Porsche 911</model>  
@@ -264,6 +274,7 @@
         <schnell>11.0</schnell>          
         <langsam>16.0</langsam>          
         <co2EmissionKombiniertWLTP>212</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/new-cars-model/Porsche.png </images>
     </automobile>
     <automobile>
         <model>Volkswagen Passat</model>  
@@ -286,6 +297,7 @@
         <schnell>5.5</schnell>          
         <langsam>8.0</langsam>          
         <co2EmissionKombiniertWLTP>139</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/VolkswagenPassat.png </images>
     </automobile>
     <automobile>
         <model>Audi A6</model>             
@@ -308,6 +320,7 @@
         <schnell>6.0</schnell>            
         <langsam>9.5</langsam>            
         <co2EmissionKombiniertWLTP>139</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/AudiA6.png </images>
     </automobile>
     <automobile>
         <model>Fiat 500</model>           
@@ -330,6 +343,7 @@
         <schnell>4.7</schnell>            
         <langsam>7.8</langsam>            
         <co2EmissionKombiniertWLTP>120</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/Fiat500.png </images>
     </automobile>
     <automobile>
         <model>Volkswagen Tiguan</model>  
@@ -352,6 +366,7 @@
         <schnell>6.8</schnell>           
         <langsam>9.4</langsam>           
         <co2EmissionKombiniertWLTP>170</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/VolkswagenTiguan.png </images>
     </automobile>
     <automobile>
         <model>Mini Cooper</model>            
@@ -374,6 +389,7 @@
         <schnell>5.7</schnell>               
         <langsam>8.9</langsam>               
         <co2EmissionKombiniertWLTP>134</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/MiniCooper.png </images>
     </automobile>
     <automobile>
         <model>Mercedes S-Klasse</model>     
@@ -396,6 +412,7 @@
         <schnell>7.0</schnell>               
         <langsam>10.3</langsam>              
         <co2EmissionKombiniertWLTP>182</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/MercedesS-Klasse.png </images>
     </automobile>
     <automobile>
         <model>BMW 2er</model>            
@@ -418,6 +435,7 @@
         <schnell>7.0</schnell>           
         <langsam>9.2</langsam>           
         <co2EmissionKombiniertWLTP>150</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/BMW2er.png </images>
     </automobile>
     <automobile>
         <model>Ford Kuga</model>  
@@ -440,6 +458,7 @@
         <schnell>7.0</schnell>          
         <langsam>9.3</langsam>          
         <co2EmissionKombiniertWLTP>157</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/FordKuga.png </images>
     </automobile>
     <automobile>
         <model>Lamborghini Urus</model>  
@@ -462,6 +481,7 @@
         <schnell>14.2</schnell>          
         <langsam>21.0</langsam>          
         <co2EmissionKombiniertWLTP>230</co2EmissionKombiniertWLTP>  
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/new-cars-model/Urus.png </images>
     </automobile>
     <automobile>
         <model>Ferrari 488</model>  
@@ -483,6 +503,7 @@
         <sehrSchnell>16.3</sehrSchnell>  
         <schnell>13.8</schnell>      
         <langsam>20.0</langsam>      
-        <co2EmissionKombiniertWLTP>210</co2EmissionKombiniertWLTP>  
+        <co2EmissionKombiniertWLTP>210</co2EmissionKombiniertWLTP> 
+        <images> http://localhost/DHBW-Automobiles/htdocs/assets/images/new-cars-model/Ferrari.png </images> 
     </automobile>
 </automobiles> 
