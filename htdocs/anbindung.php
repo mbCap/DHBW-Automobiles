@@ -96,6 +96,9 @@ if ($mysqli->commit()) {
 $countSql = "SELECT COUNT(*) as count FROM fahrzeugdaten";
 $result = $mysqli->query($countSql);
 
+
 // Datenbankverbindung schließen
 $mysqli->close();
+
+
 ?>
