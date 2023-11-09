@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
     var button = document.getElementById("show-all-button");
 
@@ -40,24 +41,30 @@ document.addEventListener("DOMContentLoaded", function() {
                             
                         } else {
                             console.warn("Das 'images'-Element wurde nicht gefunden für Automobil #" + i + ". Ein Platzhalterbild wird verwendet.");
-                            var images = 'http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/default.png'; // Setze hier den Pfad zum Platzhalterbild
+                            var images = 'http://localhost/DHBW-Automobiles/htdocs/assets/images/overview_cars/default.png'; // Setze hier den Pfad zu deinem Platzhalterbild
                         }
  
 
-                        // Hier werden weitere Daten aus der XML extrahieren und in der Ausgabe verwendet
+                        // Hier kannst du weitere Daten aus der XML extrahieren und in deiner Ausgabe verwenden
 
-                        htmlString += "Marke: " + marke + "<br>";
-                        htmlString += "Modell: " + model + "<br>";
-                        htmlString += "Fahrzeugklasse: " + fahrzeugklasse + "<br>";
-                        htmlString += "Schadstoffklasse: " + schadstoffklasse + "<br>";
-                        htmlString += "Kraftstoff: " + kraftstoff + "<br>";
-                        htmlString += "innerorts: " + innerorts + "<br>";
-                        htmlString += "ausserots: " + ausserorts + "<br>";
-                        htmlString += "kombiniert: " + kombiniert + "<br>";
-                        htmlString += "co2EmissionKombiniertNEFZ: " + co2EmissionKombiniertNEFZ + "<br>";
-                        htmlString += "co2EmissionKombiniertWLTP: " + co2EmissionKombiniertWLTP + "<br>";
-                        htmlString += "<img src='" + images + "' alt='" + model + " - " + marke + " Automobile Image'><br>";
+                        htmlString += "<div style='margin-bottom: 10px; text-align: left;'>"; // Container-Div mit etwas Abstand nach unten und linksbündiger Ausrichtung
+                        htmlString += "<strong>Marke:</strong> " + marke + "<br>";
+                        htmlString += "<strong>Modell:</strong> " + model + "<br>";
+                        htmlString += "<strong>Fahrzeugklasse:</strong> " + fahrzeugklasse + "<br>";
+                        htmlString += "<strong>Schadstoffklasse:</strong> " + schadstoffklasse + "<br>";
+                        htmlString += "<strong>Kraftstoff:</strong> " + kraftstoff + "<br>";
+                        htmlString += "<strong>Verbrauch innerorts:</strong> " + innerorts + "<br>";
+                        htmlString += "<strong>Verbrauch ausserorts:</strong> " + ausserorts + "<br>";
+                        htmlString += "<strong>kombinierter Verbrauch:</strong> " + kombiniert + "<br>";
+                        htmlString += "<strong>CO2-Emission kombiniert:</strong> " + co2EmissionKombiniertNEFZ + "<br>";
+                        htmlString += "<strong>co2EmissionKombiniertWLTP:</strong> " + co2EmissionKombiniertWLTP + "<br>";
+                        htmlString += "</div>"; // Ende des Container-Divs
+                        //htmlString += "<img src='" + images + "' alt='" + model + " - " + marke + " Automobile Image'><br>";
                         htmlString += "<hr>";
+
+                        
+
+                        
                     }
 
                     outputElement.innerHTML = htmlString;
