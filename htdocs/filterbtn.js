@@ -2,7 +2,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     // Input der Filterfelder in eine Variable schreiben
-    var fahrzeugInput = document.getElementById("fahrzeugklasse-filter");
+    var fahrzeugklasseInput = document.getElementById("fahrzeugklasse-filter");
     var markeInput = document.getElementById("marke-filter");
     var modellInput = document.getElementById("modell-filter");
     var kraftstoffverbrauchInput = document.getElementById("kraftstoffverbrauch-filter");
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Methode zur Durchführung der Suche
     function performSearch() {
-        var selectedFahrzeugklasse = fahrzeugInput.value.toLowerCase();
+        var selectedFahrzeugklasse = fahrzeugklasseInput.value.toLowerCase();
         var selectedMarke = markeInput.value.toLowerCase();
         var selectedModell = modellInput.value.toLowerCase();
         var selectedKraftstoffverbrauch = kraftstoffverbrauchInput.value.toLowerCase();
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         htmlString += "Fahrzeugklasse: " + result.Fahrzeugklasse + "<br>";
                         htmlString += "Schadstoffklasse: " + result.Schadstoffklasse + "<br>";
                         htmlString += "Kraftstoff: " + result.Kraftstoff + "<br>";
-                        htmlString += "kombiniert: " + result.Kraftstoffverbrauch + "<br>";
+                        htmlString += "kombinierter Verbrauch: " + result.Kraftstoffverbrauch + " l / 100 km" + "<br>";
                         // Hier weitere Eigenschaften hinzufügen
                         htmlString += "<hr>";
                     }
