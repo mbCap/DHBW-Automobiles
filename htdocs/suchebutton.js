@@ -84,11 +84,11 @@ document.addEventListener("DOMContentLoaded", function() {
                             htmlString += "Fahrzeugklasse: " + result.Fahrzeugklasse + "<br>";
                             htmlString += "Schadstoffklasse: " + result.Schadstoffklasse + "<br>";
                             htmlString += "Kraftstoff: " + result.Kraftstoff + "<br>";
-                            htmlString += "innerorts: " + result.innerorts + "<br>";
-                            htmlString += "ausserorts: " + result.ausserorts + "<br>";
-                            htmlString += "kombiniert: " + result.kombiniert + "<br>";
-                            htmlString += "co2EmissionKombiniertNEFZ: " + result.co2EmissionKombiniertNEFZ + "<br>";
-                            htmlString += "co2EmissionKombiniertWLTP: " + result.co2EmissionKombiniertWLTP + "<br>";
+                            htmlString += "Verbrauch innerorts: " + result.innerorts + " l/100km" +"<br>";
+                            htmlString += "Verbrauch ausserorts: " + result.ausserorts + " l/100km" + "<br>";
+                            htmlString += "Verbrauch kombiniert: " + result.kombiniert + " l/100km" + "<br>";
+                            htmlString += "Co2-Emissionen kombiniert: " + result.co2EmissionKombiniertNEFZ + " g/km (NEFZ)" + "<br>";
+                            htmlString += "Co2-Emission Kombiniert: " + result.co2EmissionKombiniertWLTP + " g/km (WLTP)" + "<br>";
                             htmlString += "<hr>";
                             
                         }
