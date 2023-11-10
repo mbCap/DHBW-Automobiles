@@ -15,7 +15,6 @@ if ($mysqli->connect_error) {
 // An dieser Stelle wird eine Tabelle erstellt, um die Daten der XML darin abzulegen
 $sql = "
     CREATE TABLE `fahrzeugdaten` (
-        `id` INT NOT NULL,
         `model` VARCHAR(50),
         `HSN` INT NOT NULL,
         `TSN` INT NOT NULL,
@@ -35,8 +34,7 @@ $sql = "
         `sehrSchnell` DOUBLE NOT NULL,
         `schnell` DOUBLE NOT NULL,
         `langsam` DOUBLE NOT NULL,
-        `co2EmissionKombiniertWLTP` INT NOT NULL,
-        `images` VARCHAR(50) NOT NULL
+        `co2EmissionKombiniertWLTP` INT NOT NULL
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 ";
  
@@ -58,7 +56,6 @@ $mysqli->begin_transaction();
 foreach ($xml->children() as $automobile) {
     
     // Die Daten aus der XML werden in Variablen gespeichert
-    $id = (int)$automobile->id;
     $model = (string)$automobile->model;
     $HSN = (int)$automobile->HSN;
     $TSN = (int)$automobile->TSN;
@@ -79,11 +76,10 @@ foreach ($xml->children() as $automobile) {
     $schnell = (float)$automobile->schnell;
     $langsam = (float)$automobile->langsam;
     $co2EmissionKombiniertWLTP = (int)$automobile->co2EmissionKombiniertWLTP;
-    $images = (string)$automobile->images;
 
     // SQL-Abfrage zum Einfügen der Daten in die Datenbank
-    $insertSql = "INSERT INTO fahrzeugdaten (id, model, HSN, TSN, Fahrzeugklasse, ArtAufbau, Marke, Fahrzeugvariante, HKB, Fahrzeugaufbau, EGT, Schadstoffklasse, Kraftstoff, innerorts, ausserorts, kombiniert, co2EmissionKombiniertNEFZ, sehrSchnell, schnell, langsam, co2EmissionKombiniertWLTP, images) 
-                VALUES ($id, '$model', $HSN, $TSN, '$Fahrzeugklasse', $ArtAufbau, '$Marke', '$Fahrzeugvariante', '$HKB', '$Fahrzeugaufbau', '$EGT', '$Schadstoffklasse', '$Kraftstoff', $innerorts, $ausserorts, $kombiniert, $co2EmissionKombiniertNEFZ, $sehrSchnell, $schnell, $langsam, $co2EmissionKombiniertWLTP, '$images')";
+    $insertSql = "INSERT INTO fahrzeugdaten (model, HSN, TSN, Fahrzeugklasse, ArtAufbau, Marke, Fahrzeugvariante, HKB, Fahrzeugaufbau, EGT, Schadstoffklasse, Kraftstoff, innerorts, ausserorts, kombiniert, co2EmissionKombiniertNEFZ, sehrSchnell, schnell, langsam, co2EmissionKombiniertWLTP) 
+                VALUES ('$model', $HSN, $TSN, '$Fahrzeugklasse', $ArtAufbau, '$Marke', '$Fahrzeugvariante', '$HKB', '$Fahrzeugaufbau', '$EGT', '$Schadstoffklasse', '$Kraftstoff', $innerorts, $ausserorts, $kombiniert, $co2EmissionKombiniertNEFZ, $sehrSchnell, $schnell, $langsam, $co2EmissionKombiniertWLTP)";
 
     // Überprüfung, ob die SQL-Abfrage erfolgreich war, und entsprechende Ausgabe.
     if ($mysqli->query($insertSql) === TRUE) {
